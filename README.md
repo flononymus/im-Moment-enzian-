@@ -12,6 +12,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 #### Illustrator:
 - [ ] Test path --> svg --> --> html5 canvas conversion tools
 
+#### General:
+- [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
+- [ ] Figure out a good project structure
+
 
 
 ```mermaid
