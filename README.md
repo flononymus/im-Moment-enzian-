@@ -1,9 +1,16 @@
 # Hausaufgabe Interaction Design ZHdK, Thema: "im-Moment"
 
-## Meditative and animated landscapes
+## Description/general idea:
+peaceful atmospheric images/environment to get a break from a busy day, to relax with, to get lost in, and to tune out. 
+
 
 ### To-Do:
+
+#### HTML5 Canvas:
 - [ ] Test html5 canvas
+
+#### Illustrator:
+- [ ] Test path --> svg --> --> html5 canvas conversion tools
 
 
 
