@@ -30,7 +30,6 @@ mindmap
         ((Pixel art))
 
             (draw in photoshop/illustrator)
-                (pixel art library: https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file)
 
             (google for atmospheric landscapes/cozy images)
 
