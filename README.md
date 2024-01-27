@@ -12,11 +12,6 @@ mindmap
     )Thema: "im Moment"(
 
         ((Wallpaper))
-        
-            (inspo:)
-                (Tyler Pate https://www.instagram.com/thecreativepain/?hl=en)
-                    (https://www.twelvesouth.com/pages/wallpaper-collection-8)
-
             (vectorbased?)
                 (Illustrator maybe convert to pixelart)
                     (Convert to svg and create canvas to animate/scale)
@@ -33,9 +28,6 @@ mindmap
             (html5 canvas + js.)
 
         ((Pixel art))
-
-            (inspo:)
-                (@aleha84 https://www.instagram.com/aleha_84/?hl=en)
 
             (draw in photoshop/illustrator)
                 (pixel art library: https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file)
