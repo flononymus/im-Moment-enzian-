@@ -1,5 +1,8 @@
 #canvas {
-    position:absolute;
+    /* align-items: center;
+    justify-content:center;
+    display: flex;
+    position:absolute; */
     background: rgba(50,50,50,1);
     width: 750px;
     height: 750px; 

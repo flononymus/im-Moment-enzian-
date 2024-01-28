@@ -6,13 +6,17 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ## To-Do:
 
-[[How-To (for me)]]
+[[How-To (for)]]
 
 ### <ins>General:</ins>
+
+- [ ] Take image --> pixelate --> add elements
+
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
 ### Ideas for images:
+- [ ] Smoking chimneys
 - [ ] Liminal spaces
 - [ ] Rain/Snow?
 - [ ] test
