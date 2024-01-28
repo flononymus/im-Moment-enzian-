@@ -22,6 +22,12 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Figure out a good project structure
 
 ### Ideas for images:
+
+- [ ] Night --> northern lights
+- [ ] Clouds --> rain
+- [ ] Day --> small clouds, airplanes (?)
+
+
 - [ ] Different times of day (day/night)
 - [ ] Different weather (rain/cloudy/sunny etc)
 
