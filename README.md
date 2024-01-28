@@ -6,16 +6,18 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ## To-Do:
 
-[[How-To (for)]]
-
 ### <ins>General:</ins>
-
 - [ ] Take image --> pixelate --> add elements
+
+- [ ] figure out how to render on my nextjs page?
 
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
 ### Ideas for images:
+- [ ] Different times of day (day/night)
+- [ ] Different weather (rain/cloudy/sunny etc)
+
 - [ ] Smoking chimneys
 - [ ] Liminal spaces
 - [ ] Rain/Snow?
