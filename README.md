@@ -6,29 +6,25 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ## To-Do:
 
-### <ins>Illustrator:</ins>
-
-- [ ] List of things i can do that can be rendered on a html canvas
-    - svg
-    - pixel art
-    - 
-- [ ] Test path --> svg --> --> html5 canvas conversion tools
-
-### <ins>HTML5 Canvas:</ins>
-
-- [ ] Test html5 canvas
+[[How-To (for me)]]
 
 ### <ins>General:</ins>
-
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
+### Ideas for images:
+- [ ] Liminal spaces
+- [ ] Rain/Snow?
+- [ ] test
+
+### <ins>Illustrator:</ins>
+- [ ] png for layers
+- [ ] svg to canvas converter
+
+### <ins>HTML5 Canvas:</ins>
+- [ ] Test html5 canvas
 
 ### <ins>Mind-Map:</ins>
-
-- [ ] Figure out how to change colors in mermaid
-
-
 
 ```mermaid
 %%{
