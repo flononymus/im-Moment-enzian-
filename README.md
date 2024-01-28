@@ -12,6 +12,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to make a more calm background (not white)
 
+- [ ] Fade between images -> maybe make two canvases?
+
 - [ ] Take image --> pixelate --> add elements
 
 - [ ] figure out how to render on my nextjs page?
