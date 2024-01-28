@@ -28,7 +28,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Rain/Snow?
 - [ ] test
 
-### <ins>Illustrator:</ins>
+### <ins>Illustrator/Photoshop:</ins>
+- [ ] Pixel value: 6
 - [ ] png for layers
 - [ ] svg to canvas converter
 
