@@ -1,7 +1,7 @@
 // var currentOpacity = 1;
 // var increment = 0.02;
 var start = null;
-var duration = 1000;
+var duration = 5000;
 
 document.getElementById('canvas').onwheel = function(event){
   event.preventDefault();
@@ -39,14 +39,15 @@ function drawImages(timestamp) {
 
   ctx.globalCompositeOperation = 'source-over';
   ctx.globalAlpha = currentOpacityNight;
-  ctx.drawImage(imageHalfNight, 0, 0, canvas.width, canvas.height);
+  // ctx.drawImage(imageHalfNight, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(imageNight,0,0,canvas.width,canvas.height);
   
-  if (currentOpacityNight === 1) {
-    console.log("check");
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.globalAlpha = currentOpacityThird;
-    ctx.drawImage(imageFullNight, 0,0);
-  }
+  // if (currentOpacityNight === 1) {
+  //   console.log("check");
+  //   ctx.globalCompositeOperation = 'source-over';
+  //   ctx.globalAlpha = currentOpacityThird;
+  //   ctx.drawImage(imageFullNight, 0,0);
+  // }
   
   if (progress < duration) {
     window.requestAnimationFrame(drawImages);
