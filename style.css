@@ -3,7 +3,18 @@
     justify-content:center;
     display: flex;
     position:absolute; */
-    background: rgba(50,50,50,1);
-    width: 750px;
-    height: 750px; 
+    /* background: rgba(50,50,50,1); */
+
+    /* width: 750px;
+    height: 750px;  */
+
+    margin:0;
+    width: auto;
+    height: 100vh;
+    aspect-ratio: 1/1;
+}
+
+body {
+    margin:0;
+    display:flex;
 }

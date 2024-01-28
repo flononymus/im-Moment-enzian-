@@ -7,6 +7,11 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ## To-Do:
 
 ### <ins>General:</ins>
+
+- [x] Figure out how to make it fill screen (resizing up and down)
+- [ ] Figure out how to make it centered on screen
+- [ ] Figure out how to make a more calm background (not white)
+
 - [ ] Take image --> pixelate --> add elements
 
 - [ ] figure out how to render on my nextjs page?
