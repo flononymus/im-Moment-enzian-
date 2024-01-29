@@ -1,8 +1,62 @@
-## working crossfade
-
+var currentImage = null; 
 var start = null;
-var duration = 5500;
-var isAnimationStarted = false;
+var duration = 2000;
+var w = canvas.width;
+var h = canvas.height;
+
+
+var imageDay= new Image();
+imageDay.onload = drawImages;
+imageDay.src = "images/test_day.png"
+
+var imageClouds= new Image();
+imageClouds.onload = drawImages
+imageClouds.src = "images/test_clouds.png"
+
+var imageHalfNight= new Image();
+imageHalfNight.onload = drawImages;
+imageHalfNight.src = "images/test_night1.png"
+
+var imageMoreNight= new Image();
+imageMoreNight.onload = drawImages;
+imageMoreNight.src = "images/test_night2.png"
+
+var imageFullNight= new Image();
+imageFullNight.onload = drawImages;
+imageFullNight.src = "images/test_night3.png"
+
+
+
+var cloudsButton= document.createElement('button');
+cloudsButton.textContent = "Cloudy"
+cloudsButton.onclick = cloudImage;
+document.body.appendChild(cloudsButton);
+
+var dayButton = document.createElement('button');
+dayButton.textContent = "Day"
+dayButton.onclick= dayImage;
+document.body.appendChild(dayButton);
+
+var halfNightButton = document.createElement('button');
+halfNightButton.textContent = "Half night"
+halfNightButton.onclick = halfNight;
+document.body.appendChild(halfNightButton);
+
+var moreNightButton= document.createElement('button');
+moreNightButton.textContent = "More night"
+moreNightButton.onclick = moreNight;
+document.body.appendChild(moreNightButton);
+
+var fullNightButton = document.createElement('button');
+fullNightButton.textContent = "Full night"
+fullNightButton.onclick = fullNight;
+document.body.appendChild(fullNightButton);
+
+var noneButton= document.createElement('button');
+noneButton.textContent = "None"
+noneButton.onclick = noImage;
+document.body.appendChild(noneButton);
+
 
 document.getElementById('canvas').onwheel = function(event){
   event.preventDefault();
@@ -11,93 +65,131 @@ document.getElementById('canvas').onmouswheel = function(event){
   event.preventDefault();
 }
 
-var imageDay= new Image();
-imageDay.src = "images/test_day.png"
-var imageClouds= new Image();
-imageClouds.src = "images/test_clouds.png"
-var imageHalfNight= new Image();
-imageHalfNight.src = "images/test_night1.png"
-var imageNight= new Image();
-imageNight.src = "images/test_night2.png"
-var imageFullNight= new Image();
-imageFullNight.src = "images/test_night3.png"
+if (currentImage === null) {
+  currentImage = 'clouds'
+};
 
 function drawImages(timestamp) {
-  if (!start) start = timestamp || performance.now();;
-  var progress = timestamp - start;
   var canvas = document.querySelector('canvas');
   var ctx = canvas.getContext('2d');
 
-  // var currentOpacityThird= Math.max(progress / duration, 0);
-  var currentOpacityNight = Math.min(progress / duration, 1);
-  var currentOpacityThird = Math.min(progress / duration, 1);
+  ctx.strokeStyle = 'rgba(174,194,224,0.5)';
+  ctx.lineWidth = 1;
+  ctx.lineCap = 'round';
 
-  ctx.clearRect(0,0, canvas.width, canvas.height)
+  // var currentOpacityTest = Math.min(progress / duration, 1);
+  var currentOpacityTest = 1;
+  // var currentOpacityTest = 0.2;
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
   ctx.globalAlpha = 1;
+  // ctx.save();
 
-  ctx.globalCompositeOperation = 'source-over'
-  ctx.drawImage(imageClouds, 0, 0);
-
-  ctx.globalCompositeOperation = 'source-over';
-  ctx.globalAlpha = currentOpacityNight;
-  ctx.drawImage(imageNight,0,0,canvas.width,canvas.height);
-
-  ctx.globalCompositeOperation = 'source-over';
-  ctx.globalAlpha = currentOpacityNight;
-  
-  if (currentOpacityNight >= 0.995) {
-    currentOpacityNight = 1;
+  if (currentImage === 'clouds') {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(imageClouds,0,0,canvas.width,canvas.height);
   }
-  
-  if (progress < duration) {
-    window.requestAnimationFrame(drawImages);
-    // console.log(currentOpacityNight);
+
+  else if (currentImage === 'day') {
+    var currentOpacityTest = 1;
+    ctx.globalAlpha = currentOpacityTest;
+    // for (currentOpacityTest > 0;currentOpacityTest < 1; currentOpacityTest++)  {
+      if (currentOpacityTest > 0) {
+      currentOpacityTest -= 0.1;
+      console.log(currentOpacityTest);
+      window.requestAnimationFrame(drawImages)
+    }
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(imageDay,0,0, canvas.width, canvas.height);
+
+  }
+  else if (currentImage === 'halfNight') {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(imageHalfNight,0,0,canvas.width,canvas.height);
+  }
+  else if (currentImage === 'moreNight') {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(imageMoreNight,0,0,canvas.width,canvas.height);
+  }
+  else if (currentImage === 'fullNight') {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(imageFullNight,0,0,canvas.width,canvas.height);
+  }
+  else if (currentImage === 'none') {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0,0,canvas.width,canvas.height);
   }
 }
 
-  imageFullNight.onload = function() {
-    var canvas = document.querySelector('canvas');
-    canvas.width = this.naturalHeight
-    canvas.height = this.naturalHeight; 
-    window.requestAnimationFrame(drawImages);
-  };
-
-  // function startAnimation () {
-  //   if (!isAnimationStarted) {
-  //     isAnimationStarted = true;
-  //     window.requestAnimationFrame(drawImages)
-  //   }
-  // }
-
-  var cloudsButton= document.createElement('button');
-  cloudsButton.textContent = "Cloudy"
-  cloudsButton.onclick = test;
-  document.body.appendChild(cloudsButton);
-  
-  var dayButton = document.createElement('button');
-  dayButton.textContent = "Day"
-  dayButton.onclick= test;
-  document.body.appendChild(dayButton);
-
-  var halfNightButton = document.createElement('button');
-  halfNightButton.textContent = "Half night"
-  halfNightButton.onclick = test;
-  document.body.appendChild(halfNightButton);
-
-  var moreNightButton= document.createElement('button');
-  moreNightButton.textContent = "More night"
-  moreNightButton.onclick = test;
-  document.body.appendChild(moreNightButton);
-
-  var fullNightButton = document.createElement('button');
-  fullNightButton.textContent = "Full night"
-  fullNightButton.onclick = test;
-  document.body.appendChild(fullNightButton);
+function cloudImage() {
+  currentImage = "clouds";
+  drawImages();
+}
+function dayImage() {
+  currentImage = "day";
+  drawImages();
+}
+function halfNight() {
+  currentImage = "halfNight";
+  drawImages();
+}
+function moreNight() {
+  currentImage = "moreNight";
+  drawImages();
+}
+function fullNight() {
+  currentImage = "fullNight";
+  drawImages();
+}
+function noImage() {
+  currentImage = "none";
+  drawImages();
+}
 
 
+function rainOverlay() {
+var init = [];
+var maxParts = 1000;
+for(var a = 0; a < maxParts; a++) {
+  init.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    l: Math.random() * 1,
+    xs: -4 + Math.random() * 4 + 2,
+    ys: Math.random() * 10 + 10
+  })
+}
 
+var particles = [];
+for(var b = 0; b < maxParts; b++) {
+  particles[b] = init[b];
+}
 
-
-  function test() {
-    console.log('test');
+function draw() {
+  ctx.clearRect(0, 0, w, h);
+  for(var c = 0; c < particles.length; c++) {
+    var p = particles[c];
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+    ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+    ctx.stroke();
   }
+  move();
+}
+
+function move() {
+  for(var b = 0; b < particles.length; b++) {
+    var p = particles[b];
+    p.x += p.xs;
+    p.y += p.ys;
+    if(p.x > w || p.y > h) {
+      p.x = Math.random() * w;
+      p.y = -20;
+    }
+  }
+}
+
+setInterval(draw, 30);
+}
+;

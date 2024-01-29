@@ -1,7 +1,43 @@
+var canvasBack= document.getElementById('canvasBackground');
+var canvasFront = document.getElementById('canvasFront');
+var ctxBack = canvasBack.getContext('2d');
+var ctxFront = canvasFront.getContext('2d');
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+canvasBack.width = window.innerWidth;
+canvasBack.height = window.innerHeight;
+canvasFront.width = window.innerWidth;
+canvasFront.height = window.innerHeight;
+
+var w = canvasFront.width;
+var h = canvasFront.height;
+var rainInterval;
+// ctx.strokeStyle = 'rgba(174,194,224,0.5)';
+ctxFront.strokeStyle = 'rgba(0,0,0,0.5)';
+// ctx.strokeStyle = 'rgba(255,255,255,0.5)'
+ctxFront.lineWidth = 1;
+ctxFront.lineCap = 'round';
+var init = [];
+var maxParts = 1000;
+for(var a = 0; a < maxParts; a++) {
+  init.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    l: Math.random() * 1,
+    xs: -4 + Math.random() * 4 + 2,
+    ys: Math.random() * 10 + 10
+  })
+}
+
+var particles = [];
+for(var b = 0; b < maxParts; b++) {
+  particles[b] = init[b];
+}
+
 var currentImage = null; 
 var start = null;
 var duration = 2000;
-
+var raining = false;
 
 
 var imageDay= new Image();
@@ -51,11 +87,21 @@ fullNightButton.textContent = "Full night"
 fullNightButton.onclick = fullNight;
 document.body.appendChild(fullNightButton);
 
+var noneButton= document.createElement('button');
+noneButton.textContent = "None"
+noneButton.onclick = noImage;
+document.body.appendChild(noneButton);
 
-document.getElementById('canvas').onwheel = function(event){
+var rainButton= document.createElement('button');
+rainButton.textContent = "Rain Test"
+rainButton.onclick = toggleRain;
+document.body.appendChild(rainButton);
+
+
+document.getElementById('canvasBackground').onwheel = function(event){
   event.preventDefault();
 }
-document.getElementById('canvas').onmouswheel = function(event){
+document.getElementById('canvasBackground').onmouswheel = function(event){
   event.preventDefault();
 }
 
@@ -64,47 +110,46 @@ if (currentImage === null) {
 };
 
 function drawImages(timestamp) {
-  var canvas = document.querySelector('canvas');
-  var ctx = canvas.getContext('2d');
-
   // var currentOpacityTest = Math.min(progress / duration, 1);
   var currentOpacityTest = 1;
   // var currentOpacityTest = 0.2;
-
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-
-  ctx.globalAlpha = 1;
+  ctxBack.clearRect(0,0,canvasBack.width,canvasBack.height);
+  ctxBack.globalAlpha = 1;
   // ctx.save();
 
   if (currentImage === 'clouds') {
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(imageClouds,0,0,canvas.width,canvas.height);
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
   }
 
   else if (currentImage === 'day') {
     var currentOpacityTest = 1;
-    ctx.globalAlpha = currentOpacityTest;
+    ctxBack.globalAlpha = currentOpacityTest;
     // for (currentOpacityTest > 0;currentOpacityTest < 1; currentOpacityTest++)  {
-      if (currentOpacityTest > 0) {
-      currentOpacityTest -= 0.1;
-      console.log(currentOpacityTest);
-      window.requestAnimationFrame(drawImages)
-    }
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(imageDay,0,0, canvas.width, canvas.height);
+    //   if (currentOpacityTest > 0) {
+    //   currentOpacityTest -= 0.1;
+    //   console.log(currentOpacityTest);
+    //   window.requestAnimationFrame(drawImages)
+    // }
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.drawImage(imageDay,0,0, canvasBack.width, canvasBack.height);
 
   }
   else if (currentImage === 'halfNight') {
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(imageHalfNight,0,0,canvas.width,canvas.height);
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.drawImage(imageHalfNight,0,0,canvasBack.width,canvasBack.height);
   }
   else if (currentImage === 'moreNight') {
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(imageMoreNight,0,0,canvas.width,canvas.height);
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.drawImage(imageMoreNight,0,0,canvasBack.width,canvasBack.height);
   }
   else if (currentImage === 'fullNight') {
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(imageFullNight,0,0,canvas.width,canvas.height);
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.drawImage(imageFullNight,0,0,canvasBack.width,canvasBack.height);
+  }
+  else if (currentImage === 'none') {
+    ctxBack.globalCompositeOperation = 'source-over';
+    ctxBack.clearRect(0,0,canvasBack.width,canvasBack.height);
   }
 }
 
@@ -127,4 +172,48 @@ function moreNight() {
 function fullNight() {
   currentImage = "fullNight";
   drawImages();
+}
+function noImage() {
+  currentImage = "none";
+  drawImages();
+}
+
+function toggleRain() {
+  raining = !raining
+  if (raining) {
+    rainInterval = setInterval(drawRain,30);
+    console.log('rain')
+  }
+  else {
+    clearInterval(rainInterval);
+    ctxFront.clearRect(0,0,canvasFront.width,canvasFront.height);
+    console.log('clear')
+  }
+}
+
+
+function drawRain() {
+  // ctx.drawImage(currentImage,0,0,w,h);
+  ctxFront.clearRect(0, 0, w, h);
+
+  for(var c = 0; c < particles.length; c++) {
+    var p = particles[c];
+    ctxFront.beginPath();
+    ctxFront.moveTo(p.x, p.y);
+    ctxFront.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+    ctxFront.stroke();
+  }
+  move();
+}
+
+function move() {
+  for(var b = 0; b < particles.length; b++) {
+    var p = particles[b];
+    p.x += p.xs;
+    p.y += p.ys;
+    if(p.x > w || p.y > h) {
+      p.x = Math.random() * w;
+      p.y = -20;
+    }
+  }
 }
