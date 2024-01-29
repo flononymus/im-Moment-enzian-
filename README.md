@@ -8,6 +8,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>General:</ins>
 
+- [ ] Move rain to different file?
+
 - [ ] slider to fade between?
 
 - [ ] Figure out how to make it centered on screen

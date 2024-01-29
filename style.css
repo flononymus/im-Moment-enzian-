@@ -35,12 +35,3 @@ button {
     margin:10px;
     height:20px;
   }
-
-  .fade-in {
-    opacity: 0;
-    transition: opacity 20s ease-in-out;
-  }
-  
-  .fade-in.opaque {
-    opacity: 1;
-  }

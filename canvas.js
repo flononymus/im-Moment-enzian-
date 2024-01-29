@@ -2,8 +2,7 @@ var canvasBack= document.getElementById('canvasBackground');
 var canvasFront = document.getElementById('canvasFront');
 var ctxBack = canvasBack.getContext('2d');
 var ctxFront = canvasFront.getContext('2d');
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
+
 canvasBack.width = window.innerWidth;
 canvasBack.height = window.innerHeight;
 canvasFront.width = window.innerWidth;
@@ -12,10 +11,8 @@ canvasFront.height = window.innerHeight;
 var w = canvasFront.width;
 var h = canvasFront.height;
 var rainInterval;
-// ctx.strokeStyle = 'rgba(174,194,224,0.5)';
-ctxFront.strokeStyle = 'rgba(0,0,0,0.5)';
-// ctx.strokeStyle = 'rgba(255,255,255,0.5)'
-ctxFront.lineWidth = 1;
+ctxFront.strokeStyle = 'rgba(50,50,50,0.5)';
+ctxFront.lineWidth = 10;
 ctxFront.lineCap = 'round';
 var init = [];
 var maxParts = 1000;
@@ -25,7 +22,7 @@ for(var a = 0; a < maxParts; a++) {
     y: Math.random() * h,
     l: Math.random() * 1,
     xs: -4 + Math.random() * 4 + 2,
-    ys: Math.random() * 10 + 10
+    ys: Math.random() * 50 + 50
   })
 }
 
@@ -39,6 +36,9 @@ var start = null;
 var duration = 2000;
 var raining = false;
 
+var raindropImage = new Image();
+// raindropImage.src = "images/raindrop_test.png"
+raindropImage.src = "images/raindrop_test2.png"
 
 var imageDay= new Image();
 imageDay.onload = drawImages;
@@ -193,15 +193,17 @@ function toggleRain() {
 
 
 function drawRain() {
+  ctxFront.globalAlpha = 0.5;
   // ctx.drawImage(currentImage,0,0,w,h);
   ctxFront.clearRect(0, 0, w, h);
 
   for(var c = 0; c < particles.length; c++) {
     var p = particles[c];
-    ctxFront.beginPath();
-    ctxFront.moveTo(p.x, p.y);
-    ctxFront.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
-    ctxFront.stroke();
+    // ctxFront.beginPath();
+    // ctxFront.moveTo(p.x, p.y);
+    // ctxFront.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+    // ctxFront.stroke();
+    ctxFront.drawImage(raindropImage, p.x, p.y, raindropImage.width/3, raindropImage.height*2);
   }
   move();
 }
