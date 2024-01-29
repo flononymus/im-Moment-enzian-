@@ -193,3 +193,14 @@ function move() {
 setInterval(draw, 30);
 }
 ;
+
+
+
+  // var currentOpacityTest = Math.min(progress / duration, 1);
+
+    // for (currentOpacityTest > 0;currentOpacityTest < 1; currentOpacityTest++)  {
+    //   if (currentOpacityTest > 0) {
+    //   currentOpacityTest -= 0.1;
+    //   console.log(currentOpacityTest);
+    //   window.requestAnimationFrame(drawImages)
+    // }
