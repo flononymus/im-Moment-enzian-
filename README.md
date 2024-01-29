@@ -8,9 +8,13 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>General:</ins>
 
-- [x] Figure out how to make it fill screen (resizing up and down)
+- [ ] slider to fade between?
+
 - [ ] Figure out how to make it centered on screen
-- [ ] Figure out how to make a more calm background (not white)
+- [ ] Figure out how to make a more calm background (not white) 
+
+- [ ] Figure out how to make different images appear first
+- [ ] then figure out how to make them fade in (globalAlpha, look into save() and restore())
 
 - [ ] Fade between images -> maybe make two canvases?
 
@@ -21,20 +25,25 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
+- [x] Figure out how to make it fill screen (resizing up and down)
+- [x] Add buttons/toggles for all 5 images
+
 ### Ideas for images:
 
-- [ ] Night --> northern lights
-- [ ] Clouds --> rain
-- [ ] Day --> small clouds, airplanes (?)
+- [ ] Night --> northern lights, stars
+- [ ] Half night --> smoking chimneys
+- [ ] Clouds --> rain (or snow) --> check out lightinggenerator
+- [ ] Day --> small clouds, airplanes (?)
 
 
 - [ ] Different times of day (day/night)
 - [ ] Different weather (rain/cloudy/sunny etc)
 
 - [ ] Smoking chimneys
-- [ ] Liminal spaces
-- [ ] Rain/Snow?
-- [ ] test
+- [ ] Rain
+- [ ] Snow?
+- [ ] aurora borealis 
+- [ ] Liminal spaces
 
 ### <ins>Illustrator/Photoshop:</ins>
 - [ ] Pixel value: 6

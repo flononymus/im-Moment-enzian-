@@ -1,22 +1,36 @@
 #canvas {
-    /* align-items: center;
-    justify-content:center;
-    display: flex;
-    position:absolute; */
-    /* background: rgba(50,50,50,1); */
-
-    /* width: 750px;
-    height: 750px;  */
-
+    z-index: 0;
     margin:0;
     width: auto;
     height: 100vh;
     aspect-ratio: 1/1;
+    position:absolute;
 }
 
 body {
     min-height: 100%;
     height:100%;
     margin:0;
+    z-index: 2;
     display:flex;
+    overflow:hidden;
 }
+
+button {
+    opacity:0.2;
+    position:relative;
+    display:flex;
+    z-index: 9999;
+
+    margin:10px;
+    height:20px;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 20s ease-in-out;
+  }
+  
+  .fade-in.opaque {
+    opacity: 1;
+  }
