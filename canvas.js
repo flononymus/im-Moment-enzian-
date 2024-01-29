@@ -1,16 +1,20 @@
 var canvasBack= document.getElementById('canvasBackground');
+var canvasFade = document.getElementById('canvasFade');
 var canvasFront = document.getElementById('canvasFront');
 var canvasDetail = document.getElementById('canvasDetail');
 var ctxBack = canvasBack.getContext('2d');
+var ctxFade = canvasFade.getContext('2d');
 var ctxFront = canvasFront.getContext('2d');
 var ctxDetail = canvasDetail.getContext('2d');
 
 canvasBack.width = window.innerWidth;
 canvasFront.width = window.innerWidth;
 canvasDetail.width = window.innerWidth;
+canvasFade.width = window.innerWidth;
 canvasBack.height = window.innerHeight;
 canvasFront.height = window.innerHeight;
 canvasDetail.height = window.innerHeight;
+canvasFade.height = window.innerHeight;
 
 var isSmoking= false;
 
@@ -240,6 +244,7 @@ function toggleSmoking() {
     console.log('smoke')
   }
   else {
+    ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
     console.log('not smoke');
   }
 }
@@ -249,8 +254,8 @@ function animateSmoke() {
     ctxDetail.clearRect(0,0,canvasDetail.width, canvasDetail.height);
 
     for (var i = 0; i < 50; i++) {
-      var x = 100 //+ Math.random() * 50;
-      var y = 150 //+ Math.random() * 100;
+      var x = 100 + Math.random() * 50;
+      var y = 150 + Math.random() * 100;
       ctxDetail.beginPath();
       ctxDetail.arc(x,y,Math.random()*10,0,Math.PI * 2);
       ctxDetail.fillStyle = 'rgba(200,200,200,0.5';
