@@ -4,37 +4,60 @@ var ctxDetail = canvasDetail.getContext('2d');
 canvasDetail.width = window.innerWidth;
 canvasDetail.height = window.innerHeight;
 
-var isSmoking= false;
+var isSmokingOld= false;
 
 var smokeButton= document.createElement('button');
-smokeButton.textContent = "Smoke Test"
-smokeButton.onclick = toggleSmoking;
+smokeButton.textContent = "Old Smoke"
+smokeButton.onclick = toggleSmokingOld;
 document.body.appendChild(smokeButton);
 
-function toggleSmoking() {
-  isSmoking = !isSmoking;
-  if (isSmoking) {
-    animateSmoke();
+function toggleSmokingOld() {
+  isSmokingOld = !isSmokingOld;
+  if (isSmokingOld) {
+    animateSmokeOld();
     console.log('smoke')
   }
   else {
     ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
+    time = 0;
     console.log('not smoke');
   }
 }
 
-function animateSmoke() {
-  if (isSmoking) {
+var smokeObj= new Image();
+smokeObj.src = "/images/smoke_test1.png"
+
+let time = 0;
+let smokeOpacity = 1;
+
+function animateSmokeOld() {
+  if (isSmokingOld) {
     ctxDetail.clearRect(0,0,canvasDetail.width, canvasDetail.height);
 
-    for (var i = 0; i < 50; i++) {
-      var x = 100 + Math.random() * 50;
-      var y = 150 + Math.random() * 100;
-      ctxDetail.beginPath();
-      ctxDetail.arc(x,y,Math.random()*10,0,Math.PI * 2);
-      ctxDetail.fillStyle = 'rgba(200,200,200,0.5';
-      ctxDetail.fill();
+    for (var i = 0; i < 1; i++) {
+    //   var x = 800 + Math.random() * 50;
+    //   var y = 500 + Math.random() * 350;
+    var x = 800;
+    // var y = 500 - 100 * Math.sin(time);  
+    var y = 800  - time * 10;
+    smokeOpacity = 1 - time/30;
+    ctxDetail.globalAlpha = smokeOpacity
+    y += 0.1;
+
+    ctxDetail.drawImage(smokeObj,x,y,smokeObj.width, smokeObj.height);
+
+    time += 0.1;
+
+    if (smokeOpacity <= -0.2) {
+        ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
+        time = 0;
     }
-    requestAnimationFrame(animateSmoke);
+
+    // if (y <= 0){
+    //     y = 0;
+    // }
+    requestAnimationFrame(animateSmokeOld);
+    console.log(smokeOpacity)
   }
+};
 }

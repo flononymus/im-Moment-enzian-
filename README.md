@@ -4,41 +4,34 @@
 
 peaceful atmospheric images/environment to get a break from a busy day, to relax with, to get lost in, and to tune out. 
 
+## To-Do:
+
+### <ins>Ideas:</ins>
 - [ ] unpixelated images --> photoshop out windows
 - [ ] night sky --> draw stars
 - [ ] rain --> draw clouds
 - [ ] evening --> draw airplane with trail
-- [ ] 
+- [ ] figure out pixelate filter --> for rain
+- [ ] Parallax clouds
 
-## To-Do:
 
-### <ins>General:</ins>
-
+### <ins>Infrastructure:</ins>
+- [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to host from github?
-
-- [ ] figure out pixelate filter
-
-- [ ] Move rain to different file?
+- [ ] figure out how to render on my nextjs page?
 
 - [ ] slider to fade between?
-
-- [ ] Figure out how to make it centered on screen
-- [ ] Figure out how to make a more calm background (not white) 
-
-- [ ] Figure out how to make different images appear first
-- [ ] then figure out how to make them fade in (globalAlpha, look into save() and restore())
-
-- [ ] Fade between images -> maybe make two canvases?
-
-- [ ] Take image --> pixelate --> add elements
-
-- [ ] figure out how to render on my nextjs page?
 
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
+
+### <ins>Completed:</ins>
 - [x] Figure out how to make it fill screen (resizing up and down)
 - [x] Add buttons/toggles for all 5 images
+- [x] Move rain to different file?
+- [x] Fade between images -> maybe make two canvases?
+
 
 ### Ideas for images:
 

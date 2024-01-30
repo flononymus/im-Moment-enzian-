@@ -8,11 +8,15 @@ var w = canvasFront.width;
 var h = canvasFront.height;
 var rainInterval;
 
-ctxFront.strokeStyle = 'rgba(50,50,50,0.2)';
-ctxFront.lineWidth = 2.5;
+ctxFront.strokeStyle = 'rgba(50,50,50,0.1)';
+// ctxFront.strokeStyle = 'rgba(0,0,0,0.05)';
+ctxFront.lineWidth = 4.5;
 ctxFront.lineCap ='square';
+// ctxFront.filter = "blur(1px)"
 var init = [];
-var maxParts = 1000;
+var maxParts = 800;
+// var maxParts = 500;
+// var maxParts = 100;
 for(var a = 0; a < maxParts; a++) {
   init.push({
     x: Math.random() * w,
