@@ -8,6 +8,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>General:</ins>
 
+- [ ] Figure out how to host from github?
+
 - [ ] figure out pixelate filter
 
 - [ ] Move rain to different file?
