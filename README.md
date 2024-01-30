@@ -4,6 +4,12 @@
 
 peaceful atmospheric images/environment to get a break from a busy day, to relax with, to get lost in, and to tune out. 
 
+- [ ] unpixelated images --> photoshop out windows
+- [ ] night sky --> draw stars
+- [ ] rain --> draw clouds
+- [ ] evening --> draw airplane with trail
+- [ ] 
+
 ## To-Do:
 
 ### <ins>General:</ins>
