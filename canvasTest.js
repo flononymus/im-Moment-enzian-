@@ -2,7 +2,7 @@ var canvasDetail = document.getElementById('canvasDetail');
 var ctxDetail = canvasDetail.getContext('2d');
 
 canvasDetail.width = window.innerWidth;
-canvasDetail.height = window.innerHeight;
+canvasDetail.height = window.innerWidth;
 
 var isSmokingOld= false;
 
@@ -37,27 +37,37 @@ function animateSmokeOld() {
     for (var i = 0; i < 1; i++) {
     //   var x = 800 + Math.random() * 50;
     //   var y = 500 + Math.random() * 350;
-    var x = 800;
-    // var y = 500 - 100 * Math.sin(time);  
-    var y = 800  - time * 10;
-    smokeOpacity = 1 - time/30;
+    var x = ((canvasDetail.width/5)*3)+35;
+    // var y = 800  - time * 10;
+    var y = ((canvasDetail.height/5)*3)+40 - time*5;
+    // smokeOpacity = 1 - time/30;
+    // ctxDetail.globalAlpha = smokeOpacity
+    // y += 0.1;
+    smokeOpacity = 1- (1 - time/20);
     ctxDetail.globalAlpha = smokeOpacity
     y += 0.1;
 
     ctxDetail.drawImage(smokeObj,x,y,smokeObj.width, smokeObj.height);
+    // ctxDetail.drawImage(smokeObj,100,100,canvasDetail.width,canvasDetail.height);
 
     time += 0.1;
 
-    if (smokeOpacity <= -0.2) {
-        ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
-        time = 0;
-    }
+    if (time >= 50) {
+      ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
+      time = 0;
+      smokeOpacity = 0;
+  }
+
+    // if (smokeOpacity <= -0.2) {
+    //     ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
+    //     time = 0;
+    // }
 
     // if (y <= 0){
     //     y = 0;
     // }
     requestAnimationFrame(animateSmokeOld);
-    console.log(smokeOpacity)
+    // console.log(smokeOpacity)
   }
 };
 }

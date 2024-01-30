@@ -16,10 +16,11 @@ var duration = 2000;
 var imageDay= new Image();
 imageDay.onload = drawImages;
 imageDay.src = "images/test_day.png"
+// imageDay.src = "images/test_clouds.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages
-imageClouds.src = "images/test_clouds.png"
+imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.onload = drawImages;
@@ -27,14 +28,15 @@ imageHalfNight.src = "images/test_night1.png"
 
 var imageMoreNight= new Image();
 imageMoreNight.onload = drawImages;
-imageMoreNight.src = "images/test_night2.png"
+imageMoreNight.src = "images/test_night5.png"
 
 var imageFullNight= new Image();
 imageFullNight.onload = drawImages;
-imageFullNight.src = "images/test_night3.png"
+imageFullNight.src = "images/test_night6.png"
+// imageFullNight.src = "images/test_night3.png"
 
 var cloudsButton= document.createElement('button');
-cloudsButton.textContent = "Cloudy"
+cloudsButton.textContent = "Clouds"
 cloudsButton.onclick = cloudImage;
 document.body.appendChild(cloudsButton);
 
@@ -44,24 +46,24 @@ dayButton.onclick= dayImage;
 document.body.appendChild(dayButton);
 
 var halfNightButton = document.createElement('button');
-halfNightButton.textContent = "Half night"
+halfNightButton.textContent = "Night1"
 halfNightButton.onclick = halfNight;
 document.body.appendChild(halfNightButton);
 
 var moreNightButton= document.createElement('button');
-moreNightButton.textContent = "More night"
+moreNightButton.textContent = "Night2"
 moreNightButton.onclick = moreNight;
 document.body.appendChild(moreNightButton);
 
 var fullNightButton = document.createElement('button');
-fullNightButton.textContent = "Full night"
+fullNightButton.textContent = "Night3"
 fullNightButton.onclick = fullNight;
 document.body.appendChild(fullNightButton);
 
-var noneButton= document.createElement('button');
-noneButton.textContent = "None"
-noneButton.onclick = noImage;
-document.body.appendChild(noneButton);
+// var noneButton= document.createElement('button');
+// noneButton.textContent = "None"
+// noneButton.onclick = noImage;
+// document.body.appendChild(noneButton);
 
 
 document.getElementById('canvasBackground').onwheel = function(event){
@@ -72,8 +74,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 }
 
 if (currentImage === null) {
-  // currentImage = 'clouds'
-  currentImage = 'moreNight';
+  currentImage = 'clouds'
+  // currentImage = 'moreNight';
   // currentImage = 'fullNight'
   // currentImage = 'halfNight';
 };

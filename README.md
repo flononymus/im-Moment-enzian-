@@ -7,6 +7,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ## To-Do:
 
 ### <ins>Ideas:</ins>
+
+- [ ] Bird flying by
 - [ ] unpixelated images --> photoshop out windows
 - [ ] night sky --> draw stars
 - [ ] rain --> draw clouds
@@ -14,8 +16,13 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] figure out pixelate filter --> for rain
 - [ ] Parallax clouds
 
+- [ ] smoke not working at all
+
 
 ### <ins>Infrastructure:</ins>
+
+- [ ] some pixel color movement
+
 - [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to host from github?
 - [ ] figure out how to render on my nextjs page?
@@ -25,13 +32,11 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
-
 ### <ins>Completed:</ins>
 - [x] Figure out how to make it fill screen (resizing up and down)
 - [x] Add buttons/toggles for all 5 images
 - [x] Move rain to different file?
 - [x] Fade between images -> maybe make two canvases?
-
 
 ### Ideas for images:
 
@@ -56,7 +61,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] svg to canvas converter
 
 ### <ins>HTML5 Canvas:</ins>
-- [ ] Test html5 canvas
+- [x] Test html5 canvas
 
 ### <ins>Mind-Map:</ins>
 
