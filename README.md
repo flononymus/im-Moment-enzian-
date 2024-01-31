@@ -9,8 +9,13 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ### <ins>Ideas:</ins>
 
 - [ ] Birds flying by
-- [ ] night sky --> draw stars
+
+- [x] night sky --> draw stars
+  - [ ] Make stars move (optional)
+  - [ ]
+
 - [ ] rain --> draw clouds
+
 - [ ] evening --> draw airplane with trail
 - [ ] figure out pixelate filter --> for rain
 - [ ] Parallax clouds
@@ -21,6 +26,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Infrastructure:</ins>
 
+- [ ] look into luminesce masks
 
 - [ ] Sort files into canvas/effects and scenes (with both)
 
