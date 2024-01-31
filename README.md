@@ -12,7 +12,9 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 - [x] night sky --> draw stars
   - [ ] Make stars move (optional)
-  - [ ]
+  - [ ] northern lights:
+    - [ ] https://codepen.io/jhereg00/pen/JKbQyR
+    - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
 - [ ] rain --> draw clouds
 
@@ -20,6 +22,26 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - make trail dissapear after a while
 
 - [ ] figure out pixelate filter --> for rain
+  (You don't need to iterate pixel buffer to create a pixelating effect.
+  Simply turn off image smoothing and enlarge a small version of the image to the canvas. This will also mean you can use any image as source (CORS-wise).
+
+  // get a block size (see demo for this approach)
+  var size = blocks.value / 100,
+      w = canvas.width * size,
+      h = canvas.height * size;
+
+  // draw the original image at a fraction of the final size
+  ctx.drawImage(img, 0, 0, w, h);
+
+  // turn off image aliasing
+  ctx.msImageSmoothingEnabled = false;
+  ctx.mozImageSmoothingEnabled = false;
+  ctx.webkitImageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false;
+
+  // enlarge the minimized image to full size    
+  ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);)
+
 - [ ] Parallax clouds
 
 
