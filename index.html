@@ -9,7 +9,6 @@
     <style>
         html {
           display:grid;
-          /* align-self: center; */
           aspect-ratio: 1/1;
         }
         html, 
@@ -20,15 +19,9 @@
         canvas {
           overflow: hidden;
         }
-  
         body {
           min-height: 100%;
         }
-
-        .button-container button {
-          margin: 5px;
-          position:absolute;
-          }
       </style>
 </head>
 <body>
@@ -37,12 +30,18 @@
     <canvas id="canvasFade"> </canvas>
     <canvas id="canvasFront"> </canvas>
     <canvas id="canvasDetail"> </canvas>
+    <canvas id="canvasTest"> </canvas>
+
+    <canvas id='canvasButtons'> </canvas>
   </div>
   <script src="canvas.js"> </script>
   <!-- <script src="canvasFadeTest.js"> </script> -->
   <script src="canvasRain.js"> </script>
   <script src="smoke.js"></script>
   <script src="canvasSmoke.js"> </script>
-  <!-- <script src="canvasTest.js"> </script> -->
+  <script src="canvasTest.js"> </script>
+
+  <script src="canvasButtons.js"> </script>
+
 </body>
 </html>

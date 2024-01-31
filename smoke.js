@@ -74,11 +74,20 @@ canvasHeight = window.innerHeight;
     }
     
     function updateParticle(particle, deltatime){
-        particle.x += particle.vx * deltatime
+        particle.x += particle.vx * deltatime 
+        // particle.x += (particle.vx * deltatime)/2
         particle.y += particle.vy * deltatime
+        // particle.y += (particle.vy * deltatime)/2
         var frac = Math.sqrt(particle.age / particle.lifetime)
         particle.vy = (1-frac)*particle.startvy
         particle.age+=deltatime
+
+        // particle.x += particle.vx * deltatime/4
+        // particle.y += particle.vy * deltatime/4
+        // var frac = Math.sqrt(particle.age / particle.lifetime)
+        // particle.vy = (1-frac)*particle.startvy
+        // particle.age+=deltatime/4
+
         particle.scale=frac*particle.finalScale
     }
     
@@ -101,6 +110,7 @@ canvasHeight = window.innerHeight;
     
         function updateAndDrawParticles(deltatime){
             context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+            // ctxDetail.clearRect(0,0,ctxDetail.width,ctxDetail.height)
     
             particles.forEach(function(p){ updateParticle(p, deltatime) })
             particles = particles.filter(function(p){ return p.age < p.lifetime })

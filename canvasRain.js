@@ -8,13 +8,15 @@ var w = canvasFront.width;
 var h = canvasFront.height;
 var rainInterval;
 
-ctxFront.strokeStyle = 'rgba(50,50,50,0.2)';
+ctxFront.strokeStyle = 'rgba(50,50,50,0.15)';
 // ctxFront.strokeStyle = 'rgba(0,0,0,0.05)';
-ctxFront.lineWidth = 4.5;
+// ctxFront.lineWidth = 4.5;
+ctxFront.lineWidth = 3;
 ctxFront.lineCap ='square';
 // ctxFront.filter = "blur(1px)"
 var init = [];
-var maxParts = 700;
+// var maxParts = 700;
+var maxParts = 1000;
 // var maxParts = 500;
 // var maxParts = 100;
 for(var a = 0; a < maxParts; a++) {
@@ -37,10 +39,7 @@ var raindropImage = new Image();
 // raindropImage.src = "images/raindrop_test.png"
 raindropImage.src = "images/raindrop_test2.png"
 
-var rainButton= document.createElement('button');
-rainButton.textContent = "Rain Test"
-rainButton.onclick = toggleRain;
-document.body.appendChild(rainButton);
+// toggleRain();
 
 function toggleRain() {
   raining = !raining

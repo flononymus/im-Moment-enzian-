@@ -35,35 +35,6 @@ imageFullNight.onload = drawImages;
 imageFullNight.src = "images/test_night6.png"
 // imageFullNight.src = "images/test_night3.png"
 
-var cloudsButton= document.createElement('button');
-cloudsButton.textContent = "Clouds"
-cloudsButton.onclick = cloudImage;
-document.body.appendChild(cloudsButton);
-
-var dayButton = document.createElement('button');
-dayButton.textContent = "Day"
-dayButton.onclick= dayImage;
-document.body.appendChild(dayButton);
-
-var halfNightButton = document.createElement('button');
-halfNightButton.textContent = "Night1"
-halfNightButton.onclick = halfNight;
-document.body.appendChild(halfNightButton);
-
-var moreNightButton= document.createElement('button');
-moreNightButton.textContent = "Night2"
-moreNightButton.onclick = moreNight;
-document.body.appendChild(moreNightButton);
-
-var fullNightButton = document.createElement('button');
-fullNightButton.textContent = "Night3"
-fullNightButton.onclick = fullNight;
-document.body.appendChild(fullNightButton);
-
-// var noneButton= document.createElement('button');
-// noneButton.textContent = "None"
-// noneButton.onclick = noImage;
-// document.body.appendChild(noneButton);
 
 
 document.getElementById('canvasBackground').onwheel = function(event){

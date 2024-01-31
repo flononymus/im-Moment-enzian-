@@ -40,6 +40,29 @@
     position:absolute;
 }
 
+#canvasTest{    
+    /* z-index: 0; */
+    margin:0;
+    /* width: 1500px;
+    height: 1500px; */
+    /* width: 100vh; */
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasButtons{    
+    /* z-index: 0; */
+    margin:0;
+    /* width: 1500px;
+    height: 1500px; */
+    /* width: 100vh; */
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+
 #canvasContainer {
     position:relative;
 }
@@ -58,8 +81,21 @@ button {
     opacity:0.2;
     position:relative;
     display:flex;
+    flex-direction: row;
     z-index: 9999;
+
 
     margin:10px;
     height:20px;
   }
+
+/* button button2 {
+    opacity:0.2;
+    position:relative;
+    display:flex;
+    z-index: 9999;
+
+    margin:10px;
+    height:20px;    
+    top:30px;
+} */
