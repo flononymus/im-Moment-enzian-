@@ -80,13 +80,23 @@ body {
 button {
     opacity:0.2;
     position:relative;
-    display:flex;
+    /* display:flex; */
+    display:block;
     flex-direction: row;
     z-index: 9999;
 
-
     margin:10px;
     height:20px;
+  }
+  #firstRow {
+    display: flex
+  }
+
+  #secondRow {
+    top:30px;
+    display: flex; 
+    position:absolute;
+    /* flex-wrap: wrap; */
   }
 
 /* button button2 {

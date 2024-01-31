@@ -22,6 +22,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Infrastructure:</ins>
 
+- [ ] Figure out testing buttons (rain/smoke etc on second row)
+
 - [ ] Sort files into canvas/effects and scenes (with both)
 
 - [ ] some pixel color movement
