@@ -50,10 +50,10 @@ starsButton.textContent = "Stars"
 starsButton.onclick = toggleStars;
 document.body.appendChild(starsButton);
 
-var testButton= document.createElement('button');
-testButton.textContent = "Test"
-testButton.onclick = toggleTest;
-document.body.appendChild(testButton);
+var planeButton= document.createElement('button');
+planeButton.textContent = "Planes"
+planeButton.onclick = togglePlane;
+document.body.appendChild(planeButton);
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
@@ -70,5 +70,5 @@ secondRow.id = 'secondRow';
 secondRow.appendChild(rainButton);
 secondRow.appendChild(smokeButton);
 secondRow.appendChild(starsButton);
-secondRow.appendChild(testButton);
+secondRow.appendChild(planeButton);
 document.body.appendChild(secondRow);

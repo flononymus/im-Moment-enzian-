@@ -16,7 +16,9 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 - [ ] rain --> draw clouds
 
-- [ ] evening --> draw airplane with trail
+- [x] evening --> draw airplane with trail
+  - make trail dissapear after a while
+
 - [ ] figure out pixelate filter --> for rain
 - [ ] Parallax clouds
 
