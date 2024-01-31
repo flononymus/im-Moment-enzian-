@@ -1,62 +1,61 @@
 #canvasBackground {
-    /* z-index: 0; */
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasFade{
-    /* z-index: 0; */
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
     height: 100vh;
-    /* aspect-ratio: 1/1; */
     aspect-ratio:1;
     position:absolute;
 }
 
-#canvasFront {    
-    /* z-index: 0; */
+#canvasSmoke{
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
+    height: 100vh;
+    aspect-ratio:1;
+    position:absolute;
+}
+
+#canvasRain{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasFront {    
+    margin:0;
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasDetail {    
-    /* z-index: 0; */
     margin:0;
-    /* width: 1500px;
-    height: 1500px; */
-    /* width: 100vh; */
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasStars {    
+    margin:0;
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasTest{    
-    /* z-index: 0; */
     margin:0;
-    /* width: 1500px;
-    height: 1500px; */
-    /* width: 100vh; */
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasButtons{    
-    /* z-index: 0; */
     margin:0;
-    /* width: 1500px;
-    height: 1500px; */
-    /* width: 100vh; */
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
@@ -80,7 +79,6 @@ body {
 button {
     opacity:0.2;
     position:relative;
-    /* display:flex; */
     display:block;
     flex-direction: row;
     z-index: 9999;
@@ -89,6 +87,7 @@ button {
     height:20px;
   }
   #firstRow {
+    position:absolute;
     display: flex
   }
 
@@ -96,16 +95,4 @@ button {
     top:30px;
     display: flex; 
     position:absolute;
-    /* flex-wrap: wrap; */
   }
-
-/* button button2 {
-    opacity:0.2;
-    position:relative;
-    display:flex;
-    z-index: 9999;
-
-    margin:10px;
-    height:20px;    
-    top:30px;
-} */

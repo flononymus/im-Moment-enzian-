@@ -1,29 +1,29 @@
-var canvasDetail = document.getElementById('canvasDetail');
-var ctxDetail = canvasDetail.getContext('2d');
+var canvasSmoke= document.getElementById('canvasSmoke');
+var ctxSmoke= canvasSmoke.getContext('2d');
 
 var isSmoking= false;
 var smokeInterval;
 var smokeInterval2;
 
 (function (root, factory) {
-    /**/     if (typeof define === 'function' && define.amd) {
-    /**/         define([], factory);
-    /**/     } else if (typeof module === 'object' && module.exports) {
-    /**/         module.exports = factory();
-    /**/         module.exports.default = module.exports
-    /**/     } else {
-    /**/         root.smokemachine = root.SmokeMachine = factory();
-    /**/   }
-    /**/ }(typeof self !== 'undefined' ? self : this, function () {
+    if (typeof define === 'function' && define.amd) {
+    define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+    module.exports.default = module.exports
+    } else {
+    root.smokemachine = root.SmokeMachine = factory();
+    }
+    }(typeof self !== 'undefined' ? self : this, function () {
     
-    var canvasDetail = document.getElementById('canvasDetail');
-    var ctxDetail = canvasDetail.getContext('2d');
+    var canvasSmoke= document.getElementById('canvasSmoke');
+    var ctxSmoke= canvasSmoke.getContext('2d');
     
-    canvasDetail.width = window.innerWidth;
-    canvasDetail.height = window.innerHeight;
+    canvasSmoke.width = window.innerWidth;
+    canvasSmoke.height = window.innerHeight;
     
-    canvasWidth = window.innerWidth;
-    canvasHeight = window.innerHeight;
+    canvasSmoke= window.innerWidth;
+    canvasSmoke= window.innerHeight;
     
     
     
@@ -116,7 +116,6 @@ var smokeInterval2;
         
             function updateAndDrawParticles(deltatime){
                 context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-                // ctxDetail.clearRect(0,0,ctxDetail.width,ctxDetail.height)
         
                 particles.forEach(function(p){ updateParticle(p, deltatime) })
                 particles = particles.filter(function(p){ return p.age < p.lifetime })
@@ -160,16 +159,10 @@ var smokeInterval2;
                 addSmoke: addParticles,
             }
         }
-    
-    
-    
-        
-        
-        
-        /* Magic UMD Boilerplate Ending */
-        /**/ }))
 
-var party = SmokeMachine(ctxDetail, [50,50,50])
+        }))
+
+var party = SmokeMachine(ctxSmoke, [50,50,50])
 
 // toggleSmoking();
 
@@ -181,18 +174,22 @@ function toggleSmoking() {
         // canvasDetail.width = 1000;
         // canvasDetail.height = 1000;
         
-        canvasDetail.width = 1500;
-        canvasDetail.height = 1500;
+        canvasSmoke.width = 1500;
+        canvasSmoke.height = 1500;
 
         party.start()
         smokeInterval = setInterval(function() {
             // party.addSmoke(580, 500, 0.5); 
-            party.addSmoke(980, 1000, 0.5); 
+
+            // party.addSmoke(980, 1000, 0.5); 
+            party.addSmoke(980, 1000, 0.3); 
             
         }, 80); 
         smokeInterval2 = setInterval(function() {
-            party.addSmoke(650, 1150, 0.3); 
-            party.addSmoke(150, 1200, 0.6); 
+            // party.addSmoke(650, 1150, 0.3); 
+            // party.addSmoke(150, 1200, 0.6); 
+            party.addSmoke(650, 1150, 0.2); 
+            party.addSmoke(150, 1200, 0.3); 
             
         }, 120); 
     }
@@ -202,6 +199,6 @@ function toggleSmoking() {
         clearInterval(smokeInterval); 
         clearInterval(smokeInterval2);
 
-        // ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height);
+        ctxSmoke.clearRect(0,0,canvasSmoke.width,canvasSmoke.height);
     }
 }

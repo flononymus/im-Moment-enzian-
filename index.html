@@ -10,6 +10,7 @@
         html {
           display:grid;
           aspect-ratio: 1/1;
+          overflow: hidden;
         }
         html, 
         body {
@@ -28,19 +29,19 @@
   <div id="canvasContainer">
     <canvas id="canvasBackground"> </canvas>
     <canvas id="canvasFade"> </canvas>
-    <canvas id="canvasFront"> </canvas>
-    <canvas id="canvasDetail"> </canvas>
-    <canvas id="canvasTest"> </canvas>
-
+    <!-- <canvas id="canvasTest"> </canvas> -->
+    
+    
+    <canvas id="canvasSmoke"> </canvas>
+    <canvas id="canvasRain"> </canvas>
     <canvas id='canvasButtons'> </canvas>
+    <canvas id="canvasStars"> </canvas>
   </div>
+
   <script src="canvas.js"> </script>
-  <!-- <script src="canvasFadeTest.js"> </script> -->
+  <script src="effects/stars.js"> </script>
   <script src="effects/rain.js"> </script>
   <script src="effects/smoke.js"></script>
-  <!-- <script src="canvasSmoke.js"> </script> -->
-  <script src="canvasTest.js"> </script>
-
   <script src="effects/buttons.js"> </script>
 
 </body>

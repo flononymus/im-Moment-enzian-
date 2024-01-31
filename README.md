@@ -8,21 +8,19 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Ideas:</ins>
 
-- [ ] Bird flying by
-- [ ] unpixelated images --> photoshop out windows
+- [ ] Birds flying by
 - [ ] night sky --> draw stars
 - [ ] rain --> draw clouds
 - [ ] evening --> draw airplane with trail
 - [ ] figure out pixelate filter --> for rain
 - [ ] Parallax clouds
 
+
 - [ ] Foreground of window?
-
-
+- [ ] unpixelated images --> photoshop out windows
 
 ### <ins>Infrastructure:</ins>
 
-- [ ] Figure out testing buttons (rain/smoke etc on second row)
 
 - [ ] Sort files into canvas/effects and scenes (with both)
 
@@ -46,6 +44,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [x] Set "default" size for smoke canvas --> something like 1500px by 1500px, and then scale based on that
   - test 2000 or 2500 or 3000 px
   - test not square aspect ratio (1:2)
+- [x] Figure out testing buttons (rain/smoke etc on second row)
 
 ### Ideas for images:
 

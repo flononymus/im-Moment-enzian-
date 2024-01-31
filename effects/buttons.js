@@ -45,6 +45,11 @@ smokeButton.textContent = "New Smoke"
 smokeButton.onclick = toggleSmoking;
 document.body.appendChild(smokeButton);
 
+var starsButton= document.createElement('button');
+starsButton.textContent = "Stars"
+starsButton.onclick = toggleStars;
+document.body.appendChild(starsButton);
+
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
 firstRow.appendChild(cloudsButton);
@@ -59,4 +64,5 @@ var secondRow = document.createElement('div');
 secondRow.id = 'secondRow';
 secondRow.appendChild(rainButton);
 secondRow.appendChild(smokeButton);
+secondRow.appendChild(starsButton);
 document.body.appendChild(secondRow);
