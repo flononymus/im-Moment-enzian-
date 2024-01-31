@@ -8,6 +8,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Ideas:</ins>
 
+- [ ] Set "default" size for smoke canvas --> something like 1500px by 1500px, and then scale based on that
+
 - [ ] Bird flying by
 - [ ] unpixelated images --> photoshop out windows
 - [ ] night sky --> draw stars
