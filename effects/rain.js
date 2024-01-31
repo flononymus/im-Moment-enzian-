@@ -1,20 +1,22 @@
-var canvasFront = document.getElementById('canvasFront');
-var ctxFront = canvasFront.getContext('2d');
+var canvasRain= document.getElementById('canvasRain');
+var ctxRain= canvasRain.getContext('2d');
 
-canvasFront.width = window.innerWidth;
-canvasFront.height = window.innerHeight;
+canvasRain.width = window.innerWidth;
+canvasRain.height = window.innerHeight;
 
-var w = canvasFront.width;
-var h = canvasFront.height;
+var w = canvasRain.width;
+var h = canvasRain.height;
 var rainInterval;
 
-ctxFront.strokeStyle = 'rgba(50,50,50,0.2)';
+ctxRain.strokeStyle = 'rgba(50,50,50,0.15)';
 // ctxFront.strokeStyle = 'rgba(0,0,0,0.05)';
-ctxFront.lineWidth = 4.5;
-ctxFront.lineCap ='square';
+// ctxFront.lineWidth = 4.5;
+ctxRain.lineWidth = 3;
+ctxRain.lineCap ='square';
 // ctxFront.filter = "blur(1px)"
 var init = [];
-var maxParts = 700;
+// var maxParts = 700;
+var maxParts = 1000;
 // var maxParts = 500;
 // var maxParts = 100;
 for(var a = 0; a < maxParts; a++) {
@@ -37,10 +39,7 @@ var raindropImage = new Image();
 // raindropImage.src = "images/raindrop_test.png"
 raindropImage.src = "images/raindrop_test2.png"
 
-var rainButton= document.createElement('button');
-rainButton.textContent = "Rain Test"
-rainButton.onclick = toggleRain;
-document.body.appendChild(rainButton);
+// toggleRain();
 
 function toggleRain() {
   raining = !raining
@@ -50,23 +49,23 @@ function toggleRain() {
   }
   else {
     clearInterval(rainInterval);
-    ctxFront.clearRect(0,0,canvasFront.width,canvasFront.height);
+    ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
     console.log('clear')
   }
 }
 
 
 function drawRain() {
-  ctxFront.globalAlpha = 0.5;
+  ctxRain.globalAlpha = 0.5;
   // ctx.drawImage(currentImage,0,0,w,h);
-  ctxFront.clearRect(0, 0, w, h);
+  ctxRain.clearRect(0, 0, w, h);
 
   for(var c = 0; c < particles.length; c++) {
     var p = particles[c];
-    ctxFront.beginPath();
-    ctxFront.moveTo(p.x, p.y);
-    ctxFront.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
-    ctxFront.stroke();
+    ctxRain.beginPath();
+    ctxRain.moveTo(p.x, p.y);
+    ctxRain.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+    ctxRain.stroke();
     // ctxFront.drawImage(raindropImage, p.x, p.y, raindropImage.width/3, raindropImage.height*2);
   }
   move();

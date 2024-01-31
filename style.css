@@ -1,44 +1,85 @@
 #canvasBackground {
-    /* z-index: 0; */
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasFade{
-    /* z-index: 0; */
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
     height: 100vh;
-    /* aspect-ratio: 1/1; */
     aspect-ratio:1;
     position:absolute;
 }
 
-#canvasFront {    
-    /* z-index: 0; */
+#canvasSmoke{
     margin:0;
-    /* width: auto; */
-    /* width:100vh; */
+    height: 100vh;
+    aspect-ratio:1;
+    position:absolute;
+}
+
+#canvasRain{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasFront {    
+    margin:0;
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
 
 #canvasDetail {    
-    /* z-index: 0; */
     margin:0;
-    /* width: 1500px;
-    height: 1500px; */
-    /* width: 100vh; */
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
 }
+
+#canvasStars {    
+    margin:0;
+    height: 100vh;
+    /* width:100%; */
+    aspect-ratio: 1/1;
+    position:absolute;
+
+    mask-mode: alpha;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url(images/test\ mask3.png);
+    overflow: hidden;
+} 
+
+#canvasTest{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasButtons{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#mask {
+    margin:0;
+    height:100%;
+    aspect-ratio:1/1;
+    position:absolute;
+    mask-composite: add;
+    mask-repeat: no-repeat;
+    mask-image: url(images/test\ mask4.png);
+    overflow: hidden;
+    background-color: #8cffa0;
+}
+
 
 #canvasContainer {
     position:relative;
@@ -57,9 +98,20 @@ body {
 button {
     opacity:0.2;
     position:relative;
-    display:flex;
+    display:block;
+    flex-direction: row;
     z-index: 9999;
 
     margin:10px;
     height:20px;
+  }
+  #firstRow {
+    position:absolute;
+    display: flex
+  }
+
+  #secondRow {
+    top:30px;
+    display: flex; 
+    position:absolute;
   }
