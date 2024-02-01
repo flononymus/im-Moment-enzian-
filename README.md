@@ -10,6 +10,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 #### IMPORTANT:
   - [ ] figure out how to make every canvas the same size, and then scale based on that?
+  - [ ] implement something to keep the browser from crashing in case i fuck something up
+
+#### Fade effect
+  - [ ] speed up clouds etc to the side?
 
 #### Birds flying by
   - [ ]sequence of maybe 6 frames/images of flapping wings, repeating? 
@@ -18,8 +22,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] Fix speed/pixelated value
 
 #### Night sky --> draw stars
-  - [ ] Stars not scaling/resizing properly yet
-  - [ ] Make stars move (optional)
+  - [x] Make stars move --> either rotate or just move horizontally
+  - [x] Make stars "flicker" etc
+
+  - [x] Stars not scaling/resizing properly yet
 
 #### Night sky 2 ---> northern lights?
   - [ ] northern lights:
@@ -73,6 +79,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Figure out a good project structure
 
 ### <ins>Completed:</ins>
+- [x] Fade, fixed
 - [x] Figure out how to make it fill screen (resizing up and down)
 - [x] Add buttons/toggles for all 5 images
 - [x] Move rain to different file?

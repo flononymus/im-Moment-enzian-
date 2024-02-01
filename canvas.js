@@ -13,7 +13,7 @@ canvasBack.height = 1000;
 canvasFade.height = 1000;
 
 var currentImage = null; 
-var currentOpacity = 0;
+var currentOpacity = 1;
 var start = null;
 var duration = 2000;
 
@@ -21,12 +21,13 @@ var fps = 60;
 
 
 var imageDay= new Image();
-imageDay.onload = drawImages;
+// imageDay.onload = drawImages;
 imageDay.src = "images/test_day.png"
 // imageDay.src = "images/test_clouds.png"
 
 var imageClouds= new Image();
-// imageClouds.onload = drawImages
+imageClouds.onload = drawImages
+// imageClouds.onload = ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
@@ -61,8 +62,6 @@ if (currentImage === null) {
 function drawImages() {
 
   if (currentImage === 'clouds') {
-
-    // ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
 
     currentOpacity += 0.01;
     if (currentOpacity < 1) {

@@ -7,6 +7,10 @@ canvasPlane.width = 1000;
 canvasPlane.height = 1000;
 canvasTrail.width = 1000;
 canvasTrail.height = 1000;
+// canvasPlane.width = 500;
+// canvasPlane.height = 500;
+// canvasTrail.width = 500;
+// canvasTrail.height = 500;
 
 var plane = new Image;
 plane.src = "images/airplane test6.png"
