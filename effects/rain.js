@@ -1,8 +1,12 @@
 var canvasRain= document.getElementById('canvasRain');
 var ctxRain= canvasRain.getContext('2d');
 
-canvasRain.width = window.innerWidth;
-canvasRain.height = window.innerHeight;
+// canvasRain.width = window.innerWidth;
+// canvasRain.height = window.innerHeight;
+// canvasRain.width = 1000;
+// canvasRain.height = 1000;
+canvasRain.width = 500;
+canvasRain.height = 500;
 
 var w = canvasRain.width;
 var h = canvasRain.height;

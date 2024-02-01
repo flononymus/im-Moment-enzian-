@@ -19,11 +19,20 @@ var smokeInterval2;
     var canvasSmoke= document.getElementById('canvasSmoke');
     var ctxSmoke= canvasSmoke.getContext('2d');
     
-    canvasSmoke.width = window.innerWidth;
-    canvasSmoke.height = window.innerHeight;
+    // canvasSmoke.width = window.innerWidth;
+    // canvasSmoke.height = window.innerHeight;
+    canvasSmoke.width = 1000;
+    canvasSmoke.height = 1000;
+    // canvasSmoke.width = 10;
+    // canvasSmoke.height = 10;
+
+    ctxSmoke.msImageSmoothingEnabled = false;
+    ctxSmoke.mozImageSmoothingEnabled = false;
+    ctxSmoke.webkitImageSmoothingEnabled = false;
+    ctxSmoke.imageSmoothingEnabled = false;
     
-    canvasSmoke= window.innerWidth;
-    canvasSmoke= window.innerHeight;
+    // canvasSmoke= window.innerWidth;
+    // canvasSmoke= window.innerHeight;
     
     
     
@@ -115,7 +124,8 @@ var smokeInterval2;
                 preDrawCallback=function(){}
         
             function updateAndDrawParticles(deltatime){
-                context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+                // context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+                context.clearRect(0, 0, canvasSmoke.width, canvasSmoke.height);
         
                 particles.forEach(function(p){ updateParticle(p, deltatime) })
                 particles = particles.filter(function(p){ return p.age < p.lifetime })

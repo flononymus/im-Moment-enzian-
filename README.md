@@ -8,19 +8,40 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Ideas:</ins>
 
-- [ ] Birds flying by
+#### IMPORTANT:
+  - [ ] figure out how to make every canvas the same size, and then scale based on that?
+  - [ ] implement something to keep the browser from crashing in case i fuck something up
 
-- [x] night sky --> draw stars
-  - [ ] Make stars move (optional)
+#### Fade effect
+  - [ ] speed up clouds etc to the side?
+  - [ ] Also fade in plane/stars etc when toggle
+
+#### Birds flying by
+  - [ ]sequence of maybe 6 frames/images of flapping wings, repeating? 
+
+#### Smoking chimneys
+  - [ ] Fix speed/pixelated value
+
+#### Night sky --> draw stars
+  - [x] Make stars move --> either rotate or just move horizontally
+  - [x] Make stars "flicker" etc
+
+  - [x] Stars not scaling/resizing properly yet
+
+#### Night sky 2 ---> northern lights?
   - [ ] northern lights:
     - [ ] https://codepen.io/jhereg00/pen/JKbQyR
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
-- [ ] rain --> draw clouds
+#### rain --> draw clouds
+  - [ ] Various levels of opacity, overlaying
+  - [ ] Parallax clouds
 
-- [x] evening --> draw airplane with trail
-  - make trail dissapear after a while
+#### Evening --> draw airplane with trail
+  - [ ] make scale properly
+  - [ ] make trail dissapear after a while
 
+#### Rest
 - [ ] figure out pixelate filter --> for rain
   (You don't need to iterate pixel buffer to create a pixelating effect.
   Simply turn off image smoothing and enlarge a small version of the image to the canvas. This will also mean you can use any image as source (CORS-wise).
@@ -42,8 +63,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   // enlarge the minimized image to full size    
   ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);)
 
-- [ ] Parallax clouds
-
 
 - [ ] Foreground of window?
 - [ ] unpixelated images --> photoshop out windows
@@ -51,21 +70,17 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ### <ins>Infrastructure:</ins>
 
 - [ ] look into luminesce masks
-
 - [ ] Sort files into canvas/effects and scenes (with both)
-
 - [ ] some pixel color movement
-
 - [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to host from github?
 - [ ] figure out how to render on my nextjs page?
-
 - [ ] slider to fade between?
-
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
 ### <ins>Completed:</ins>
+- [x] Fade, fixed
 - [x] Figure out how to make it fill screen (resizing up and down)
 - [x] Add buttons/toggles for all 5 images
 - [x] Move rain to different file?
@@ -104,19 +119,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ### <ins>Mind-Map:</ins>
 
 ```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#850FA6',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#fff',
-      'lineColor': '#fff',
-      'secondaryColor': '#850FA6',
-      'tertiaryColor': '#850FA6'
-    }
-  }
-}%%
 mindmap
     )Thema: "im Moment"(
 

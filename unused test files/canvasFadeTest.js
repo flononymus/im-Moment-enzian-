@@ -3,10 +3,14 @@ var canvasFade = document.getElementById('canvasFade');
 var ctxBack = canvasBack.getContext('2d');
 var ctxFade = canvasFade.getContext('2d');
 
-canvasBack.width = window.innerWidth;
-canvasFade.width = window.innerWidth;
-canvasBack.height = window.innerHeight;
-canvasFade.height = window.innerHeight;
+// canvasBack.width = window.innerWidth;
+// canvasFade.width = window.innerWidth;
+// canvasBack.height = window.innerHeight;
+// canvasFade.height = window.innerHeight;
+canvasBack.width = 1000;
+canvasFade.width = 1000;
+canvasBack.height = 1000;
+canvasFade.height = 1000;
 
 var currentImage = null; 
 var currentOpacity = 0;
@@ -19,7 +23,7 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages
-imageClouds.src = "images/test_clouds.png"
+imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.onload = drawImages;
@@ -33,37 +37,6 @@ var imageFullNight= new Image();
 imageFullNight.onload = drawImages;
 // imageFullNight.src = "images/test_night3.png"
 imageFullNight.src = "images/test_night5.png"
-
-
-var cloudsButton= document.createElement('button');
-cloudsButton.textContent = "Cloudy"
-cloudsButton.onclick = cloudImage;
-document.body.appendChild(cloudsButton);
-
-var dayButton = document.createElement('button');
-dayButton.textContent = "Day"
-dayButton.onclick= dayImage;
-document.body.appendChild(dayButton);
-
-var halfNightButton = document.createElement('button');
-halfNightButton.textContent = "Half night"
-halfNightButton.onclick = halfNight;
-document.body.appendChild(halfNightButton);
-
-var moreNightButton= document.createElement('button');
-moreNightButton.textContent = "More night"
-moreNightButton.onclick = moreNight;
-document.body.appendChild(moreNightButton);
-
-var fullNightButton = document.createElement('button');
-fullNightButton.textContent = "Full night"
-fullNightButton.onclick = fullNight;
-document.body.appendChild(fullNightButton);
-
-var noneButton= document.createElement('button');
-noneButton.textContent = "None"
-noneButton.onclick = noImage;
-document.body.appendChild(noneButton);
 
 
 document.getElementById('canvasBackground').onwheel = function(event){

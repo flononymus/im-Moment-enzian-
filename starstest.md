@@ -149,71 +149,66 @@ var starPoints = [
 ];
 var canvasStars= document.getElementById('canvasStars');
 var ctxStars= canvasStars.getContext('2d');
-canvasStars.width = 850;
-canvasStars.height = 850;
-// canvasStars.width = 750;
-// canvasStars.height = 750;
+// canvasStars.width = window.innerWidth;
+// canvasStars.height = window.innerWidth;
+// canvasStars.width = 1000;
+// canvasStars.height = 1000;
+// canvasStars.width = 850;
+// canvasStars.height = 850;
+canvasStars.width = 550;
+canvasStars.height = 550;
 
 var enableStars = false;
-let rotationAngle = 0;
+var rotation = 0;
 var fps = 60;
 
 
 let xStars = 3;
 let yStars = 3;
 
-let currentOpacityStars= 0;
-
 const starCenterX = canvasStars.width/2;
 const starCenterY = canvasStars.height/2; 
 
-// ctxStars.filter = 'blur(1px)'
-
-// toggleStars();
+toggleStars();
 
 
 function stars() {
   ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height);
 
-  ctxStars.save();
-  ctxStars.translate(canvasStars.width / 2, canvasStars.height / 2);
-  ctxStars.rotate(rotationAngle);
-  ctxStars.translate(-canvasStars.width / 2, -canvasStars.height / 2);
+    // rotation += 0.0005
+    // if (rotation < 0.01) {
+  
+    // setTimeout(function() {
+    //   ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height);
+    //   requestAnimationFrame(stars);
+    //     ctxStars.rotate(rotation);
+    //     console.log(rotation);
+    //   }, 1000 / fps);
+    // }
+
+  // ctxStars.translate(canvasStars.width/2,canvasStars.height/2);
+  // ctxStars.rotate(rotation);
+  // ctxStars.drawImage(canvasStars,-starCenterX,-starCenterY,canvasStars.width,canvasStars.height);
+
 
   starPoints.forEach(star => {
-    let {xPos,yPos,alpha,size} = star;
+  let {xPos,yPos,alpha,size} = star;
 
-    if (Math.random() > 0.005) {
-      ctxStars.globalAlpha = 1;
-      ctxStars.fillStyle = '#ffff8f';
-      // ctxStars.fillStyle = 'rgba(96,165,137,1)'
-    }
-    else {
-      ctxStars.globalAlpha = alpha;
-      // ctxStars.fillStyle = 'rgba(96,165,137,1)'
-      ctxStars.fillStyle = '#ffffff'
-      // ctxStars.fillStyle = '#000000'
-    }
-
-  // ctxStars.fillStyle = '#ffffff';
-  // ctxStars.globalAlpha = alpha;
+  ctxStars.fillStyle = '#ffff8f';
+  ctxStars.globalAlpha = alpha;
   ctxStars.fillRect(xPos,yPos,size,size);
   });
-  ctxStars.restore();
-  rotationAngle += (Math.PI / 180 * 0.005)
+
 };
-
-
 
 function toggleStars() {
   enableStars = !enableStars
   console.log('stars', enableStars)
   if (enableStars) {
+    // rotation = 0;
     stars();
-    starInterval = setInterval(stars, 1000 / fps);
   }
   else {
     ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)
-    clearInterval(starInterval);
   }
 }
