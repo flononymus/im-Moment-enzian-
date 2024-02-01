@@ -162,6 +162,8 @@ var fps = 60;
 let xStars = 3;
 let yStars = 3;
 
+let currentOpacityStars= 0;
+
 const starCenterX = canvasStars.width/2;
 const starCenterY = canvasStars.height/2; 
 
@@ -202,13 +204,13 @@ function stars() {
 };
 
 
+
 function toggleStars() {
   enableStars = !enableStars
   console.log('stars', enableStars)
   if (enableStars) {
     stars();
     starInterval = setInterval(stars, 1000 / fps);
-
   }
   else {
     ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)

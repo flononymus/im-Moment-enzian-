@@ -35,11 +35,9 @@ function togglePlane() {
   enablePlane= !enablePlane
   console.log('Plane', enablePlane)
   if (enablePlane) {
-    console.log('test')
     movePlane();
   }
   else {
-    console.log('not')
     x = -10;
     y = 40;
     ctxPlane.clearRect(0,0,canvasPlane.width, canvasPlane.height);

@@ -14,6 +14,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 #### Fade effect
   - [ ] speed up clouds etc to the side?
+  - [ ] Also fade in plane/stars etc when toggle
 
 #### Birds flying by
   - [ ]sequence of maybe 6 frames/images of flapping wings, repeating? 
