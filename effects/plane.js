@@ -13,21 +13,21 @@ canvasTrail.height = 1000;
 // canvasTrail.height = 500;
 
 var plane = new Image;
-plane.src = "images/airplane test6.png"
+plane.src = "images/airplane test3.png"
 
 var plane2 = new Image;
 plane2.src = "images/airplane test7.png"
 
 var trail = new Image;
 // trail.src = "images/trail test.png"
-trail.src = "images/trail test2.png"
+trail.src = "images/trail.png"
 ctxTrail.filter = "blur(3px)"
 // trail.blur(
 
 let x = -10;
 let y = 40;
-const speed = 0.25; 
-const yspeed = 0.05;
+const speed = 0.1; 
+const yspeed = 0.02;
 
 var enablePlane= false;
 
@@ -51,7 +51,7 @@ function movePlane() {
   ctxTrail.globalAlpha = 0.8;
   ctxTrail.clearRect(x - 400, 0, 10, canvasTrail.height);
 
-  ctxPlane.drawImage(plane2,x, y);
+  ctxPlane.drawImage(plane,x, y);
   ctxTrail.drawImage(trail,x,y);
   // ctxTrail.fillRect(x, y, dotSize, dotSize)
   x += speed;

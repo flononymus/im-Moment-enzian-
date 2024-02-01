@@ -50,6 +50,7 @@ function toggleRain() {
   if (raining) {
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
+    // ctxRain.globalAlpha = 0.1
   }
   else {
     clearInterval(rainInterval);

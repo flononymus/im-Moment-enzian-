@@ -180,24 +180,25 @@ function drawImages() {
 }
 
 function cloudImage() {
+  resetToggles();
   currentImage = "clouds";
   currentOpacity = 0;
   drawImages();
-  // setTimeout(function() {
-  //   toggleSmoking();
-  // },1000);
-  // setTimeout(function() {
-  //   toggleRain();
-  // },1000);
+  setTimeout(function() {
+    toggleSmoking();
+  },1000);
+  setTimeout(function() {
+    toggleRain();
+  },1000);
 }
 function dayImage() {
+  resetToggles();
   currentImage = "day";
   currentOpacity = 0;
   drawImages();
-
-  // setTimeout(function() {
-  //   togglePlane();
-  // },1000);
+  setTimeout(function() {
+    togglePlane();
+  },1000);
 }
 function halfNight() {
   currentImage = "halfNight";

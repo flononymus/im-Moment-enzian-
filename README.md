@@ -36,6 +36,11 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 #### rain --> draw clouds
   - [ ] Various levels of opacity, overlaying
   - [ ] Parallax clouds
+    - [ ] https://codepen.io/vavik96/pen/vEdMXM
+    - [ ] https://codepen.io/jackrugile/pen/nmexZj
+
+
+
 
 #### Evening --> draw airplane with trail
   - [ ] make scale properly

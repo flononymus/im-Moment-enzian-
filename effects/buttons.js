@@ -6,10 +6,10 @@ canvasButtons.height = window.innerWidth;
 // canvasButtons.width = 1000;
 // canvasButtons.height = 1000;
 
-var cloudsButton= document.createElement('button');
-cloudsButton.textContent = "Clouds"
-cloudsButton.onclick = cloudImage;
-document.body.appendChild(cloudsButton);
+var cloudyButton= document.createElement('button');
+cloudyButton.textContent = "Cloudy"
+cloudyButton.onclick = cloudImage;
+document.body.appendChild(cloudyButton);
 
 var dayButton = document.createElement('button');
 dayButton.textContent = "Day"
@@ -42,6 +42,12 @@ rainButton.textContent = "Rain Test"
 rainButton.onclick = toggleRain;
 document.body.appendChild(rainButton);
 
+var cloudsButton = document.createElement('button');
+cloudsButton.textContent = "More Clouds"
+cloudsButton.onclick = toggleClouds;
+document.body.appendChild(cloudsButton);
+
+
 var smokeButton= document.createElement('button');
 smokeButton.textContent = "New Smoke"
 smokeButton.onclick = toggleSmoking;
@@ -57,6 +63,11 @@ planeButton.textContent = "Planes"
 planeButton.onclick = togglePlane;
 document.body.appendChild(planeButton);
 
+var borealisButton= document.createElement('button');
+borealisButton.textContent = "Northern Lights"
+borealisButton.onclick = toggleBorealis;
+document.body.appendChild(borealisButton);
+
 var resetButton = document.createElement('button');
 resetButton.textContent = "Reset effects"
 resetButton.onclick = resetToggles;
@@ -64,7 +75,7 @@ document.body.appendChild(resetButton);
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
-firstRow.appendChild(cloudsButton);
+firstRow.appendChild(cloudyButton);
 firstRow.appendChild(dayButton);
 firstRow.appendChild(halfNightButton);
 firstRow.appendChild(moreNightButton);
@@ -75,9 +86,11 @@ document.body.appendChild(firstRow);
 var secondRow = document.createElement('div');
 secondRow.id = 'secondRow';
 secondRow.appendChild(rainButton);
+secondRow.appendChild(cloudsButton);
 secondRow.appendChild(smokeButton);
 secondRow.appendChild(starsButton);
 secondRow.appendChild(planeButton);
+secondRow.appendChild(borealisButton);
 secondRow.appendChild(resetButton);
 document.body.appendChild(secondRow);
 

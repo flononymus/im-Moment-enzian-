@@ -67,6 +67,46 @@
     position:absolute;
 }
 
+#canvasClouds1{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasClouds2{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasClouds3{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasBird{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasBorealis{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
+#canvasLights{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
 #canvasTest{    
     margin:0;
     height: 100vh;
