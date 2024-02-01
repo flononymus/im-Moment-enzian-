@@ -179,23 +179,25 @@ function drawImages() {
   }
 }
 
-
 function cloudImage() {
   currentImage = "clouds";
   currentOpacity = 0;
   drawImages();
-  setTimeout(function() {
-    toggleSmoking();
-  },1000);
+  // setTimeout(function() {
+  //   toggleSmoking();
+  // },1000);
+  // setTimeout(function() {
+  //   toggleRain();
+  // },1000);
 }
 function dayImage() {
   currentImage = "day";
   currentOpacity = 0;
   drawImages();
 
-  setTimeout(function() {
-    togglePlane();
-  },1000);
+  // setTimeout(function() {
+  //   togglePlane();
+  // },1000);
 }
 function halfNight() {
   currentImage = "halfNight";
@@ -204,6 +206,7 @@ function halfNight() {
   // toggleStars();
 }
 function moreNight() {
+  resetToggles();
   currentImage = "moreNight";
   currentOpacity = 0;
   drawImages();

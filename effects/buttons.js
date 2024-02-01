@@ -57,6 +57,11 @@ planeButton.textContent = "Planes"
 planeButton.onclick = togglePlane;
 document.body.appendChild(planeButton);
 
+var resetButton = document.createElement('button');
+resetButton.textContent = "Reset effects"
+resetButton.onclick = resetToggles;
+document.body.appendChild(resetButton);
+
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
 firstRow.appendChild(cloudsButton);
@@ -73,4 +78,42 @@ secondRow.appendChild(rainButton);
 secondRow.appendChild(smokeButton);
 secondRow.appendChild(starsButton);
 secondRow.appendChild(planeButton);
+secondRow.appendChild(resetButton);
 document.body.appendChild(secondRow);
+
+
+function resetToggles() {
+    if (raining) {
+        console.log('rain off')
+        toggleRain();
+    }
+    else {
+        console.log('rain already off')
+    }
+
+    if (enablePlane) {
+        console.log('plane off')
+        togglePlane();
+    }
+    else {
+        console.log('plane already off')
+    }
+
+    if (enableStars) {
+        console.log('stars off')
+        toggleStars();
+    }
+    else {
+        console.log('already not stars')
+    }
+
+
+    if (isSmoking) {
+        console.log('smoking off')
+        toggleSmoking();
+    }
+    else {
+        console.log('already not smoking')
+    }
+
+  }
