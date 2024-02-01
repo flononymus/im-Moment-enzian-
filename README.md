@@ -8,23 +8,33 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Ideas:</ins>
 
-- [ ] Birds flying by
-  - sequence of maybe 6 frames/images of flapping wings, repeating? 
+#### IMPORTANT:
+  - [ ] figure out how to make every canvas the same size, and then scale based on that?
 
-- [x] night sky --> draw stars
+#### Birds flying by
+  - [ ]sequence of maybe 6 frames/images of flapping wings, repeating? 
+
+#### Smoking chimneys
+  - [ ] Fix speed/pixelated value
+
+#### Night sky --> draw stars
   - [ ] Stars not scaling/resizing properly yet
   - [ ] Make stars move (optional)
+
+#### Night sky 2 ---> northern lights?
   - [ ] northern lights:
     - [ ] https://codepen.io/jhereg00/pen/JKbQyR
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
-- [ ] rain --> draw clouds
+#### rain --> draw clouds
   - [ ] Various levels of opacity, overlaying
   - [ ] Parallax clouds
 
-- [x] evening --> draw airplane with trail
+#### Evening --> draw airplane with trail
+  - [ ] make scale properly
   - [ ] make trail dissapear after a while
 
+#### Rest
 - [ ] figure out pixelate filter --> for rain
   (You don't need to iterate pixel buffer to create a pixelating effect.
   Simply turn off image smoothing and enlarge a small version of the image to the canvas. This will also mean you can use any image as source (CORS-wise).
@@ -47,24 +57,18 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);)
 
 
-
 - [ ] Foreground of window?
 - [ ] unpixelated images --> photoshop out windows
 
 ### <ins>Infrastructure:</ins>
 
 - [ ] look into luminesce masks
-
 - [ ] Sort files into canvas/effects and scenes (with both)
-
 - [ ] some pixel color movement
-
 - [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to host from github?
 - [ ] figure out how to render on my nextjs page?
-
 - [ ] slider to fade between?
-
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 

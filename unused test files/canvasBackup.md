@@ -20,6 +20,7 @@ var duration = 2000;
 var imageDay= new Image();
 imageDay.onload = drawImages;
 imageDay.src = "images/test_day.png"
+// imageDay.src = "images/test_clouds.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages
@@ -31,12 +32,13 @@ imageHalfNight.src = "images/test_night1.png"
 
 var imageMoreNight= new Image();
 imageMoreNight.onload = drawImages;
-imageMoreNight.src = "images/test_night2.png"
+imageMoreNight.src = "images/test_night5.png"
 
 var imageFullNight= new Image();
 imageFullNight.onload = drawImages;
+imageFullNight.src = "images/test_night6.png"
 // imageFullNight.src = "images/test_night3.png"
-imageFullNight.src = "images/test_night5.png"
+
 
 
 document.getElementById('canvasBackground').onwheel = function(event){
@@ -48,59 +50,20 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 
 if (currentImage === null) {
   currentImage = 'clouds'
+  // currentImage = 'moreNight';
+  // currentImage = 'fullNight'
+  // currentImage = 'halfNight';
 };
 
 function drawImages() {
-
   window.requestAnimationFrame(drawImages);
 
   if (currentImage === 'clouds') {
-    // ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
-
-    // ctxFade.globalAlpha = currentOpacity;
-    // ctxFade.drawImage(imageClouds,0,0,canvasFade.width,canvasFade.height);
-    // currentOpacity += 0.001;
-    //     if (currentOpacity > 1) currentOpacity = 1;
-    //     ctxFade.globalAlpha = currentOpacity;
-        // console.log(currentOpacity);
-
-        // if (currentOpacity >= 1) {
-          // window.requestAnimationFrame(drawImages);
-        //   clearTimeout(fadeTimeout)
-        //   fadeTimeout = setTimeout(function(){
-        //     ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        //     currentOpacity=0
-        //     ctxFade.globalAlpha = 0;
-        //     ctxBack.drawImage(imageClouds,0,0, canvasBack.width, canvasBack.height);
-        //   }, 500)
-        // }
-
-    // setTimeout(function(){
-    //   ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-    //   currentOpacity = 0;
-    //   ctxFade.globalAlpha = 0;
-      ctxBack.drawImage(imageClouds,0,0, canvasBack.width, canvasBack.height);
-    // }, 500)
+    ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
   }
 
   else if (currentImage === 'day') {
-    // ctxFade.globalAlpha = currentOpacity;
-    // ctxFade.drawImage(imageDay,0,0,canvasFade.width,canvasFade.height);
-    //   currentOpacity += 0.01;
-    //     if (currentOpacity > 1) currentOpacity = 1;
-    //     ctxFade.globalAlpha = currentOpacity;
-        // console.log(currentOpacity);
-
-    //     if (currentOpacity < 1) {
-    //       window.requestAnimationFrame(drawImages);
-    //     }
-
-    // setTimeout(function(){
-    //   ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-    //   currentOpacity = 0;
-    //   ctxFade.globalAlpha = 0;
-      ctxBack.drawImage(imageDay,0,0, canvasBack.width, canvasBack.height);
-    // }, 500)
+    ctxBack.drawImage(imageDay,0,0, canvasBack.width, canvasBack.height);
   }
 
 
@@ -117,10 +80,6 @@ function drawImages() {
     ctxBack.clearRect(0,0,canvasBack.width,canvasBack.height);
     ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
   }
-
-var fadeTimeout;
-
-
 }
 
 function cloudImage() {

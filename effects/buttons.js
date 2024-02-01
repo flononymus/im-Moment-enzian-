@@ -3,6 +3,8 @@ var ctxButtons= canvasButtons.getContext('2d');
 
 canvasButtons.width = window.innerWidth;
 canvasButtons.height = window.innerWidth;
+// canvasButtons.width = 1000;
+// canvasButtons.height = 1000;
 
 var cloudsButton= document.createElement('button');
 cloudsButton.textContent = "Clouds"

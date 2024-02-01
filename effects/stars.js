@@ -151,32 +151,26 @@ var starPoints = [
 
 var canvasStars= document.getElementById('canvasStars');
 var ctxStars= canvasStars.getContext('2d');
-canvasStars.width = window.innerWidth;
-canvasStars.height = window.innerWidth;
+// canvasStars.width = window.innerWidth;
+// canvasStars.height = window.innerWidth;
+// canvasStars.width = 1000;
+// canvasStars.height = 1000;
+canvasStars.width = 750;
+canvasStars.height = 750;
 
 var enableStars = false;
 var rotation = 0;
 
-// function randomStar(min,max) {
-//   return min + Math.random() * (max + 1 -min);
-// }
 
 function stars() {
 
-  const canvasSize = canvasStars.width * canvasStars.height;
+  // const canvasSize = canvasStars.width * canvasStars.height;
+  const canvasSize = 1000 * 1000
 
   if (starPoints) {  
     ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height);
 
-  // for (let i = 0; i < starsFraction; i++) {
-  //   let xPos = randomStar(2,canvasStars.width - 2);
-  //   let yPos = randomStar(2,(canvasStars.height)- 2);
-  //   let alpha = randomStar(0.1,1);
-  //   let size = randomStar(1,2);
-  //   console.log('xPos:', xPos, 'yPos:', yPos, 'alpha:', alpha, 'size:', size);
 
-
-  // starPoints.array.forEach(star => {
     starPoints.forEach(star => {
    let {xPos,yPos,alpha,size} = star;
 
