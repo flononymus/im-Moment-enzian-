@@ -9,17 +9,21 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ### <ins>Ideas:</ins>
 
 - [ ] Birds flying by
+  - sequence of maybe 6 frames/images of flapping wings, repeating? 
 
 - [x] night sky --> draw stars
+  - [ ] Stars not scaling/resizing properly yet
   - [ ] Make stars move (optional)
   - [ ] northern lights:
     - [ ] https://codepen.io/jhereg00/pen/JKbQyR
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
 - [ ] rain --> draw clouds
+  - [ ] Various levels of opacity, overlaying
+  - [ ] Parallax clouds
 
 - [x] evening --> draw airplane with trail
-  - make trail dissapear after a while
+  - [ ] make trail dissapear after a while
 
 - [ ] figure out pixelate filter --> for rain
   (You don't need to iterate pixel buffer to create a pixelating effect.
@@ -42,7 +46,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   // enlarge the minimized image to full size    
   ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);)
 
-- [ ] Parallax clouds
 
 
 - [ ] Foreground of window?
@@ -104,19 +107,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ### <ins>Mind-Map:</ins>
 
 ```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#850FA6',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#fff',
-      'lineColor': '#fff',
-      'secondaryColor': '#850FA6',
-      'tertiaryColor': '#850FA6'
-    }
-  }
-}%%
 mindmap
     )Thema: "im Moment"(
 
