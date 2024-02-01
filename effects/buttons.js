@@ -17,17 +17,17 @@ dayButton.onclick= dayImage;
 document.body.appendChild(dayButton);
 
 var halfNightButton = document.createElement('button');
-halfNightButton.textContent = "Night1"
+halfNightButton.textContent = "Kinda Night"
 halfNightButton.onclick = halfNight;
 document.body.appendChild(halfNightButton);
 
 var moreNightButton= document.createElement('button');
-moreNightButton.textContent = "Night2"
+moreNightButton.textContent = "Half Night"
 moreNightButton.onclick = moreNight;
 document.body.appendChild(moreNightButton);
 
 var fullNightButton = document.createElement('button');
-fullNightButton.textContent = "Night3"
+fullNightButton.textContent = "Full Night"
 fullNightButton.onclick = fullNight;
 document.body.appendChild(fullNightButton);
 
@@ -38,7 +38,7 @@ document.body.appendChild(noneButton);
 
 
 var rainButton= document.createElement('button');
-rainButton.textContent = "Rain Test"
+rainButton.textContent = "Rain"
 rainButton.onclick = toggleRain;
 document.body.appendChild(rainButton);
 
@@ -49,7 +49,7 @@ document.body.appendChild(cloudsButton);
 
 
 var smokeButton= document.createElement('button');
-smokeButton.textContent = "New Smoke"
+smokeButton.textContent = "Smoke"
 smokeButton.onclick = toggleSmoking;
 document.body.appendChild(smokeButton);
 
@@ -100,33 +100,25 @@ function resetToggles() {
         console.log('rain off')
         toggleRain();
     }
-    else {
-        console.log('rain already off')
-    }
-
     if (enablePlane) {
         console.log('plane off')
         togglePlane();
     }
-    else {
-        console.log('plane already off')
-    }
-
     if (enableStars) {
         console.log('stars off')
         toggleStars();
     }
-    else {
-        console.log('already not stars')
-    }
-
-
     if (isSmoking) {
         console.log('smoking off')
         toggleSmoking();
     }
-    else {
-        console.log('already not smoking')
+    if (cloudsActive) {
+        console.log('clouds off')
+        toggleClouds();
+    }
+    if (borealisActive) {
+        console.log('borealis off')
+        toggleBorealis();
     }
 
   }

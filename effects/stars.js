@@ -185,7 +185,8 @@ function stars() {
 
     if (Math.random() > 0.005) {
       ctxStars.globalAlpha = 1;
-      ctxStars.fillStyle = '#ffff8f';
+      // ctxStars.fillStyle = '#ffff8f';
+      ctxStars.fillStyle = '#ffffff';
       // ctxStars.fillStyle = 'rgba(96,165,137,1)'
     }
     else {

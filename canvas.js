@@ -17,7 +17,11 @@ var currentOpacity = 1;
 var start = null;
 var duration = 2000;
 
+var fadeSpeed = 0.01;
+var fadeSpeed = 0.005;
+
 var fps = 60;
+// var fps = 30;
 
 
 var imageDay= new Image();
@@ -63,7 +67,8 @@ function drawImages() {
 
   if (currentImage === 'clouds') {
 
-    currentOpacity += 0.01;
+    // currentOpacity += 0.01;
+    currentOpacity += 0.005;
     if (currentOpacity < 1) {
 
     setTimeout(function() {
@@ -86,7 +91,7 @@ function drawImages() {
 
   else if (currentImage === 'day') {
 
-    currentOpacity += 0.01;
+    currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
 
     setTimeout(function() {
@@ -109,7 +114,7 @@ function drawImages() {
 
   else if (currentImage === 'halfNight') {
 
-    currentOpacity += 0.01;
+    currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
 
     setTimeout(function() {
@@ -129,9 +134,8 @@ function drawImages() {
       }
   }
   else if (currentImage === 'moreNight') {
-    // ctxBack.drawImage(imageMoreNight,0,0,canvasBack.width,canvasBack.height);
 
-    currentOpacity += 0.01;
+    currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
 
     setTimeout(function() {
@@ -152,9 +156,8 @@ function drawImages() {
 
   }
   else if (currentImage === 'fullNight') {
-    // ctxBack.drawImage(imageFullNight,0,0,canvasBack.width,canvasBack.height);
 
-    currentOpacity += 0.01;
+    currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
 
     setTimeout(function() {
@@ -180,25 +183,25 @@ function drawImages() {
 }
 
 function cloudImage() {
-  resetToggles();
+  // resetToggles();
   currentImage = "clouds";
   currentOpacity = 0;
   drawImages();
-  setTimeout(function() {
-    toggleSmoking();
-  },1000);
-  setTimeout(function() {
-    toggleRain();
-  },1000);
+  // setTimeout(function() {
+  //   toggleSmoking();
+  // },1000);
+  // setTimeout(function() {
+  //   toggleRain();
+  // },1000);
 }
 function dayImage() {
-  resetToggles();
+  // resetToggles();
   currentImage = "day";
   currentOpacity = 0;
   drawImages();
-  setTimeout(function() {
-    togglePlane();
-  },1000);
+  // setTimeout(function() {
+  //   togglePlane();
+  // },1000);
 }
 function halfNight() {
   currentImage = "halfNight";
@@ -207,7 +210,7 @@ function halfNight() {
   // toggleStars();
 }
 function moreNight() {
-  resetToggles();
+  // resetToggles();
   currentImage = "moreNight";
   currentOpacity = 0;
   drawImages();

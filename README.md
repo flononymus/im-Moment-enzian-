@@ -23,6 +23,8 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] Fix speed/pixelated value
 
 #### Night sky --> draw stars
+  - [ ] Add comets/shooting stars?
+
   - [x] Make stars move --> either rotate or just move horizontally
   - [x] Make stars "flicker" etc
 
@@ -39,12 +41,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
     - [ ] https://codepen.io/vavik96/pen/vEdMXM
     - [ ] https://codepen.io/jackrugile/pen/nmexZj
 
-
-
-
 #### Evening --> draw airplane with trail
   - [ ] make scale properly
   - [ ] make trail dissapear after a while
+    - [ ] Look into globalCompositeOperation
 
 #### Rest
 - [ ] figure out pixelate filter --> for rain
