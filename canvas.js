@@ -49,9 +49,9 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 }
 
 if (currentImage === null) {
-  // currentImage = 'clouds'
+  currentImage = 'clouds'
   // currentImage = 'moreNight';
-  currentImage = 'fullNight'
+  // currentImage = 'fullNight'
   // currentImage = 'halfNight';
 };
 

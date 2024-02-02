@@ -13,10 +13,12 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] implement something to keep the browser from crashing in case i fuck something up
 
 #### Fade effect
-  - [ ] speed up clouds etc to the side?
-  - [ ] Also fade in plane/stars etc when toggle
+  - [x] speed up clouds etc to the side?
+  - [x] Also fade in clouds when toggle
+  - [ ] Fade rest
 
 #### BIRDS
+- [ ] scaling wrong, everything wrong --> figure out how i did it with the smoke
 - [ ] Idlebird --> animate back into idle position
 
   - [ ] Figure out how to create instances (of birds)
@@ -30,6 +32,9 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] Fix speed/pixelated value
 
 #### Stars
+- [ ] Stars not rotating around center 
+  - [ ] Check how i did it with clouds
+
   - [ ] Add comets/shooting stars?
   - [x] Make stars move --> either rotate or just move horizontally
   - [x] Make stars "flicker" etc

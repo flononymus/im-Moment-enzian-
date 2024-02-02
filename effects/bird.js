@@ -1,17 +1,23 @@
 var canvasBird= document.getElementById('canvasBird');
 var ctxBird = canvasBird.getContext('2d')
-canvasBird.width = window.innerWidth;
-canvasBird.height = window.innerHeight;
+// canvasBird.width = window.innerWidth;
+// canvasBird.height = window.innerHeight;
+canvasBird.width = 1200;
+canvasBird.height = 1200;
 
 var canvasBird2 = document.getElementById('canvasBird2');
 var ctxBird2 = canvasBird2.getContext('2d');
-canvasBird2.width = window.innerWidth;
-canvasBird2.height = window.innerHeight;
+// canvasBird2.width = window.innerWidth;
+// canvasBird2.height = window.innerHeight;
+canvasBird2.width = 1200;
+canvasBird2.height = 1200;
 
 var canvasBird3 = document.getElementById('canvasBird');
 var ctxBird3 = canvasBird3.getContext('2d');
-canvasBird3.width = window.innerWidth;
-canvasBird3.height = window.innerHeight;
+// canvasBird3.width = window.innerWidth;
+// canvasBird3.height = window.innerHeight;
+canvasBird3.width = 1200;
+canvasBird3.height = 1200;
 
 
 
@@ -65,6 +71,8 @@ var spriteHeight = birdFlyingLeft.height / rows;
 var spriteWidthIdle= birdIdle.width / cols;
 var spriteHeightIdle= birdIdle.height / rows;
 
+var birdOpacity = 0;
+
 
 
 // var xBirdLanding= -1*(window.innerWidth);
@@ -108,6 +116,11 @@ function animate() {
     ctxBird3.clearRect(0,0,canvasBird.width,canvasBird.height);
 
     requestAnimationFrame(animate);
+
+    if (birdOpacity < 1) {
+        ctxBird2.globalAlpha = birdOpacity;
+        birdOpacity+= 0.01;
+    }
 
     currentFrame = currentFrame % totalFrames;
     srcX = currentFrame * spriteWidth;
@@ -194,6 +207,8 @@ function toggleBird() {
 
 
         birdIdle.src = "images/birdIdlePixel5.png"
+
+        birdOpacity = 0;
 
         // imageSwitch = false;
         // return;

@@ -1186,18 +1186,9 @@ var canvasStars= document.getElementById('canvasStars');
 var canvasStars2= document.getElementById('canvasStars2');
 var ctxStars= canvasStars.getContext('2d');
 console.log(canvasStars.width,canvasStars.height)
-// ctxStars.scale(1.2,1.2)
 var ctxStars2 = canvasStars2.getContext('2d');
-// canvasStars.width = 1000;
-// canvasStars.height = 1000;
-canvasStars.width = 2*window.innerWidth;
-canvasStars.height = 2*window.innerHeight;
-// canvasStars.width = window.innerWidth;
-// canvasStars.height = window.innerHeight;
-// canvasStars.width = 850;
-// canvasStars.height = 850;
-// canvasStars.width = 750;
-// canvasStars.height = 750;
+canvasStars.width = 1000;
+canvasStars.height = 1000;
 
 var enableStars = false;
 let rotationAngle = 0;
@@ -1212,51 +1203,33 @@ let currentOpacityStars= 0;
 const starCenterX = canvasStars.width/2;
 const starCenterY = canvasStars.height/2; 
 
-// ctxStars.filter = 'blur(1px)'
-
-// toggleStars();
+ctxStars.imageSmoothingEnabled = false;
 
 
 function stars() {
+  ctxStars.globalAlpha = 0;
   ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height);
-  // ctxStars.clearRect(window.innerWidth, window.innerHeight, canvasStars.width, canvasStars.height);
 
   ctxStars.save();
-  ctxStars.translate(canvasStars.width / 2, canvasStars.height/2);
-    // ctxStars.translate(-canvasStars.width , -canvasStars.height);
+  //for rotating in the center
+  ctxStars.translate(canvasStars.width/2,canvasStars.height/2)
+
   ctxStars.rotate(rotationAngle);
-  ctxStars.translate(-canvasStars.width / 2, -canvasStars.height/2);
-  // ctxStars.translate(-canvasStars.width , -canvasStars.height);
+
+  //to put it back in place
+  ctxStars.translate(-canvasStars.width / 2, (-canvasStars.height/2)-100);
+  // ctxStars.translate(-canvasStars.width / 2, (-canvasStars.height/3)/2);
 
 
   starPoints.forEach(star => {
     let {xPos,yPos,alpha,size} = star;
-
-    // if (Math.floor(Math.random()*10) > 8) {
-    //   // ctxStars.globalAlpha = 0.7;
-    //   ctxStars.globalAlpha = 0.1;
-    //   ctxStars.fillStyle = '#ffff8f';
-    //   // ctxStars.fillStyle = '#000000';
-    //   // ctxStars.fillStyle = '#ffffff';
-    //   // ctxStars.fillStyle = 'rgba(96,165,137,1)'
-    // }
-    // else {
-    //   ctxStars.globalAlpha = alpha;
-    //   // ctxStars.fillStyle = 'rgba(96,165,137,1)'
-    //   ctxStars.fillStyle = '#ffffff'
-    //   // ctxStars.fillStyle = '#000000'
-    // }
-
   ctxStars.fillStyle = '#ffffff';
-  // ctxStars.fillRect(0,0,canvasStars.width,canvasStars.height)
-  // ctxStars.clearRect(10,10,canvasStars.width+10,canvasStars.height+10)
-  // ctxStars2.globalAlpha = 0.2;
   ctxStars.globalAlpha = alpha/2;
   ctxStars.fillRect(xPos,yPos,size,size);
   });
   ctxStars.restore();
-  // rotationAngle += (Math.PI / 180 * 0.001)
-  rotationAngle += (Math.PI / 180 * 0.1)
+  rotationAngle += (Math.PI / 180 * 0.01)
+  // rotationAngle += (Math.PI / 180 * 0.1)
 };
 
 
@@ -1267,11 +1240,11 @@ function toggleStars() {
   if (enableStars) {
     stars();
     starInterval = setInterval(stars, 1000 / fps);
-    ctxStars2.globalAlpha = 0.1;
   }
   else {
     ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)
     clearInterval(starInterval);
+    rotationAngle = 0;
   }
 }
 
