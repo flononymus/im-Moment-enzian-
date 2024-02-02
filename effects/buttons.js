@@ -78,6 +78,12 @@ animationTestButton.textContent = "Animation Test"
 animationTestButton.onclick = toggleAnimationTest;
 document.body.appendChild(animationTestButton);
 
+
+var idleTest= document.createElement('button');
+idleTest.textContent = "idle"
+idleTest.onclick = switchIdle;
+document.body.appendChild(idleTest);
+
 var resetButton = document.createElement('button');
 resetButton.textContent = "Reset effects"
 resetButton.onclick = resetToggles;
@@ -108,6 +114,7 @@ thirdRow.id = 'thirdRow';
 thirdRow.appendChild(planeButton);
 thirdRow.appendChild(birdButton);
 thirdRow.appendChild(animationTestButton);
+thirdRow.appendChild(idleTest);
 document.body.appendChild(thirdRow);
 
 
