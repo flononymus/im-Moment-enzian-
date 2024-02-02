@@ -13,15 +13,18 @@ canvasTrail.height = 1000;
 // canvasTrail.height = 500;
 
 var plane = new Image;
-plane.src = "images/airplane test3.png"
+// plane.src = "images/airplane test3.png"
+// plane.src = "images/airplane Pixel1.png"
+plane.src = "images/airplane Pixel2.png"
 
-var plane2 = new Image;
-plane2.src = "images/airplane test7.png"
+// var plane2 = new Image;
+// plane2.src = "images/airplane test7.png"
 
 var trail = new Image;
 // trail.src = "images/trail test.png"
 trail.src = "images/trail.png"
-ctxTrail.filter = "blur(3px)"
+// ctxTrail.filter = "blur(3px)"
+ctxTrail.filter = "blur(3.5px)"
 // trail.blur(
 
 let x = -10;

@@ -67,6 +67,7 @@ function drawImages() {
 
   if (currentImage === 'clouds') {
 
+
     // currentOpacity += 0.01;
     currentOpacity += 0.005;
     if (currentOpacity < 1) {
