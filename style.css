@@ -94,6 +94,22 @@
     position:absolute;
 }
 
+#canvasBird2{    
+    margin:0;
+    height: 100vh;
+    /* height:15%; */
+    /* aspect-ratio: 1/1; */
+    position:absolute;
+}
+
+#canvasBird3{    
+    margin:0;
+    height: 100vh;
+    /* height:15%; */
+    /* aspect-ratio: 1/1; */
+    position:absolute;
+}
+
 #canvasAnimationTest{    
     margin:0;
     height: 100vh;
@@ -127,18 +143,6 @@
     height: 100vh;
     aspect-ratio: 1/1;
     position:absolute;
-}
-
-#mask {
-    margin:0;
-    height:100%;
-    aspect-ratio:1/1;
-    position:absolute;
-    mask-composite: add;
-    mask-repeat: no-repeat;
-    mask-image: url(images/test\ mask4.png);
-    overflow: hidden;
-    background-color: #8cffa0;
 }
 
 

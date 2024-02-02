@@ -1,14 +1,19 @@
 var canvasBird= document.getElementById('canvasBird');
 var ctxBird = canvasBird.getContext('2d')
+canvasBird.width = window.innerWidth;
+canvasBird.height = window.innerHeight;
 
-var canvasBird2 = document.getElementById('canvasBird');
+var canvasBird2 = document.getElementById('canvasBird2');
 var ctxBird2 = canvasBird2.getContext('2d');
 canvasBird2.width = window.innerWidth;
 canvasBird2.height = window.innerHeight;
 
+var canvasBird3 = document.getElementById('canvasBird');
+var ctxBird3 = canvasBird3.getContext('2d');
+canvasBird3.width = window.innerWidth;
+canvasBird3.height = window.innerHeight;
 
-canvasBird.width = window.innerWidth;
-canvasBird.height = window.innerHeight;
+
 
 var birdFlyingLeft= new Image();
 birdFlyingLeft.src = "images/birdPixelLeft.png";
@@ -92,10 +97,15 @@ var srcYLanding = 0;
 
 function animate() {
     ctxBird.filter = "blur(1px)"
-    // ctxBird.globalAlpha = 0.5
+    ctxBird2.filter = "blur(1px)"
+    ctxBird3.filter = "blur(1px)"
+    // ctxBird.globalAlpha = 1
+    // ctxBird2.globalAlpha = 0.1
 
     if (birdActive) {
     ctxBird.clearRect(0,0,canvasBird.width,canvasBird.height);
+    ctxBird2.clearRect(0,0,canvasBird.width,canvasBird.height);
+    ctxBird3.clearRect(0,0,canvasBird.width,canvasBird.height);
 
     requestAnimationFrame(animate);
 
@@ -108,7 +118,7 @@ function animate() {
 
     ctxBird.drawImage(birdFlyingLeft, srcX, srcY, spriteWidth, spriteHeight, xBird, yBird, spriteWidth, spriteHeight)
     // ctxBird2.drawImage(birdIdle, srcX, srcY, spriteIdleWidth, spriteIdleHeight, xBirdIdle, yBirdIdle, spriteIdleWidth, spriteIdleHeight)
-    ctxBird.drawImage(birdIdle, srcXIdle, srcYIdle, spriteWidthIdle, spriteHeightIdle, xBirdIdle, yBirdIdle, spriteWidthIdle, spriteHeightIdle)
+    ctxBird2.drawImage(birdIdle, srcXIdle, srcYIdle, spriteWidthIdle, spriteHeightIdle, xBirdIdle, yBirdIdle, spriteWidthIdle, spriteHeightIdle)
 
     xBird += birdSpeed;
     yBird += birdHeight; 
@@ -139,12 +149,11 @@ function animate() {
         birdIdleSpeed = 0;
         birdIdleHeight = 0.;
     }
-
-
 }
 
 function toggleBird() {
     birdActive = !birdActive   
+    console.log(ctxBird2.canvas.width,ctxBird2.canvas.height)
     if (birdActive) {
         console.log('birb')
         animate();
@@ -160,6 +169,8 @@ function toggleBird() {
     }
     else {
         ctxBird.clearRect(0,0,canvasBird.width,canvasBird.height);
+        ctxBird2.clearRect(0,0,canvasBird.width,canvasBird.height);
+        ctxBird3.clearRect(0,0,canvasBird.width,canvasBird.height);
 
         xBird = window.innerWidth;
         yBird = window.innerHeight/2;
@@ -175,6 +186,7 @@ function toggleBird() {
         // imageSwitch = false;
         switchIdle();
         landBird();
+
 
         xBirdLanding = -10
         yBirdLanding = (window.innerHeight/3)*2
@@ -196,11 +208,15 @@ function switchIdle() {
         birdIdle.src = "images/birdIdlePixel5.png"
         birdIdleSpeed = 0;
         birdIdleHeight = 0;
+        
     }
     else {
         birdIdle.src = "images/birdPixelLeft.png"
         birdIdleSpeed = 1;
         birdIdleHeight = -0.5;
+
+        // console.log('test')
+        // requestAnimationFrame(switchIdle)
     }
 }
 
@@ -214,7 +230,7 @@ function landBird() {
         srcXLanding= currentFrameLanding* spriteWidthLanding
     
     
-        ctxBird.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
+        ctxBird3.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
     
         xBirdLanding += birdSpeedLanding;
         yBirdLanding += birdHeightLanding; 

@@ -21,31 +21,23 @@ var fadeSpeed = 0.01;
 var fadeSpeed = 0.005;
 
 var fps = 60;
-// var fps = 30;
 
 
 var imageDay= new Image();
-// imageDay.onload = drawImages;
 imageDay.src = "images/test_day.png"
-// imageDay.src = "images/test_clouds.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages
-// imageClouds.onload = ctxBack.drawImage(imageClouds,0,0,canvasBack.width,canvasBack.height);
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
-// imageHalfNight.onload = drawImages;
 imageHalfNight.src = "images/test_night1.png"
 
 var imageMoreNight= new Image();
-// imageMoreNight.onload = drawImages;
 imageMoreNight.src = "images/test_night5.png"
 
 var imageFullNight= new Image();
-// imageFullNight.onload = drawImages;
 imageFullNight.src = "images/test_night6.png"
-// imageFullNight.src = "images/test_night3.png"
 
 
 
@@ -67,8 +59,6 @@ function drawImages() {
 
   if (currentImage === 'clouds') {
 
-
-    // currentOpacity += 0.01;
     currentOpacity += 0.005;
     if (currentOpacity < 1) {
 

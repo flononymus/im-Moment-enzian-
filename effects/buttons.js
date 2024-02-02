@@ -32,7 +32,7 @@ fullNightButton.onclick = fullNight;
 document.body.appendChild(fullNightButton);
 
 var noneButton= document.createElement('button');
-noneButton.textContent = "None"
+noneButton.textContent = "No BG"
 noneButton.onclick = noImage;
 document.body.appendChild(noneButton);
 
@@ -43,10 +43,9 @@ rainButton.onclick = toggleRain;
 document.body.appendChild(rainButton);
 
 var cloudsButton = document.createElement('button');
-cloudsButton.textContent = "More Clouds"
+cloudsButton.textContent = "Clouds"
 cloudsButton.onclick = toggleClouds;
 document.body.appendChild(cloudsButton);
-
 
 var smokeButton= document.createElement('button');
 smokeButton.textContent = "Smoke"
@@ -73,19 +72,18 @@ birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
 
-var animationTestButton= document.createElement('button');
-animationTestButton.textContent = "Animation Test"
-animationTestButton.onclick = toggleAnimationTest;
-document.body.appendChild(animationTestButton);
+// var animationTestButton= document.createElement('button');
+// animationTestButton.textContent = "Animation Test"
+// animationTestButton.onclick = toggleAnimationTest;
+// document.body.appendChild(animationTestButton);
 
-
-var idleTest= document.createElement('button');
-idleTest.textContent = "idle"
-idleTest.onclick = switchIdle;
-document.body.appendChild(idleTest);
+// var idleTest= document.createElement('button');
+// idleTest.textContent = "idle"
+// idleTest.onclick = switchIdle;
+// document.body.appendChild(idleTest);
 
 var resetButton = document.createElement('button');
-resetButton.textContent = "Reset effects"
+resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
@@ -113,8 +111,8 @@ var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
 thirdRow.appendChild(planeButton);
 thirdRow.appendChild(birdButton);
-thirdRow.appendChild(animationTestButton);
-thirdRow.appendChild(idleTest);
+// thirdRow.appendChild(animationTestButton);
+// thirdRow.appendChild(idleTest);
 document.body.appendChild(thirdRow);
 
 
