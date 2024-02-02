@@ -127,7 +127,6 @@ function drawClouds() {
         ctxClouds3.globalAlpha = cloudsOpacity;
         cloudsOpacity-= 0.005;
 
-        console.log(cloudsOpacity)
         }
     }
 
@@ -141,12 +140,10 @@ function toggleClouds() {
         cloudFadeIn = true;
         console.log('clouds on')
         drawClouds();
-        console.log(cloudFadeIn)
     } else {
         cloudFadeIn = false;
         // cloudsOpacity = 0;
         console.log('clouds off')
-        console.log(cloudFadeIn)
         setTimeout(function() { 
             ctxClouds1.clearRect(0,0,canvasClouds1.width,canvasClouds1.height);    
             ctxClouds2.clearRect(0,0,canvasClouds2.width,canvasClouds2.height);    
