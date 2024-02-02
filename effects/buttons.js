@@ -73,6 +73,11 @@ birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
 
+var animationTestButton= document.createElement('button');
+animationTestButton.textContent = "Animation Test"
+animationTestButton.onclick = toggleAnimationTest;
+document.body.appendChild(animationTestButton);
+
 var resetButton = document.createElement('button');
 resetButton.textContent = "Reset effects"
 resetButton.onclick = resetToggles;
@@ -102,6 +107,7 @@ var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
 thirdRow.appendChild(planeButton);
 thirdRow.appendChild(birdButton);
+thirdRow.appendChild(animationTestButton);
 document.body.appendChild(thirdRow);
 
 
@@ -129,6 +135,14 @@ function resetToggles() {
     if (borealisActive) {
         console.log('borealis off')
         toggleBorealis();
+    }
+    if (birdActive) {
+        console.log('bird off');
+        toggleBird();
+    }
+    if (animaionActive) {
+        console.log('animate off')
+        toggleAnimationTest();
     }
 
   }

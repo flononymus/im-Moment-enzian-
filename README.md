@@ -16,59 +16,41 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] speed up clouds etc to the side?
   - [ ] Also fade in plane/stars etc when toggle
 
-#### Birds flying by
-  - [ ]sequence of maybe 6 frames/images of flapping wings, repeating? 
+#### BIRDS
+  - [x] Reference material
+  - [ ] Sprites (at least 2 or 3 versions to reuse)
+    - [ ] Flying bird
+    - [ ] Sitting bird
+  - [ ] sequence of maybe 6 frames/images of flapping wings, repeating? 
 
 #### Smoking chimneys
   - [ ] Fix speed/pixelated value
 
-#### Night sky --> draw stars
+#### Stars
   - [ ] Add comets/shooting stars?
-
   - [x] Make stars move --> either rotate or just move horizontally
   - [x] Make stars "flicker" etc
 
   - [x] Stars not scaling/resizing properly yet
 
-#### Night sky 2 ---> northern lights?
+#### Northern lights?
   - [ ] northern lights:
     - [ ] https://codepen.io/jhereg00/pen/JKbQyR
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
-#### rain --> draw clouds
+#### Rain/Clouds
   - [ ] Various levels of opacity, overlaying
   - [ ] Parallax clouds
     - [ ] https://codepen.io/vavik96/pen/vEdMXM
     - [ ] https://codepen.io/jackrugile/pen/nmexZj
 
-#### Evening --> draw airplane with trail
+#### Airplane with trail
   - [ ] make scale properly
   - [ ] make trail dissapear after a while
     - [ ] Look into globalCompositeOperation
 
 #### Rest
 - [ ] figure out pixelate filter --> for rain
-  (You don't need to iterate pixel buffer to create a pixelating effect.
-  Simply turn off image smoothing and enlarge a small version of the image to the canvas. This will also mean you can use any image as source (CORS-wise).
-
-  // get a block size (see demo for this approach)
-  var size = blocks.value / 100,
-      w = canvas.width * size,
-      h = canvas.height * size;
-
-  // draw the original image at a fraction of the final size
-  ctx.drawImage(img, 0, 0, w, h);
-
-  // turn off image aliasing
-  ctx.msImageSmoothingEnabled = false;
-  ctx.mozImageSmoothingEnabled = false;
-  ctx.webkitImageSmoothingEnabled = false;
-  ctx.imageSmoothingEnabled = false;
-
-  // enlarge the minimized image to full size    
-  ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);)
-
-
 - [ ] Foreground of window?
 - [ ] unpixelated images --> photoshop out windows
 
@@ -80,7 +62,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 - [ ] Figure out how to make it centered on screen
 - [ ] Figure out how to host from github?
 - [ ] figure out how to render on my nextjs page?
-- [ ] slider to fade between?
 - [ ] Research workflow --> look into https://github.com/aleha84/simple.canvas.core2?tab=readme-ov-file
 - [ ] Figure out a good project structure
 
@@ -98,28 +79,14 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### Ideas for images:
 
-- [ ] Night --> northern lights, stars
-- [ ] Half night --> smoking chimneys
-- [ ] Clouds --> rain (or snow) --> check out lightinggenerator
-- [ ] Day --> small clouds, airplanes (?)
+Night --> northern lights, stars
+Half night --> smoking chimneys
+Clouds --> rain (or snow) --> check out lightinggenerator
+Day --> small clouds, airplanes (?)
+Movement --> planes, birds
 
-
-- [x] Different times of day (day/night)
-- [ ] Different weather (rain/cloudy/sunny etc)
-
-- [x] Smoking chimneys
-- [x] Rain
-- [ ] Snow?
-- [ ] aurora borealis 
-- [ ] Liminal spaces
-
-### <ins>Illustrator/Photoshop:</ins>
-- [ ] Pixel value: 6
-- [ ] png for layers
-- [ ] svg to canvas converter
-
-### <ins>HTML5 Canvas:</ins>
-- [x] Test html5 canvas
+Different times of day (day/night)
+Different weather (rain/cloudy/sunny etc)
 
 ### <ins>Mind-Map:</ins>
 
