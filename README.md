@@ -17,6 +17,9 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] Also fade in plane/stars etc when toggle
 
 #### BIRDS
+- [ ] Idlebird --> animate back into idle position
+
+  - [ ] Figure out how to create instances (of birds)
   - [x] Reference material
   - [ ] Sprites (at least 2 or 3 versions to reuse)
     - [ ] Flying bird
