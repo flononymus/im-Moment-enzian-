@@ -68,6 +68,11 @@ borealisButton.textContent = "Northern Lights"
 borealisButton.onclick = toggleBorealis;
 document.body.appendChild(borealisButton);
 
+var birdButton = document.createElement('button');
+birdButton.textContent = "Bird"
+birdButton.onclick = toggleBird;
+document.body.appendChild(birdButton);
+
 var resetButton = document.createElement('button');
 resetButton.textContent = "Reset effects"
 resetButton.onclick = resetToggles;
@@ -89,10 +94,15 @@ secondRow.appendChild(rainButton);
 secondRow.appendChild(cloudsButton);
 secondRow.appendChild(smokeButton);
 secondRow.appendChild(starsButton);
-secondRow.appendChild(planeButton);
 secondRow.appendChild(borealisButton);
 secondRow.appendChild(resetButton);
 document.body.appendChild(secondRow);
+
+var thirdRow= document.createElement('div');
+thirdRow.id = 'thirdRow';
+thirdRow.appendChild(planeButton);
+thirdRow.appendChild(birdButton);
+document.body.appendChild(thirdRow);
 
 
 function resetToggles() {

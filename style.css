@@ -89,6 +89,7 @@
 #canvasBird{    
     margin:0;
     height: 100vh;
+    /* height:15%; */
     aspect-ratio: 1/1;
     position:absolute;
 }
@@ -165,6 +166,12 @@ button {
 
   #secondRow {
     top:30px;
+    display: flex; 
+    position:absolute;
+  }
+
+  #thirdRow {
+    top:60px;
     display: flex; 
     position:absolute;
   }

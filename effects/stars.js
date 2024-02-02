@@ -201,7 +201,7 @@ function stars() {
   ctxStars.fillRect(xPos,yPos,size,size);
   });
   ctxStars.restore();
-  rotationAngle += (Math.PI / 180 * 0.005)
+  rotationAngle += (Math.PI / 180 * 0.001)
 };
 
 
