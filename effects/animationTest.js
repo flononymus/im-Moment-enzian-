@@ -16,6 +16,18 @@ var animationTestSprite= new Image();
 // animationTestSprite.src = "images/birdPixelRight.png"
 animationTestSprite.src = "images/birdPixelRight2.png"
 
+var birdIdleImage = new Image();
+// birdIdleImage.src = "images/birdIdle1.png";
+// birdIdleImage.src = "images/birdIdle2.png";
+// birdIdleImage.src = "images/birdIdlePixel1.png";
+// birdIdleImage.src = "images/birdIdlePixel2.png";
+// birdIdleImage.src = "images/birdIdle3.png";
+// birdIdleImage.src = "images/birdIdlePixel3.png";
+birdIdleImage.src = "images/birdIdlePixel4.png";
+
+// var imageSwitch = false;
+var imageSwitch = true;
+
 var animationActive= false;
 var colsTest = 10;
 var rowsTest = 1;
@@ -30,8 +42,28 @@ var srcYTest = 0;
 var xAnimTest= window.innerWidth/2;
 var yAnimTest= window.innerHeight/2;
 
+var xAnimTestIdle = window.innerWidth/2+ 100;
+var yAnimTestIdle = window.innerHeight/2;
+
 var spriteWidthTest = animationTestSprite.width / cols;
 var spriteHeightTest = animationTestSprite.height / rows;
+
+var spriteWidthTestIdle = birdIdleImage.width / cols;
+var spriteHeightTestIdle = birdIdleImage.height / rows;
+
+function testSwitchAnimation() {
+    // imageSwitch = !imageSwitch;
+    imageSwitch = false;
+    if (imageSwitch) {
+        birdIdleImage.src = "images/birdIdlePixel1.png"
+        console.log('image 1')
+    }
+    else {
+        // birdIdleImage.src = "images/birdIdle2.png"
+        birdIdleImage.src = "images/birdPixelLeft.png"
+        console.log('image 2')
+    }
+}
 
 
 function animateTest() {
@@ -46,14 +78,20 @@ function animateTest() {
     srcXTest = currentFrameTest * spriteWidth;
     ctxAnim.drawImage(animationTestSprite, srcXTest, srcYTest, spriteWidthTest, spriteHeightTest, xAnimTest, yAnimTest, spriteWidthTest, spriteHeightTest)
 
+    ctxAnim.drawImage(birdIdleImage, srcXTest,srcYTest,spriteWidthTestIdle,spriteHeightTestIdle,xAnimTestIdle,yAnimTestIdle,spriteWidthTestIdle, spriteHeightTestIdle)
+
     framesDrawnTest++;
         // if (framesDrawnTest >= 5) {
             if (framesDrawnTest >= 4) {
             currentFrameTest++;
             framesDrawnTest = 0;
         }
-    }
 
+        // setTimeout(function() {
+        //    testSwitchAnimation();
+        // },1000)
+
+    }
     else {
         ctxAnim.clearRect(0,0,canvasAnimationTest.width,canvasAnimationTest.height);
     }
