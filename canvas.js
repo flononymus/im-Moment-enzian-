@@ -27,6 +27,9 @@ var fadeSpeed = 0.005;
 
 var fps = 60;
 
+var cyclingBG = false;
+var repeatCycle= false;
+
 
 var imageDay= new Image();
 imageDay.src = "images/test_day.png"
@@ -59,13 +62,7 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
   event.preventDefault();
 }
 
-if (currentImage === null) {
-  // currentImage = 'none';
-  currentImage = 'clouds'
-  // currentImage = 'moreNight';
-  // currentImage = 'fullNight'
-  // currentImage = 'halfNight';
-};
+currentImage = 'clouds'
 
 function drawImages() {
 
@@ -233,3 +230,31 @@ function noImage() {
   currentOpacity = 0;
   drawImages();
 }
+
+function cycleTime() {
+  cyclingBG = !cyclingBG
+  repeatCycle = !repeatCycle
+  if (cyclingBG && repeatCycle) { 
+    console.log('cycling background')
+      setTimeout(function() { 
+      dayImage();
+      setTimeout(function() { 
+        halfNight();
+        setTimeout(function() { 
+          fullNight();
+          setTimeout(function() { 
+            cloudImage();
+            repeatCycle = true;
+            cycleTime();
+          },5000)
+        },5000)
+      },5000)
+    },5000)
+  }
+  if (!cyclingBG) {
+    repeatCycle = false; 
+    // cyclingBG = false;
+    console.log('not')
+  }
+}
+

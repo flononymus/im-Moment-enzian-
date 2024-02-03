@@ -36,6 +36,11 @@ noneButton.textContent = "No BG"
 noneButton.onclick = noImage;
 document.body.appendChild(noneButton);
 
+var cycleButton= document.createElement('button');
+cycleButton.textContent = "Cycle BG"
+cycleButton.onclick = cycleTime;
+document.body.appendChild(cycleButton);
+
 
 var rainButton= document.createElement('button');
 rainButton.textContent = "Rain"
@@ -105,6 +110,7 @@ firstRow.appendChild(halfNightButton);
 // firstRow.appendChild(moreNightButton);
 firstRow.appendChild(fullNightButton);
 firstRow.appendChild(noneButton);
+firstRow.appendChild(cycleButton);
 document.body.appendChild(firstRow);
 
 var secondRow = document.createElement('div');
