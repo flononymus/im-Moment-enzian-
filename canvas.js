@@ -35,7 +35,8 @@ var imageDay= new Image();
 imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
-imageClouds.onload = drawImages
+// imageClouds.onload = drawImages()
+imageClouds.onload = drawImages, toggleBird
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
