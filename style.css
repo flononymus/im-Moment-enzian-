@@ -22,7 +22,8 @@
 #canvasRain{    
     margin:0;
     height: 100vh;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
+    aspect-ratio: 1;
     position:absolute;
 }
 
@@ -105,6 +106,7 @@
 #canvasBird{    
     margin:0;
     height: 100vh;
+    aspect-ratio: 1/1;
     /* height:15%; */
     /* aspect-ratio: 1/1; */
     position:absolute;
@@ -113,6 +115,7 @@
 #canvasBird2{    
     margin:0;
     height: 100vh;
+    aspect-ratio: 1/1;
     /* height:15%; */
     /* aspect-ratio: 1/1; */
     position:absolute;
@@ -121,6 +124,7 @@
 #canvasBird3{    
     margin:0;
     height: 100vh;
+    aspect-ratio: 1/1;
     /* height:15%; */
     /* aspect-ratio: 1/1; */
     position:absolute;

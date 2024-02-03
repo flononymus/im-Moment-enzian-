@@ -1185,7 +1185,6 @@ var starPoints = [
 var canvasStars= document.getElementById('canvasStars');
 var canvasStars2= document.getElementById('canvasStars2');
 var ctxStars= canvasStars.getContext('2d');
-console.log(canvasStars.width,canvasStars.height)
 var ctxStars2 = canvasStars2.getContext('2d');
 canvasStars.width = 1000;
 canvasStars.height = 1000;
