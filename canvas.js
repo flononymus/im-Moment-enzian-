@@ -62,7 +62,10 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
   event.preventDefault();
 }
 
-currentImage = 'clouds'
+if (currentImage === null) {
+  currentImage = 'clouds'
+  toggleBird();
+}
 
 function drawImages() {
 
