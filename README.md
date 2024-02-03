@@ -16,6 +16,8 @@ Movement --> planes, birds
 Different times of day (day/night)
 Different weather (rain/cloudy/sunny etc)
 
+debug tool --> coordinates from mouse onclick
+
 ### <ins>Mind-Map:</ins>
 
 ```mermaid

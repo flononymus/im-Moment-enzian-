@@ -1,27 +1,11 @@
 var canvasBird= document.getElementById('canvasBird');
 var ctxBird = canvasBird.getContext('2d')
-// canvasBird.width = window.innerWidth;
-// canvasBird.height = window.innerHeight;
-// canvasBird.width = 2200;
-// canvasBird.height = 2200;
-
-// canvasBird.width = 500;
-// canvasBird.height = 500;
 
 var canvasBird2 = document.getElementById('canvasBird');
 var ctxBird2 = canvasBird2.getContext('2d');
-// canvasBird2.width = window.innerWidth;
-// canvasBird2.height = window.innerHeight;
-// canvasBird2.width = 1200;
-// canvasBird2.height = 1200;
 
 var canvasBird3 = document.getElementById('canvasBird');
 var ctxBird3 = canvasBird3.getContext('2d');
-// canvasBird3.width = window.innerWidth;
-// canvasBird3.height = window.innerHeight;
-// canvasBird3.width = 1200;
-// canvasBird3.height = 1200;
-
 
 
 var birdFlyingLeft= new Image();
@@ -31,11 +15,8 @@ var birdFlyingRight = new Image();
 birdFlyingRight.src = "images/birdPixelRight.png"
 
 var birdIdle = new Image();
-// birdIdle.src = "images/birdIdlePixel4.png";
 birdIdle.src = "images/birdIdlePixel5.png";
-// birdIdle.onload = switchIdle();
 
-// var imageSwitch = false; 
 var imageSwitch = true;
 
 
@@ -50,25 +31,13 @@ var framesDrawn = 0;
 var totalFramesIdle = 10;
 var currentFrameIdle = 0;
 var framesDrawnIdle = 0;
-
 var srcX = 0;
 var srcY = 0;
 var srcXIdle = 0;
 var srcYIdle = 0;
 
-// var xBird = window.innerWidth + 200;
-// var yBird = window.innerHeight/2;
-// var xBird = canvasBird.width + 200;
-// var yBird = canvasBird.height/2;
 var xBird
 var yBird
-
-// var xBirdIdle = (window.innerWidth/5) * 2;
-// var yBirdIdle = (window.innerHeight/7) * 5.15 ;
-// var xBirdIdle = (canvasBird.width/5) * 2;
-// var yBirdIdle = (canvasBird.height/7) * 5.15 ;
-// var xBirdIdle = canvasBird.width/2
-// var yBirdIdle = canvasBird.height/2
 var xBirdIdle
 var yBirdIdle
 

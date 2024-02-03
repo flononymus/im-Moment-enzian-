@@ -60,7 +60,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 }
 
 if (currentImage === null) {
-  currentImage = 'clouds'
+  currentImage = 'none';
+  // currentImage = 'clouds'
   // currentImage = 'moreNight';
   // currentImage = 'fullNight'
   // currentImage = 'halfNight';

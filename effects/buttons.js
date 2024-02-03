@@ -157,3 +157,25 @@ function resetToggles() {
     }
 
   }
+
+//   canvasButtons.onload = (function() {
+//   canvasButtons.addEventListener('click', function(event) {
+//     const rectToClick = canvasButton.getBoundingClientRect();
+//     const xClicked = event.clientX - rect.left;
+//     const yClicked = event.clientY - rect.top;
+  
+//     // Log the mouse coordinates
+//     console.log(xClicked, yClicked);
+//   })
+//   });
+
+// function getCursorPosition(canvasButtons, event) {
+//     const rect = canvasButtons.getBoundingClientRect()
+//     const xClicked = event.clientX - rect.left
+//     const yClicked = event.clientY - rect.top
+//     console.log("x: " + x + " y: " + y)
+// }
+
+// canvasButtons.addEventListener('mousedown', function(e) {
+//     getCursorPosition(canvasButtons, e)
+// })
