@@ -47,6 +47,11 @@ cloudsButton.textContent = "Clouds"
 cloudsButton.onclick = toggleClouds;
 document.body.appendChild(cloudsButton);
 
+var cloudsButtonDay = document.createElement('button');
+cloudsButtonDay.textContent = "Clouds Day"
+cloudsButtonDay.onclick = toggleCloudsDay;
+document.body.appendChild(cloudsButtonDay);
+
 var smokeButton= document.createElement('button');
 smokeButton.textContent = "Smoke"
 smokeButton.onclick = toggleSmoking;
@@ -106,6 +111,7 @@ var secondRow = document.createElement('div');
 secondRow.id = 'secondRow';
 secondRow.appendChild(rainButton);
 secondRow.appendChild(cloudsButton);
+secondRow.appendChild(cloudsButtonDay);
 secondRow.appendChild(smokeButton);
 secondRow.appendChild(starsButton);
 secondRow.appendChild(borealisButton);

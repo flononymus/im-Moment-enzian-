@@ -108,6 +108,18 @@
     aspect-ratio: 1/1;
     position:absolute;
 }
+#canvasClouds4{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasClouds5{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
 
 #canvasBird{    
     margin:0;
