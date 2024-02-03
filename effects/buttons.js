@@ -17,14 +17,14 @@ dayButton.onclick= dayImage;
 document.body.appendChild(dayButton);
 
 var halfNightButton = document.createElement('button');
-halfNightButton.textContent = "Kinda Night"
+halfNightButton.textContent = "Half Night"
 halfNightButton.onclick = halfNight;
 document.body.appendChild(halfNightButton);
 
-var moreNightButton= document.createElement('button');
-moreNightButton.textContent = "Half Night"
-moreNightButton.onclick = moreNight;
-document.body.appendChild(moreNightButton);
+// var moreNightButton= document.createElement('button');
+// moreNightButton.textContent = "Half Night"
+// moreNightButton.onclick = moreNight;
+// document.body.appendChild(moreNightButton);
 
 var fullNightButton = document.createElement('button');
 fullNightButton.textContent = "Full Night"
@@ -62,6 +62,11 @@ planeButton.textContent = "Planes"
 planeButton.onclick = togglePlane;
 document.body.appendChild(planeButton);
 
+var nightPlaneButton= document.createElement('button');
+nightPlaneButton.textContent = "Planes (night)"
+nightPlaneButton.onclick = toggleNightPlane;
+document.body.appendChild(nightPlaneButton);
+
 var borealisButton= document.createElement('button');
 borealisButton.textContent = "Northern Lights"
 borealisButton.onclick = toggleBorealis;
@@ -92,7 +97,7 @@ firstRow.id = 'firstRow';
 firstRow.appendChild(cloudyButton);
 firstRow.appendChild(dayButton);
 firstRow.appendChild(halfNightButton);
-firstRow.appendChild(moreNightButton);
+// firstRow.appendChild(moreNightButton);
 firstRow.appendChild(fullNightButton);
 firstRow.appendChild(noneButton);
 document.body.appendChild(firstRow);
@@ -111,6 +116,7 @@ var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
 thirdRow.appendChild(planeButton);
 thirdRow.appendChild(birdButton);
+thirdRow.appendChild(nightPlaneButton);
 // thirdRow.appendChild(animationTestButton);
 // thirdRow.appendChild(idleTest);
 document.body.appendChild(thirdRow);

@@ -37,7 +37,9 @@ var imageMoreNight= new Image();
 imageMoreNight.src = "images/test_night5.png"
 
 var imageFullNight= new Image();
-imageFullNight.src = "images/test_night6.png"
+// imageFullNight.src = "images/test_night6.png"
+// imageFullNight.src = "images/night_mixed1.png"
+imageFullNight.src = "images/night_mixed2.png"
 
 
 

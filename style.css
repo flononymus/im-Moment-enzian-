@@ -77,6 +77,12 @@
     aspect-ratio: 1/1;
     position:absolute;
 }
+#canvasNightPlane{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
 #canvasTrail{    
     margin:0;
     height: 100vh;

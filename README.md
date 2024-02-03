@@ -8,6 +8,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ### <ins>Ideas:</ins>
 
+
 #### IMPORTANT:
   - [ ] figure out how to make every canvas the same size, and then scale based on that?
   - [ ] implement something to keep the browser from crashing in case i fuck something up
@@ -18,7 +19,7 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
   - [ ] Fade rest
 
 #### BIRDS
-- [ ] scaling wrong, everything wrong --> figure out how i did it with the smoke
+- [x] scaling wrong, everything wrong --> figure out how i did it with the smoke
 - [ ] Idlebird --> animate back into idle position
 
   - [ ] Figure out how to create instances (of birds)
@@ -31,7 +32,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 #### Smoking chimneys
   - [ ] Fix speed/pixelated value
 
-#### Stars
+#### Night/Stars
+
+- [ ] Make lights more visible (redraw)
+
 - [ ] Stars not rotating around center 
   - [ ] Check how i did it with clouds
 
@@ -47,10 +51,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
 #### Rain/Clouds
-  - [ ] Various levels of opacity, overlaying
-  - [ ] Parallax clouds
-    - [ ] https://codepen.io/vavik96/pen/vEdMXM
-    - [ ] https://codepen.io/jackrugile/pen/nmexZj
+  - [x] Various levels of opacity, overlaying
+  - [x] Parallax clouds
+    - [x] https://codepen.io/vavik96/pen/vEdMXM
+    - [x] https://codepen.io/jackrugile/pen/nmexZj
 
 #### Airplane with trail
   - [ ] make scale properly
