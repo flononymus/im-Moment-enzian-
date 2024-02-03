@@ -60,8 +60,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 }
 
 if (currentImage === null) {
-  currentImage = 'none';
-  // currentImage = 'clouds'
+  // currentImage = 'none';
+  currentImage = 'clouds'
   // currentImage = 'moreNight';
   // currentImage = 'fullNight'
   // currentImage = 'halfNight';
@@ -89,7 +89,6 @@ function drawImages() {
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched')
       }
-
   }
 
   else if (currentImage === 'day') {

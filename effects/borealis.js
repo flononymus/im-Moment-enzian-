@@ -1,11 +1,10 @@
 const canvasBorealis = document.getElementById("canvasBorealis");
 const ctxBorealis= canvasBorealis.getContext("2d");
 
-canvasBorealis.width = 100;
-canvasBorealis.height = 100;
-
 var borealis = new Image();
-borealis.src = "images/borealis test2.png"
+// borealis.src = "images/borealis test.png"
+borealis.src = "images/borealis test4.png"
+// borealis.src = "images/borealis test2.png"
 
 var borealisActive = false;
 
@@ -21,7 +20,12 @@ var spriteHeightBorealis = borealis.height/rowsBorealis;
 var xBorealis = 0
 var yBorealis = 0
 
+ctxBorealis.globalAlpha = 0.1;
+// ctxBorealis.globalAlpha = 1
+
 function animateBorealis() {
+    canvasBorealis.width = 100;
+    canvasBorealis.height = 100;
     if (borealisActive) {
         ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);
         requestAnimationFrame(animateBorealis);
@@ -42,7 +46,10 @@ function toggleBorealis() {
     borealisActive = !borealisActive;
         if (borealisActive) {
         console.log('borealis on')
-        animateBorealis();
+        // animateBorealis();
+        canvasBorealis.width = 1000
+        canvasBorealis.height = 1000
+        ctxBorealis.drawImage(borealis,0,0,canvasBorealis.width, canvasBorealis.height)
     } else {
         console.log('borealis off')
         ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);    
