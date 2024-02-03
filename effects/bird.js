@@ -35,8 +35,8 @@ var birdIdle = new Image();
 birdIdle.src = "images/birdIdlePixel5.png";
 // birdIdle.onload = switchIdle();
 
-var imageSwitch = false; 
-// var imageSwitch = true;
+// var imageSwitch = false; 
+var imageSwitch = true;
 
 
 var birdActive = false;
@@ -208,6 +208,7 @@ function toggleBird() {
 
         setTimeout(function() {
             switchIdle();
+            console.log('switch', imageSwitch)
         },5000)
 
         setTimeout(function() {

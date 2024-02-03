@@ -1,112 +1,194 @@
-var canvasAnimationTest= document.getElementById('canvasAnimationTest');
-var ctxAnim= canvasAnimationTest.getContext('2d')
-
-// canvasAnimationTest.width = 128;
-// canvasAnimationTest.height = 128;
-canvasAnimationTest.width = window.innerWidth;
-canvasAnimationTest.height = window.innerHeight;
-
-var animationTestSprite= new Image();
-// animationTestSprite.src = "images/bird5.png"
-// animationTestSprite.src = "images/bird2.png"
-// animationTestSprite.src = "images/birdPixel1.png"
-// animationTestSprite.src = "images/birdPixel2.png"
-// animationTestSprite.src = "images/birdPixelLeft.png"
-// animationTestSprite.src = "images/birdRight.png"
-// animationTestSprite.src = "images/birdPixelRight.png"
-animationTestSprite.src = "images/birdPixelRight2.png"
-
-var birdIdleImage = new Image();
-// birdIdleImage.src = "images/birdIdle1.png";
-// birdIdleImage.src = "images/birdIdle2.png";
-// birdIdleImage.src = "images/birdIdlePixel1.png";
-// birdIdleImage.src = "images/birdIdlePixel2.png";
-// birdIdleImage.src = "images/birdIdle3.png";
-// birdIdleImage.src = "images/birdIdlePixel3.png";
-birdIdleImage.src = "images/birdIdlePixel4.png";
-
-// var imageSwitch = false;
-var imageSwitch = true;
-
-var animationActive= false;
-var colsTest = 10;
-var rowsTest = 1;
-var totalFramesTest = 10;
-var currentFrameTest = 0;
-
-var framesDrawnTest = 0;
-
-var srcXTest = 0;
-var srcYTest = 0;
-
-var xAnimTest= window.innerWidth/2;
-var yAnimTest= window.innerHeight/2;
-
-var xAnimTestIdle = window.innerWidth/2+ 100;
-var yAnimTestIdle = window.innerHeight/2;
-
-var spriteWidthTest = animationTestSprite.width / cols;
-var spriteHeightTest = animationTestSprite.height / rows;
-
-var spriteWidthTestIdle = birdIdleImage.width / cols;
-var spriteHeightTestIdle = birdIdleImage.height / rows;
-
-function testSwitchAnimation() {
-    // imageSwitch = !imageSwitch;
-    imageSwitch = false;
-    if (imageSwitch) {
-        birdIdleImage.src = "images/birdIdlePixel1.png"
-        console.log('image 1')
+window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+  })();
+  
+  var gnum = 90; //num grids / frame
+  var _x = 2265; //x width (canvas width)
+  var _y = 1465; //y height (canvas height)
+  var w = _x / gnum; //grid sq width
+  var h = _y / gnum; //grid sq height
+  var $; //context
+  var parts; //particles 
+  var frm = 0; //value from
+  var P1 = 0.0005; //point one
+  var P2 = 0.01; //point two
+  var n = 0.98; //n value for later
+  var n_vel = 0.02; //velocity
+  var ŭ = 0; //color update
+  var msX = 0; //mouse x
+  var msY = 0; //mouse y
+  var msdn = false; //mouse down flag
+  
+  var Part = function() {
+    this.x = 0; //x pos
+    this.y = 0; //y pos
+    this.vx = 0; //velocity x
+    this.vy = 0; //velocity y
+    this.ind_x = 0; //index x
+    this.ind_y = 0; //index y
+  };
+  
+  Part.prototype.frame = function() {
+  
+    if (this.ind_x == 0 || this.ind_x == gnum - 1 || this.ind_y == 0 || this.ind_y == gnum - 1) {
+      return;
     }
-    else {
-        // birdIdleImage.src = "images/birdIdle2.png"
-        birdIdleImage.src = "images/birdPixelLeft.png"
-        console.log('image 2')
+  
+    var ax = 0; //angle x
+    var ay = 0; //angle y
+    //off_dx, off_dy = offset distance x, y
+    var off_dx = this.ind_x * w - this.x;
+    var off_dy = this.ind_y * h - this.y;
+    ax = P1 * off_dx;
+    ay = P1 * off_dy;
+  
+    ax -= P2 * (this.x - parts[this.ind_x - 1][this.ind_y].x);
+    ay -= P2 * (this.y - parts[this.ind_x - 1][this.ind_y].y);
+  
+    ax -= P2 * (this.x - parts[this.ind_x + 1][this.ind_y].x);
+    ay -= P2 * (this.y - parts[this.ind_x + 1][this.ind_y].y);
+  
+    ax -= P2 * (this.x - parts[this.ind_x][this.ind_y - 1].x);
+    ay -= P2 * (this.y - parts[this.ind_x][this.ind_y - 1].y);
+  
+    ax -= P2 * (this.x - parts[this.ind_x][this.ind_y + 1].x);
+    ay -= P2 * (this.y - parts[this.ind_x][this.ind_y + 1].y);
+  
+    this.vx += (ax - this.vx * n_vel);
+    this.vy += (ay - this.vy * n_vel);
+  
+    this.x += this.vx * n;
+    this.y += this.vy * n;
+    if (msdn) {
+      var dx = this.x - msX;
+      var dy = this.y - msY;
+      var ɋ = Math.sqrt(dx * dx + dy * dy);
+      if (ɋ < 50) {
+        ɋ = ɋ < 10 ? 10 : ɋ;
+        this.x -= dx / ɋ * 5;
+        this.y -= dy / ɋ * 5;
+      }
     }
-}
-
-
-function animateTest() {
-    ctxAnim.filter = "blur(1px)"
-    // ctxAnim.globalAlpha = 0.5
-    if (animationActive) {
-    ctxAnim.clearRect(0,0,canvasAnimationTest.width,canvasAnimationTest.height);
-
-    requestAnimationFrame(animateTest);
-
-    currentFrameTest = currentFrameTest % totalFramesTest;
-    srcXTest = currentFrameTest * spriteWidth;
-    ctxAnim.drawImage(animationTestSprite, srcXTest, srcYTest, spriteWidthTest, spriteHeightTest, xAnimTest, yAnimTest, spriteWidthTest, spriteHeightTest)
-
-    ctxAnim.drawImage(birdIdleImage, srcXTest,srcYTest,spriteWidthTestIdle,spriteHeightTestIdle,xAnimTestIdle,yAnimTestIdle,spriteWidthTestIdle, spriteHeightTestIdle)
-
-    framesDrawnTest++;
-        // if (framesDrawnTest >= 5) {
-            if (framesDrawnTest >= 4) {
-            currentFrameTest++;
-            framesDrawnTest = 0;
+  };
+  
+  function go() {
+      parts = []; //particle array
+      for (var i = 0; i < gnum; i++) {
+        parts.push([]);
+        for (var j = 0; j < gnum; j++) {
+          var p = new Part();
+          p.ind_x = i;
+          p.ind_y = j;
+          p.x = i * w;
+          p.y = j * h;
+          parts[i][j] = p;
         }
-
-        // setTimeout(function() {
-        //    testSwitchAnimation();
-        // },1000)
-
+      }
     }
-    else {
-        ctxAnim.clearRect(0,0,canvasAnimationTest.width,canvasAnimationTest.height);
+    //move particles function
+  function mv_part() {
+  
+      for (var i = 0; i < gnum; i++) {
+        for (var j = 0; j < gnum; j++) {
+          var p = parts[i][j];
+          p.frame();
+        }
+      }
     }
-}
-
-function toggleAnimationTest() {
-    animationActive= !animationActive
-    if (animationActive) {
-        console.log('animate')
-        animateTest();
+    //draw grid function
+  function draw() {
+      $.strokeStyle = "hsla(" + (ŭ % 360) + ",100%,50%,1)";
+      $.beginPath();
+      ŭ -= .5;
+      for (var i = 0; i < gnum - 1; i += 1) {
+        for (var j = 0; j < gnum - 1; j += 1) {
+          var p1 = parts[i][j];
+          var p2 = parts[i][j + 1];
+          var p3 = parts[i + 1][j + 1];
+          var p4 = parts[i + 1][j];
+          draw_each(p1, p2, p3, p4);
+        }
+      }
+      $.stroke();
+  
     }
-    else {
-        ctxAnim.clearRect(0,0,canvasAnimationTest.width,canvasAnimationTest.height);
-        xAnimTest = canvasAnimationTest.width/2;
-        yAnimTest = canvasAnimationTest.height/2;
-        return;
+    //draw each in array
+  function draw_each(p1, p2, p3, p4) {
+  
+      $.moveTo(p1.x, p1.y);
+      $.lineTo(p2.x, p2.y);
+      $.moveTo(p1.x, p1.y);
+      $.lineTo(p4.x, p4.y);
+      
+      if (p1.ind_x == gnum - 2) {
+        $.moveTo(p3.x, p3.y);
+        $.lineTo(p4.x, p4.y);
+      }
+      if (p1.ind_y == gnum - 2) {
+        $.moveTo(p3.x, p3.y);
+        $.lineTo(p2.x, p2.y);
+      }
     }
-}
+    //call functions to run
+  function calls() {
+      $.fillStyle = "hsla(0, 5%, 5%, .1)";
+      $.fillRect(0, 0, _x, _y);
+  
+      mv_part();
+      draw();
+      frm++;
+    }
+    //create wave effect 
+  function wave(x, y) {
+  
+    var wv = Math.sin(x / wv * xw);
+    var wave = Math.sin(0.2 * w * frm + y * yw) * w;
+  
+    return wave;
+  }
+  
+  var c = document.getElementById('canvasAnimationTest');
+  var $ = c.getContext('2d');
+  $.fillStyle = "hsla(0, 5%, 5%, .1)";
+  $.fillRect(0, 0, _x, _y);
+  
+  function resize() {
+    if (c.width < window.innerWidth) {
+      c.width = window.innerWidth;
+    }
+  
+    if (c.height < window.innerHeight) {
+      c.height = window.innerHeight;
+    }
+  }
+  window.requestAnimFrame(go);
+  
+  document.addEventListener('mousemove', MSMV, false);
+  document.addEventListener('mousedown', MSDN, false);
+  document.addEventListener('mouseup', MSUP, false);
+  
+  function MSDN(e) {
+    msdn = true;
+  }
+  
+  function MSUP(e) {
+    msdn = false;
+  }
+  
+  function MSMV(e) {
+    var rect = e.target.getBoundingClientRect();
+    msX = e.clientX - rect.left;
+    msY = e.clientY - rect.top;
+  }
+  window.onload = function() {
+    run();
+  
+    function run() {
+      window.requestAnimFrame(calls);
+      window.requestAnimFrame(run, 33);
+    }
+    resize();
+  };

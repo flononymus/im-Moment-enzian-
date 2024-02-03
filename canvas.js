@@ -3,6 +3,9 @@ var canvasFade = document.getElementById('canvasFade');
 var ctxBack = canvasBack.getContext('2d');
 var ctxFade = canvasFade.getContext('2d');
 
+var canvasLightsDetail = document.getElementById('canvasDetail');
+var ctxLightsDetail = canvasLightsDetail.getContext('2d');
+
 // canvasBack.width = window.innerWidth;
 // canvasFade.width = window.innerWidth;
 // canvasBack.height = window.innerHeight;
@@ -11,6 +14,8 @@ canvasBack.width = 1000;
 canvasFade.width = 1000;
 canvasBack.height = 1000;
 canvasFade.height = 1000;
+canvasDetail.width= 1000;
+canvasDetail.height = 1000;
 
 var currentImage = null; 
 var currentOpacity = 1;
@@ -40,6 +45,10 @@ var imageFullNight= new Image();
 // imageFullNight.src = "images/test_night6.png"
 // imageFullNight.src = "images/night_mixed1.png"
 imageFullNight.src = "images/night_mixed2.png"
+
+var imageLightsDetail = new Image();
+// imageLightsDetail.src = "images/background lights1.png"
+imageLightsDetail.src = "images/background lights2.png"
 
 
 
@@ -165,6 +174,12 @@ function drawImages() {
       }
       else {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
+        ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+        setTimeout(function() {
+          // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+          ctxLightsDetail.clearRect(0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+        },1000)
+
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched')
       }
