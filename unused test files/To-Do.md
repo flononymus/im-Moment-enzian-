@@ -26,6 +26,7 @@
 
 #### Night/Stars
 
+- [ ] galaxy
 - [ ] Make lights more visible (redraw)
 
 - [ ] Stars not rotating around center 
@@ -43,6 +44,7 @@
     - [ ] https://github.com/Btsan/Aurora-Effect/tree/master
 
 #### Rain/Clouds
+  - [ ] make image darker when rain?
   - [x] Various levels of opacity, overlaying
   - [x] Parallax clouds
     - [x] https://codepen.io/vavik96/pen/vEdMXM

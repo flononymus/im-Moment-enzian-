@@ -86,8 +86,10 @@ var srcXLanding = 0;
 var srcYLanding = 0;
 
 
-canvasBird.width = 1000;
-canvasBird.height = 1000;
+// canvasBird.width = 1000;
+// canvasBird.height = 1000;
+canvasBird.width = 1200;
+canvasBird.height = 1200;
 
 xBird = canvasBird.width;
 yBird = canvasBird.height/2;
@@ -177,7 +179,7 @@ function toggleBird() {
 
         setTimeout(function() {
             switchIdle();
-            console.log('switch', imageSwitch)
+            console.log('switch idle', imageSwitch)
         },5000)
 
         setTimeout(function() {

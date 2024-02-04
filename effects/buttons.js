@@ -41,6 +41,11 @@ cycleButton.textContent = "Cycle BG"
 cycleButton.onclick = cycleTime;
 document.body.appendChild(cycleButton);
 
+var stopCycleButton= document.createElement('button');
+stopCycleButton.textContent = "Stop Cycle"
+stopCycleButton.onclick = stopCycleTime;
+document.body.appendChild(stopCycleButton);
+
 
 var rainButton= document.createElement('button');
 rainButton.textContent = "Rain"
@@ -111,6 +116,7 @@ firstRow.appendChild(halfNightButton);
 firstRow.appendChild(fullNightButton);
 firstRow.appendChild(noneButton);
 firstRow.appendChild(cycleButton);
+firstRow.appendChild(stopCycleButton);
 document.body.appendChild(firstRow);
 
 var secondRow = document.createElement('div');

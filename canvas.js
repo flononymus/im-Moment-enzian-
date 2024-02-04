@@ -29,14 +29,18 @@ var fps = 60;
 
 var cyclingBG = false;
 var repeatCycle= false;
+var stopCycle = false;
 
 
 var imageDay= new Image();
 imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
-// imageClouds.onload = drawImages()
-imageClouds.onload = drawImages, toggleBird
+imageClouds.onload = drawImages(), 
+// setTimeout(function() { 
+//     toggleBird();
+// },1000);
+// imageClouds.onload = drawImages, toggleBird
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
@@ -49,6 +53,7 @@ var imageFullNight= new Image();
 // imageFullNight.src = "images/test_night6.png"
 // imageFullNight.src = "images/night_mixed1.png"
 imageFullNight.src = "images/night_mixed2.png"
+imageFullNight.onload = drawImages
 
 var imageLightsDetail = new Image();
 // imageLightsDetail.src = "images/background lights1.png"
@@ -63,9 +68,11 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
   event.preventDefault();
 }
 
+// currentImage = 'clouds'
+// currentImage = 'fullNight'
+
 if (currentImage === null) {
-  currentImage = 'clouds'
-  toggleBird();
+  currentImage = 'fullNight'
 }
 
 function drawImages() {
@@ -175,11 +182,11 @@ function drawImages() {
       }
       else {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
-        ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-        setTimeout(function() {
-          // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-          ctxLightsDetail.clearRect(0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-        },1000)
+        // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+        // setTimeout(function() {
+        //   // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+        //   ctxLightsDetail.clearRect(0,0,canvasLightsDetail.width,canvasLightsDetail.height)
+        // },1000)
 
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched')
@@ -237,28 +244,51 @@ function noImage() {
 
 function cycleTime() {
   cyclingBG = !cyclingBG
-  repeatCycle = !repeatCycle
-  if (cyclingBG && repeatCycle) { 
+  // repeatCycle = !repeatCycle
+  // cyclingBG = true;
+  if (cyclingBG) { 
     console.log('cycling background')
       setTimeout(function() { 
+        if (stopCycle) {
+          return;
+        }
       dayImage();
       setTimeout(function() { 
+        if (stopCycle) {
+          return;
+        }
         halfNight();
         setTimeout(function() { 
+          if (stopCycle) {
+            return;
+          }
           fullNight();
           setTimeout(function() { 
+            if (stopCycle) {
+              return;
+            }
             cloudImage();
-            repeatCycle = true;
             cycleTime();
           },5000)
         },5000)
       },5000)
     },5000)
   }
-  if (!cyclingBG) {
-    repeatCycle = false; 
-    // cyclingBG = false;
-    console.log('not')
-  }
+  // if (!cyclingBG) {
+  //   repeatCycle = false; 
+  //   // cyclingBG = false;
+  //   console.log('not')
+  //   return;
+  // }
 }
 
+function stopCycleTime() {
+
+  if (cyclingBG) {
+    stopCycle = !stopCycle;
+
+    cyclingBG = false;
+    console.log('not')
+    return;
+  }
+}
