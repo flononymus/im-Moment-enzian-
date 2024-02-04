@@ -37,9 +37,9 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages(), 
-// setTimeout(function() { 
-//     toggleBird();
-// },1000);
+setTimeout(function() { 
+    toggleBird();
+},1000);
 // imageClouds.onload = drawImages, toggleBird
 imageClouds.src = "images/test_clouds2.png"
 
@@ -72,7 +72,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 // currentImage = 'fullNight'
 
 if (currentImage === null) {
-  currentImage = 'fullNight'
+  // currentImage = 'fullNight'
+  currentImage = 'clouds'
 }
 
 function drawImages() {
@@ -166,6 +167,7 @@ function drawImages() {
 
   }
   else if (currentImage === 'fullNight') {
+     resetToggles(); 
 
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
@@ -182,14 +184,14 @@ function drawImages() {
       }
       else {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
-        // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-        // setTimeout(function() {
-        //   // ctxLightsDetail.drawImage(imageLightsDetail,0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-        //   ctxLightsDetail.clearRect(0,0,canvasLightsDetail.width,canvasLightsDetail.height)
-        // },1000)
-
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched')
+
+        setTimeout(function() { 
+          toggleBorealis();
+          toggleStars();
+        },1000);
+
       }
   }
   else if (currentImage === 'none') {

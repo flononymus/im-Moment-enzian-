@@ -169,10 +169,10 @@ function resetToggles() {
         console.log('bird off');
         toggleBird();
     }
-    if (animaionActive) {
-        console.log('animate off')
-        toggleAnimationTest();
-    }
+    // if (animationActive) {
+    //     console.log('animate off')
+    //     toggleAnimationTest();
+    // }
 
   }
 

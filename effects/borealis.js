@@ -25,7 +25,7 @@ var yBorealis = 0
 var borealisOpacity= 0;
 var borealisFadeOut= false;
 
-ctxBorealis.imageSmoothingEnabled = false;
+// ctxBorealis.imageSmoothingEnabled = false;
 
 canvasBorealis.width = 1000;
 canvasBorealis.height = 1000;
