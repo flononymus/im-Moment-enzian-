@@ -1,23 +1,29 @@
 # Hausaufgabe Interaction Design ZHdK, <br/> Thema: "im-Moment"
 
-https://flokleiser.github.io/im-Moment/
+
+### https://flokleiser.github.io/im-Moment/
+
+___
 
 ## Description/general idea:
 
 peaceful atmospheric images/environment to get a break from a busy day, to relax with, to get lost in, and to tune out. 
 
+___
+
 ### Ideas/Brainstorming
 - Night --> northern lights, stars, maybe a galaxy
 - Half night --> smoking chimneys, 
 - Clouds --> rain (or snow), maybe something to indicate wind?
-- Day --> small clouds, airplanes (?)
-- Movement --> planes, birds, smaller birds
+- Day --> small clouds, airplanes , planes, birds, smaller birds
+
+___
 
 - Maybe soundscapes
 - Different times of day (day/night)
 - Different weather (rain/cloudy/sunny etc)
 
-debug tool --> coordinates from mouse onclick
+___
 
 ### <ins>Mind-Map:</ins>
 
