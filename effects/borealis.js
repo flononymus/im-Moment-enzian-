@@ -22,9 +22,10 @@ var spriteHeightBorealis = borealis.height/rowsBorealis;
 var xBorealis = 0
 var yBorealis = 0
 
+var borealisOpacity= 0;
+var borealisFadeOut= false;
+
 ctxBorealis.imageSmoothingEnabled = false;
-// ctxBorealis.globalAlpha = 0.1;
-ctxBorealis.globalAlpha = 1
 
 canvasBorealis.width = 1000;
 canvasBorealis.height = 1000;
@@ -39,28 +40,59 @@ function animateBorealis() {
 
         ctxBorealis.drawImage(borealis,srcXB,srcYB,spriteWithBorealis,spriteHeightBorealis,xBorealis, yBorealis,spriteWithBorealis,spriteHeightBorealis);
         framesDrawnB++
-        // if (framesDrawnB >= 100) {
-        if (framesDrawnB >= 10) {
+        if (framesDrawnB >= 15) {
             currentFrameB++;
             framesDrawnB = 0;
-            // console.log(currentFrameB - 1);
+        }
+
+        if (borealisOpacity < 0.3) {
+            ctxBorealis.globalAlpha = borealisOpacity
+            // borealisOpacity += 0.0005;
+            borealisOpacity += 0.0005;
+        }
+
+    }
+
+
+    else {
+        ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height)
+        ctxBorealis.drawImage(borealis,srcXB,srcYB,spriteWithBorealis,spriteHeightBorealis,xBorealis, yBorealis,spriteWithBorealis,spriteHeightBorealis);
+        if (borealisFadeOut) {
+            if (borealisOpacity > 0) {
+                ctxBorealis.globalAlpha = borealisOpacity;
+                borealisOpacity += -0.001;
+            }
+            requestAnimationFrame(animateBorealis);
         }
     }
-    else {
-        console.log('borealis off')
-    }
+
 }
 
 function toggleBorealis() {
     borealisActive = !borealisActive;
         if (borealisActive) {
+        borealisFadeOut= false;
         console.log('borealis on')
         animateBorealis();
         // canvasBorealis.width = 1000
         // canvasBorealis.height = 1000
         // ctxBorealis.drawImage(borealis,0,0,canvasBorealis.width, canvasBorealis.height)
+
+        // ctxBorealis.globalAlpha = 0.3
+        // ctxBorealis.globalAlpha = 1
+        // setTimeout(function(){ 
+        //     // ctxBorealis.filter = "blur(5px)"
+        //     ctxBorealis.globalAlpha = 0.3;
+        // },1000)
+
+
     } else {
-        console.log('borealis off')
-        ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);    
+        borealisFadeOut= true;
+        // console.log('borealis off')
+        setTimeout(function() { 
+            ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);     
+            console.log('test')
+            borealisFadeOut = false;
+        },3000)
     }
 }
