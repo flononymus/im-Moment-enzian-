@@ -107,6 +107,11 @@ resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
+var soundButton = document.createElement('button');
+soundButton.textContent = "Sound";
+// soundButton.onclick = 
+document.body.appendChild(soundButton)
+
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
 firstRow.appendChild(cloudyButton);
@@ -138,6 +143,16 @@ thirdRow.appendChild(nightPlaneButton);
 // thirdRow.appendChild(animationTestButton);
 // thirdRow.appendChild(idleTest);
 document.body.appendChild(thirdRow);
+
+// var cloudsButton = document.createElement('button');
+// cloudsButton.textContent = "Clouds"
+// cloudsButton.onclick = toggleClouds;
+// document.body.appendChild(cloudsButton);
+
+var soundButtonDiv = document.createElement('div');
+soundButtonDiv.id = 'soundButtonDiv'
+soundButtonDiv.appendChild(soundButton);
+document.body.appendChild(soundButtonDiv)
 
 
 function resetToggles() {

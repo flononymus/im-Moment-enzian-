@@ -208,6 +208,16 @@ button {
     margin:10px;
     height:20px;
   }
+
+#soundButtonDiv {
+    position:absolute;
+    /* position:relative; */
+    display:flex;
+    top:90px
+  }
+
+
+
   #firstRow {
     position:absolute;
     display: flex

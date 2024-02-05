@@ -20,7 +20,7 @@ ___
 ### Ideas/Brainstorming
 - Night --> northern lights, stars, maybe a galaxy
 - Half night --> smoking chimneys, 
-- Clouds --> rain (or snow), maybe something to indicate wind? ------> if rain, make picture darker
+- Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
 - Day --> small clouds, airplanes , planes, birds, smaller birds
 
 <br/>

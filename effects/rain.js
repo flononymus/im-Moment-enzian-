@@ -1,6 +1,9 @@
 var canvasRain= document.getElementById('canvasRain');
 var ctxRain= canvasRain.getContext('2d');
 
+var canvasDetail= document.getElementById('canvasDetail');
+var ctxDetail= canvasDetail.getContext('2d');
+
 canvasRain.width = 500;
 canvasRain.height = 500;
 
@@ -42,15 +45,24 @@ raindropImage.src = "images/raindrop_test2.png"
 // toggleRain();
 
 function toggleRain() {
+  console.log(ctxRain.globalAlpha)
   raining = !raining
   if (raining) {
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
     // ctxRain.globalAlpha = 0.1
+
+    // if (currentImage === 'clouds') {
+    //   console.log('currentimage detection')
+    //   ctxDetail.fillStyle = 'rgba(0,0,0,0.3)'
+    //   ctxDetail.fillRect(0,0,canvasDetail.width,canvasDetail.height);
+    // }
+
   }
   else {
     clearInterval(rainInterval);
     ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
+    // ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height)
     console.log('clear')
   }
 }
@@ -70,7 +82,7 @@ function drawRain() {
 
     // ctxRain.globalAlpha = rainOpacity
     // rainOpacity += 0.001
-    // console.log(rainOpacity)
+    ctxRain.globalAlpha = 0.1;
 
   }
   move();
