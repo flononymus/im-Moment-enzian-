@@ -7,9 +7,9 @@ ___
 
 ## Projektbeschrieb
 
-(max 900 words)
+- (max 900 words)
 [[projektbeschrieb]]
-
+![image](images/hausaufgabe/hausaufgabe.png)
 ___
 
 ## Description/general idea:
