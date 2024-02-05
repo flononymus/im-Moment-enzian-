@@ -107,6 +107,11 @@ resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
+var hideButton = document.createElement('button');
+hideButton.textContent = "Hide Buttons"
+hideButton.onclick = hideButtons;
+document.body.appendChild(hideButton);
+
 var soundButton = document.createElement('button');
 soundButton.textContent = "Sound: off"
 soundButton.addEventListener('click', function handleClick() {
@@ -161,6 +166,7 @@ document.body.appendChild(thirdRow);
 var soundButtonDiv = document.createElement('div');
 soundButtonDiv.id = 'soundButtonDiv'
 soundButtonDiv.appendChild(soundButton);
+soundButtonDiv.appendChild(hideButton);
 document.body.appendChild(soundButtonDiv)
 
 
@@ -197,8 +203,16 @@ function resetToggles() {
     //     console.log('animate off')
     //     toggleAnimationTest();
     // }
-
   }
+
+function hideButtons() {
+    ctxButtons.clearRect(0,0,canvasButtons.width,canvasButtons.height);
+    document.body.removeChild(firstRow)
+    document.body.removeChild(secondRow)
+    document.body.removeChild(thirdRow)
+    document.body.removeChild(soundButtonDiv)
+    console.log('hide');
+}
 
 //   canvasButtons.onload = (function() {
 //   canvasButtons.addEventListener('click', function(event) {

@@ -18,6 +18,10 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 ___
 
 ### Ideas/Brainstorming
+
+- resize window properly
+<br/>
+
 - Night --> northern lights, stars, maybe a galaxy
 - Half night --> smoking chimneys, 
 - Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
