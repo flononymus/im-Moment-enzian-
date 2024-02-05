@@ -36,7 +36,7 @@ var imageDay= new Image();
 imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
-imageClouds.onload = drawImages(), 
+imageClouds.onload = drawImages(),
 // setTimeout(function() { 
 //     toggleBird();
 // },1000);
@@ -303,4 +303,42 @@ function stopCycleTime() {
     console.log('not')
     return;
   }
+}
+
+window.onload = function() {
+function resizeCanvas(canvas) {
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
+  if (windowWidth < 1000 && windowWidth > windowHeight) {
+      canvas.style.width = windowWidth + 'px';
+      canvas.style.height = windowWidth + 'px';
+  } else {
+      var canvasRatio = canvas.height / canvas.width;
+      var windowRatio = windowHeight / windowWidth;
+      var width;
+      var height;
+
+      if (windowRatio < canvasRatio) {
+          height = windowHeight;
+          width = height / canvasRatio;
+      } else {
+          width = windowWidth;
+          height = width * canvasRatio;
+      }
+
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+  }
+}
+
+function resizeAllCanvases() {
+  var allCanvases = document.getElementsByTagName('canvas');
+  for (var i = 0; i < allCanvases.length; i++) {
+      resizeCanvas(allCanvases[i]);
+      // console.log(allCanvases)
+  }
+}
+window.addEventListener('resize', resizeAllCanvases, false);
+resizeAllCanvases(); 
 }
