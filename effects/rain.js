@@ -1,6 +1,9 @@
 var canvasRain= document.getElementById('canvasRain');
 var ctxRain= canvasRain.getContext('2d');
 
+var canvasDetail= document.getElementById('canvasDetail');
+var ctxDetail= canvasDetail.getContext('2d');
+
 canvasRain.width = 500;
 canvasRain.height = 500;
 
@@ -15,7 +18,9 @@ var init = [];
 var maxParts = 1000;
 
 var rainOpacity = 0;
-ctxRain.globalAlpha = 0.5;
+var rainOpacityOut = 0.5;
+var isFadingRain = true;
+var isFadingOutRain = false;
 
 for(var a = 0; a < maxParts; a++) {
   init.push({
@@ -34,30 +39,41 @@ for(var b = 0; b < maxParts; b++) {
 
 var raining = false;
 var raindropImage = new Image();
-// raindropImage.src = "images/raindrop_test.png"
 raindropImage.src = "images/raindrop_test2.png"
 
-// ctxRain.globalAlpha = 0.1
 
-// toggleRain();
 
 function toggleRain() {
+  // console.log(ctxRain.globalAlpha)
+  // ctxRain.globalAlpha = 0.1
   raining = !raining
   if (raining) {
+    // rainOpacity = 0;
+    // ctxRain.globalAlpha = rainOpacity; 
+    fadeInRain();
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
-    // ctxRain.globalAlpha = 0.1
+
+    // if (currentImage === 'clouds') {
+    //   console.log('currentimage detection')
+    //   ctxDetail.fillStyle = 'rgba(0,0,0,0.3)'
+    //   ctxDetail.fillRect(0,0,canvasDetail.width,canvasDetail.height);
+    // }
+
   }
   else {
-    clearInterval(rainInterval);
-    ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
+    // isFadingOutRain = true
+    fadeOutRain();
     console.log('clear')
+    setTimeout(function() {
+    clearInterval(rainInterval);
+    // ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
+    // ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height)
+    },1000)
   }
 }
 
 function drawRain() {
-  // ctxRain.globalAlpha = 0.5;
-  // ctx.drawImage(currentImage,0,0,w,h);
   ctxRain.clearRect(0, 0, w, h);
 
   for(var c = 0; c < particles.length; c++) {
@@ -66,12 +82,6 @@ function drawRain() {
     ctxRain.moveTo(p.x, p.y);
     ctxRain.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
     ctxRain.stroke();
-    // ctxFront.drawImage(raindropImage, p.x, p.y, raindropImage.width/3, raindropImage.height*2);
-
-    // ctxRain.globalAlpha = rainOpacity
-    // rainOpacity += 0.001
-    // console.log(rainOpacity)
-
   }
   move();
 }
@@ -86,4 +96,47 @@ function move() {
       p.y = -20;
     }
   }
+}
+
+function fadeInRain() {
+  // isFadingOutRain = false;
+  isFadingRain = true
+  if (isFadingRain) {
+    rainOpacityOut = 0.5;
+      ctxRain.globalAlpha = rainOpacity;
+      if (rainOpacity < 0.5) {
+        isFadingRain = true;
+        console.log(ctxRain.globalAlpha)
+        rainOpacity += 0.005
+        ctxRain.globalAlpha = rainOpacity;
+
+    requestAnimationFrame(fadeInRain);
+      }
+  }
+  setTimeout(function() { 
+    isFadingRain= false;  
+    console.log('fade in over')
+  },1000)
+
+}
+
+function fadeOutRain() {
+  isFadingOutRain = true;
+  if (isFadingOutRain) {
+    rainOpacity = 0;
+    if (rainOpacityOut > 0) {
+      ctxRain.globalAlpha = rainOpacityOut;
+      console.log(ctxRain.globalAlpha)
+      rainOpacityOut -= 0.005
+    
+
+      ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
+      drawRain()
+    requestAnimationFrame(fadeOutRain);
+    }
+  }
+  setTimeout(function() { 
+    isFadingOutRain = false;  
+    console.log('fade out over')
+  },1000)
 }

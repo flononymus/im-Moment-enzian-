@@ -58,7 +58,6 @@ function drawCloudsDay() {
         ctxClouds5.globalAlpha = cloudsOpacityDay;
         cloudsOpacityDay+= 0.005;
         }
-        console.log(cloudsOpacityDay)
     // },1000/fps)
 
     requestAnimationFrame(drawCloudsDay);

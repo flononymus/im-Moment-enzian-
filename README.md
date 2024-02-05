@@ -1,8 +1,14 @@
-# Hausaufgabe Interaction Design ZHdK, <br/> Thema: "im-Moment"
+# Interaction Design ZHdK, <br/> Thema: "im-Moment"
 
 
 ### https://flokleiser.github.io/im-Moment/
 
+___
+
+### Projektbeschrieb
+
+<!-- [[projektbeschrieb]] -->
+![image](images/hausaufgabe/hausaufgabe.png)
 ___
 
 ## Description/general idea:
@@ -14,14 +20,20 @@ ___
 ### Ideas/Brainstorming
 - Night --> northern lights, stars, maybe a galaxy
 - Half night --> smoking chimneys, 
-- Clouds --> rain (or snow), maybe something to indicate wind? ------> if rain, make picture darker
+- Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
 - Day --> small clouds, airplanes , planes, birds, smaller birds
+
+<br/>
+
+- Soundscapes --> button to toggle sound on/off
 
 ___
 
-- Maybe soundscapes
-- Different times of day (day/night)
+### Features:
+
+- Different times of day (day/dusk/night)
 - Different weather (rain/cloudy/sunny etc)
+- Different sounds (Birds, tourists, wind, rain, cars, church bells)
 
 ___
 

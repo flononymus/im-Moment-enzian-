@@ -3,8 +3,8 @@ var canvasFade = document.getElementById('canvasFade');
 var ctxBack = canvasBack.getContext('2d');
 var ctxFade = canvasFade.getContext('2d');
 
-var canvasLightsDetail = document.getElementById('canvasDetail');
-var ctxLightsDetail = canvasLightsDetail.getContext('2d');
+var canvasDetail= document.getElementById('canvasDetail');
+var ctxDetail= canvasDetail.getContext('2d');
 
 // canvasBack.width = window.innerWidth;
 // canvasFade.width = window.innerWidth;
@@ -37,9 +37,9 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages(), 
-setTimeout(function() { 
-    toggleBird();
-},1000);
+// setTimeout(function() { 
+//     toggleBird();
+// },1000);
 // imageClouds.onload = drawImages, toggleBird
 imageClouds.src = "images/test_clouds2.png"
 
@@ -59,6 +59,10 @@ var imageLightsDetail = new Image();
 // imageLightsDetail.src = "images/background lights1.png"
 imageLightsDetail.src = "images/background lights2.png"
 
+var imageDarkClouds = new Image();
+imageDarkClouds.src = "images/test_clouds_rain.png"
+
+
 
 
 document.getElementById('canvasBackground').onwheel = function(event){
@@ -77,22 +81,27 @@ if (currentImage === null) {
 }
 
 function drawImages() {
-
   if (currentImage === 'clouds') {
+
+    // if (raining) {
+    //   console.log('darker clouds')
+    //   ctxDetail.fillStyle = 'rgba(0,0,0,0.3)'
+    //   ctxDetail.fillRect(0,0,canvasDetail.width,canvasDetail.height);
+    // }
 
     currentOpacity += 0.005;
     if (currentOpacity < 1) {
+    
 
     setTimeout(function() {
       requestAnimationFrame(drawImages);
-
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
         console.log(currentOpacity);
         ctxFade.drawImage(imageClouds,0,0,canvasFade.width,canvasFade.height);
       }, 1000 / fps);
-      }
+    }
       else {
         ctxBack.drawImage(imageClouds,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
@@ -205,6 +214,7 @@ function cloudImage() {
   currentImage = "clouds";
   currentOpacity = 0;
   drawImages();
+
   // setTimeout(function() {
   //   toggleSmoking();
   // },1000);
