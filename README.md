@@ -7,7 +7,7 @@ ___
 
 ### Projektbeschrieb
 
-[[projektbeschrieb]]
+<!-- [[projektbeschrieb]] -->
 ![image](images/hausaufgabe/hausaufgabe.png)
 ___
 
