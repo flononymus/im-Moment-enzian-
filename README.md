@@ -7,7 +7,6 @@ ___
 
 ## Projektbeschrieb
 
-- (max 900 words)
 [[projektbeschrieb]]
 ![image](images/hausaufgabe/hausaufgabe.png)
 ___
@@ -24,11 +23,15 @@ ___
 - Clouds --> rain (or snow), maybe something to indicate wind? ------> if rain, make picture darker
 - Day --> small clouds, airplanes , planes, birds, smaller birds
 
+<br/>
+
+- Soundscapes --> button to toggle sound on/off
+
 ___
 
-- Maybe soundscapes
-- Different times of day (day/night)
+- Different times of day (day/dusk/night)
 - Different weather (rain/cloudy/sunny etc)
+- Different sounds (Birds, tourists, wind, rain, cars, church bells)
 
 ___
 
