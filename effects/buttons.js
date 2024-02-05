@@ -108,8 +108,17 @@ resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
 var soundButton = document.createElement('button');
-soundButton.textContent = "Sound";
-// soundButton.onclick = 
+soundButton.textContent = "Sound: off"
+soundButton.addEventListener('click', function handleClick() {
+    if (enableSound) {
+        soundButton.textContent = "Sound: off"
+    }
+    if (!enableSound) {
+        soundButton.textContent = "Sound: on"
+    }
+});
+// soundButton.textContent = enableSound;
+soundButton.onclick = toggleSound;
 document.body.appendChild(soundButton)
 
 var firstRow = document.createElement('div');
