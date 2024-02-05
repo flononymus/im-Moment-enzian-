@@ -5,7 +5,7 @@
 
 ___
 
-## Projektbeschrieb
+### Projektbeschrieb
 
 [[projektbeschrieb]]
 ![image](images/hausaufgabe/hausaufgabe.png)
@@ -28,6 +28,8 @@ ___
 - Soundscapes --> button to toggle sound on/off
 
 ___
+
+### Features:
 
 - Different times of day (day/dusk/night)
 - Different weather (rain/cloudy/sunny etc)
