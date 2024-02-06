@@ -107,6 +107,7 @@ resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
+// var hideButton = document.createElement('button2');
 var hideButton = document.createElement('button');
 hideButton.textContent = "Hide Buttons"
 hideButton.onclick = hideButtons;

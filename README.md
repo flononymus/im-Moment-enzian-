@@ -19,9 +19,13 @@ ___
 
 ### Ideas/Brainstorming
 
-- [ ] Final title
 - [ ] soundscapes collection
 - [ ] figure out how to play sounds?
+
+- [ ] Final title --> Momentful (?)
+- [ ] Animated title that plays when first loading (maybe clouds?)
+
+- [x] Figure out how to make different buttons
 
 <br/>
 
@@ -32,7 +36,8 @@ ___
 
 <br/>
 
-- Soundscapes --> button to toggle sound on/off
+- [ ] Night --> add galaxy / moon
+- [ ] Soundscapes --> button to toggle sound on/off
 
 ___
 

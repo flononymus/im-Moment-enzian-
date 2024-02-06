@@ -2,7 +2,11 @@
 
 Titel ideas:
     - A day from my room
-    - 
+    - mindful moments
+    - mindments?
+    - Momentful
+
+
 
 
 #### V1:
