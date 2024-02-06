@@ -53,6 +53,7 @@ function toggleRain() {
     fadeInRain();
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
+    loadRainSound();
 
     // if (currentImage === 'clouds') {
     //   console.log('currentimage detection')
@@ -64,11 +65,10 @@ function toggleRain() {
   else {
     // isFadingOutRain = true
     fadeOutRain();
+    loadRainSound();
     console.log('clear')
     setTimeout(function() {
-    clearInterval(rainInterval);
-    // ctxRain.clearRect(0,0,canvasRain.width,canvasRain.height);
-    // ctxDetail.clearRect(0,0,canvasDetail.width,canvasDetail.height)
+      clearInterval(rainInterval);
     },1000)
   }
 }

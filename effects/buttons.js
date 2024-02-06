@@ -124,7 +124,9 @@ soundButton.addEventListener('click', function handleClick() {
     }
 });
 // soundButton.textContent = enableSound;
+
 soundButton.onclick = toggleSound;
+// soundButton.onclick = loadRainSound;
 document.body.appendChild(soundButton)
 
 var firstRow = document.createElement('div');

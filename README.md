@@ -20,6 +20,15 @@ ___
 ### Ideas/Brainstorming
 
 - [ ] soundscapes collection
+    - [ ] Rain
+    - [ ] Birds
+    - [ ] Cricket(?)
+
+
+    - [ ] Fade sound in/out
+    - [ ] Global button to enable/disable all sound
+
+
 - [ ] figure out how to play sounds?
 https://web.dev/articles/webaudio-intro?hl=en
 
