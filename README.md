@@ -19,7 +19,18 @@ ___
 
 ### Ideas/Brainstorming
 
-- resize window properly
+- [ ] soundscapes collection
+- [ ] figure out how to play sounds?
+https://web.dev/articles/webaudio-intro?hl=en
+
+https://www.w3schools.com/graphics/game_sound.asp
+https://stackoverflow.com/questions/1933969/sound-effects-in-javascript-html5
+
+- [ ] Final title --> Momentful (?)
+- [ ] Animated title that plays when first loading (maybe clouds?)
+
+- [x] Figure out how to make different buttons
+
 <br/>
 
 - Night --> northern lights, stars, maybe a galaxy
@@ -29,7 +40,8 @@ ___
 
 <br/>
 
-- Soundscapes --> button to toggle sound on/off
+- [ ] Night --> add galaxy / moon
+- [ ] Soundscapes --> button to toggle sound on/off
 
 ___
 

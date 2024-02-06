@@ -60,7 +60,7 @@ function animateBorealis() {
         if (borealisFadeOut) {
             if (borealisOpacity > 0) {
                 ctxBorealis.globalAlpha = borealisOpacity;
-                borealisOpacity += -0.001;
+                borealisOpacity += -0.005;
             }
             requestAnimationFrame(animateBorealis);
         }
