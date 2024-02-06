@@ -1189,9 +1189,17 @@ var ctxStars2 = canvasStars2.getContext('2d');
 canvasStars.width = 1000;
 canvasStars.height = 1000;
 
+var moonImage = new Image();
+// moonImage.src = "images/moon.png"
+moonImage.src = "images/moontest.png"
+moonImage.onload = drawMoon();
+
 var enableStars = false;
 let rotationAngle = 0;
 var fps = 60;
+
+// ctxStars.width = 1000;
+// ctxStars.height = 1000;
 
 
 let xStars = 3;
@@ -1203,6 +1211,12 @@ const starCenterX = canvasStars.width/2;
 const starCenterY = canvasStars.height/2; 
 
 ctxStars.imageSmoothingEnabled = false;
+
+function drawMoon() {
+  ctxStars2.drawImage(moonImage,0,0,canvasStars.width,canvasStars.height)
+  console.log(moonImage.x, moonImage.y)
+  console.log('moon should be here')
+}
 
 
 function stars() {
@@ -1237,6 +1251,7 @@ function toggleStars() {
   enableStars = !enableStars
   console.log('stars', enableStars)
   if (enableStars) {
+    drawMoon();
     stars();
     starInterval = setInterval(stars, 1000 / fps);
   }
