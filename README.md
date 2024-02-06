@@ -19,7 +19,10 @@ ___
 
 ### Ideas/Brainstorming
 
-- Final title
+- [ ] Final title
+- [ ] soundscapes collection
+- [ ] figure out how to play sounds?
+
 <br/>
 
 - Night --> northern lights, stars, maybe a galaxy
