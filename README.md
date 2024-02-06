@@ -19,7 +19,7 @@ ___
 
 ### Ideas/Brainstorming
 
-- resize window properly
+- Final title
 <br/>
 
 - Night --> northern lights, stars, maybe a galaxy
