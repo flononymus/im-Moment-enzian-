@@ -19,6 +19,8 @@ ___
 
 ### Ideas/Brainstorming
 
+- [ ] Make currently active buttons outlined
+
 - [ ] soundscapes collection
     - [ ] Rain
     - [ ] Birds

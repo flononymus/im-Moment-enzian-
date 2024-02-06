@@ -203,6 +203,7 @@ button {
     position:relative;
     display:block;
     flex-direction: row;
+    /* flex-direction: column; */
     /* z-index: 9999; */
     font-size: 16px;
 
@@ -226,14 +227,23 @@ button2 {
     border:0.5px;
     border-radius: 6px;
     margin:10px;
-    height:26px;
-    width:120px
+    height:30px;
+    /* width:120px */
+    /* width:40px; */
+    /* width:80px; */
+    width:100px;
   }
 
 button2:hover {
     scale:1.1;  
 }
 
+.outlined{
+    border-style:solid;
+    /* border-color: black; */
+    border:2px;
+    background-color: rgba(0,0,0,0.5);
+}
 
 buttonSound {
     display:flex;
@@ -252,7 +262,7 @@ buttonSound {
     border:0.5px;
     border-radius: 6px;
     margin:10px;
-    height:26px;
+    height:30px;
     width:40px
   }
 
@@ -267,26 +277,33 @@ buttonSound:hover {
     top:90px
   }
 
-
-
   #firstRow {
     position:absolute;
     display: flex
   }
 
   #secondRow {
-    top:30px;
+    top:40px;
     display: flex; 
+    flex-direction: column;
     position:absolute;
+    left:240px;
+
   }
 
   #thirdRow {
-    top:60px;
+    /* top:60px; */
+    top:40px;
     display: flex; 
     position:absolute;
+    flex-direction: column;
+    /* left:120px; */
   }
   #fourthRow{
-    top:90px;
+    /* top:90px; */
+    top:40px;
     display: flex; 
     position:absolute;
+    flex-direction: column;
+    left:120px;
   }

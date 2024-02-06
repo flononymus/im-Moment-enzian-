@@ -6,24 +6,36 @@ canvasButtons.height = window.innerWidth;
 
 var buttonsHidden = true;
 
+$(document).on('click', 'button2', function() {
+    $(this).toggleClass('outlined');
+});
+
 // canvasButtons.width = 1000;
 // canvasButtons.height = 1000;
 
 // var cloudyButton= document.createElement('button');
-var cloudyButton= document.createElement('button2');
-cloudyButton.textContent = "Cloudy"
+// var cloudyButton= document.createElement('button2');
+var cloudyButton= document.createElement('buttonSound');
+// cloudyButton.textContent = "Cloudy"
+// cloudyButton.textContent = "🌧️"
+cloudyButton.textContent ="🌫️"
 cloudyButton.onclick = cloudImage;
 document.body.appendChild(cloudyButton);
 
 // var dayButton = document.createElement('button');
-var dayButton = document.createElement('button2');
-dayButton.textContent = "Day"
+// var dayButton = document.createElement('button2');
+var dayButton= document.createElement('buttonSound');
+// dayButton.textContent = "Day"
+// dayButton.textContent = "️🌤️"
+dayButton.textContent = "🏙️"
 dayButton.onclick= dayImage;
 document.body.appendChild(dayButton);
 
 // var halfNightButton = document.createElement('button');
-var halfNightButton = document.createElement('button2');
-halfNightButton.textContent = "Half Night"
+// var halfNightButton = document.createElement('button2');
+var halfNightButton= document.createElement('buttonSound');
+// halfNightButton.textContent = "Half Night"
+halfNightButton.textContent = "🌆"
 halfNightButton.onclick = halfNight;
 document.body.appendChild(halfNightButton);
 
@@ -33,68 +45,82 @@ document.body.appendChild(halfNightButton);
 // document.body.appendChild(moreNightButton);
 
 // var fullNightButton = document.createElement('button');
-var fullNightButton = document.createElement('button2');
-fullNightButton.textContent = "Full Night"
+// var fullNightButton = document.createElement('button2');
+var fullNightButton= document.createElement('buttonSound');
+// fullNightButton.textContent = "Full Night"
+fullNightButton.textContent = "🌃"
 fullNightButton.onclick = fullNight;
 document.body.appendChild(fullNightButton);
 
-var noneButton= document.createElement('button');
+// var noneButton= document.createElement('button');
+var noneButton= document.createElement('button2');
 noneButton.textContent = "No BG"
 noneButton.onclick = noImage;
 document.body.appendChild(noneButton);
 
-var cycleButton= document.createElement('button');
+// var cycleButton= document.createElement('button');
+var cycleButton= document.createElement('button2');
 cycleButton.textContent = "Cycle BG"
 cycleButton.onclick = cycleTime;
 document.body.appendChild(cycleButton);
 
 var stopCycleButton= document.createElement('button');
+var stopCycleButton= document.createElement('button2');
 stopCycleButton.textContent = "Stop Cycle"
 stopCycleButton.onclick = stopCycleTime;
 document.body.appendChild(stopCycleButton);
 
 
-var rainButton= document.createElement('button');
+// var rainButton= document.createElement('button');
+var rainButton= document.createElement('button2');
 rainButton.textContent = "Rain"
 rainButton.onclick = toggleRain;
 document.body.appendChild(rainButton);
 
-var cloudsButton = document.createElement('button');
+// var cloudsButton = document.createElement('button');
+var cloudsButton = document.createElement('button2');
 cloudsButton.textContent = "Clouds"
 cloudsButton.onclick = toggleClouds;
 document.body.appendChild(cloudsButton);
 
-var cloudsButtonDay = document.createElement('button');
-cloudsButtonDay.textContent = "Clouds Day"
+// var cloudsButtonDay = document.createElement('button');
+var cloudsButtonDay = document.createElement('button2');
+cloudsButtonDay.textContent = "DayClouds"
 cloudsButtonDay.onclick = toggleCloudsDay;
 document.body.appendChild(cloudsButtonDay);
 
-var smokeButton= document.createElement('button');
+// var smokeButton= document.createElement('button');
+var smokeButton= document.createElement('button2');
 smokeButton.textContent = "Smoke"
 smokeButton.onclick = toggleSmoking;
 document.body.appendChild(smokeButton);
 
-var starsButton= document.createElement('button');
+// var starsButton= document.createElement('button');
+var starsButton= document.createElement('button2');
 starsButton.textContent = "Stars"
 starsButton.onclick = toggleStars;
 document.body.appendChild(starsButton);
 
-var planeButton= document.createElement('button');
+// var planeButton= document.createElement('button');
+var planeButton= document.createElement('button2');
 planeButton.textContent = "Planes"
 planeButton.onclick = togglePlane;
 document.body.appendChild(planeButton);
 
-var nightPlaneButton= document.createElement('button');
-nightPlaneButton.textContent = "Planes (night)"
+// var nightPlaneButton= document.createElement('button');
+var nightPlaneButton= document.createElement('button2');
+nightPlaneButton.textContent = "NightPlanes"
 nightPlaneButton.onclick = toggleNightPlane;
 document.body.appendChild(nightPlaneButton);
 
-var borealisButton= document.createElement('button');
-borealisButton.textContent = "Northern Lights"
+// var borealisButton= document.createElement('button');
+var borealisButton= document.createElement('button2');
+borealisButton.textContent = "Borealis"
 borealisButton.onclick = toggleBorealis;
 document.body.appendChild(borealisButton);
 
-var birdButton = document.createElement('button');
+// var birdButton = document.createElement('button');
+var birdButton = document.createElement('button2');
 birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
@@ -109,20 +135,23 @@ document.body.appendChild(birdButton);
 // idleTest.onclick = switchIdle;
 // document.body.appendChild(idleTest);
 
-var resetButton = document.createElement('button');
+var resetButton = document.createElement('button2');
+// var resetButton = document.createElement('button');
 resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
-var hideButton = document.createElement('button2');
+var hideButton = document.createElement('buttonSound');
 // var hideButton = document.createElement('button');
-hideButton.textContent = "Debug"
+hideButton.textContent = "+"
 hideButton.addEventListener('click', function handleClick() {
     if (buttonsHidden) {
-        hideButton.textContent = "Hide"
+        // hideButton.textContent = "Hide"
+        hideButton.textContent = "-"
     }
     if (!buttonsHidden) {
-        hideButton.textContent = "Debug"
+        // hideButton.textContent = "Debug"
+        hideButton.textContent = "+"
     }
 });
 hideButton.onclick = hideButtons;
@@ -195,11 +224,11 @@ fourthRow.appendChild(nightPlaneButton);
 var testButton= document.createElement('button');
 testButton.textContent = "test"
 testButton.onclick = console.log('test');
-document.body.appendChild(testButton);
+// document.body.appendChild(testButton);
 
-var soundButtonDiv = document.createElement('div');
-soundButtonDiv.id = 'soundButtonDiv'
-soundButtonDiv.appendChild(testButton);
+// var soundButtonDiv = document.createElement('div');
+// soundButtonDiv.id = 'soundButtonDiv'
+// soundButtonDiv.appendChild(testButton);
 // document.body.appendChild(soundButtonDiv)
 
 
@@ -246,13 +275,13 @@ function hideButtons() {
     document.body.removeChild(secondRow)
     document.body.removeChild(thirdRow)
     document.body.removeChild(fourthRow)
-    document.body.removeChild(soundButtonDiv)
+    // document.body.removeChild(soundButtonDiv)
     }
     else {
         document.body.appendChild(secondRow)
         document.body.appendChild(thirdRow)
         document.body.appendChild(fourthRow)
-        document.body.appendChild(soundButtonDiv)
+        // document.body.appendChild(soundButtonDiv)
     }
 }
 
