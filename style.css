@@ -203,7 +203,7 @@ button {
     position:relative;
     display:block;
     flex-direction: row;
-    z-index: 9999;
+    /* z-index: 9999; */
 
     margin:10px;
     height:20px;
