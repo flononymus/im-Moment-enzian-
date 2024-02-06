@@ -39,6 +39,7 @@ https://stackoverflow.com/questions/1933969/sound-effects-in-javascript-html5
 - [ ] Animated title that plays when first loading (maybe clouds?)
 
 - [x] Figure out how to make different buttons
+- [ ] Figure out how to have icon instead of button
 
 <br/>
 
