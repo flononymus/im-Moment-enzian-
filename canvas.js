@@ -197,7 +197,7 @@ function drawImages() {
         console.log('switched')
 
         setTimeout(function() { 
-          toggleBorealis();
+          // toggleBorealis();
           toggleStars();
         },1000);
 

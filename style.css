@@ -71,6 +71,34 @@
     overflow: hidden;
 } 
 
+#canvasMoon{    
+    margin:0;
+    height: 100vh;
+    /* width:100%; */
+    aspect-ratio: 1/1;
+    position:absolute;
+
+    mask-mode: alpha;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url(images/test\ mask3.png);
+    overflow: hidden;
+} 
+
+#canvasComet{    
+    margin:0;
+    height: 100vh;
+    /* width:100%; */
+    aspect-ratio: 1/1;
+    position:absolute;
+
+    mask-mode: alpha;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url(images/test\ mask3.png);
+    overflow: hidden;
+} 
+
 #canvasPlane{    
     margin:0;
     height: 100vh;
