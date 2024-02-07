@@ -20,6 +20,10 @@ ___
 ### Ideas/Brainstorming
 
 - [ ] soundscapes collection
+    - [ ] Footsteps
+    - [ ] Cars
+    - [ ] Wind
+    - [ ] People chatter
     - [ ] Rain
     - [ ] Birds
     - [ ] Cricket(?)
