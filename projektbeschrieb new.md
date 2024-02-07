@@ -1,5 +1,4 @@
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 mindmap
     ((Projektbeschrieb))
 
