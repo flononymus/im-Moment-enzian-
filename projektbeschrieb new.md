@@ -2,15 +2,38 @@
 mindmap
     ((Projektbeschrieb))
 
-        (Idea)
+        [Idea]
             (Mindfulness)
-            (Capture moments)
-            (mundane)
 
-        (Description)
-            (html canvas)
+            (Capture moments)
+                (test)
+
+            (mundane)
+                (test)
+
+
+        [Description]
             (javascript)
+                (html canvas)
+
+                (sounds)
+                
+
+
             (photoshop)
+                (weather/time of day)
+                    (cloudy)
+                    (midday)
+                    (evening)
+                    (night)
+
+                (moving elements)
+                    (stars)
+                    (birds)
+                    (planes)
+                    (clouds)
+                    (rain)
+
 
 
 
