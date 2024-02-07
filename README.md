@@ -5,7 +5,7 @@
 
 ___
 
-### Projektbeschrieb
+### Projektbeschrieb Momentfulness
 
 <!-- [[projektbeschrieb]] -->
 ![image](images/hausaufgabe/hausaufgabe.png)
@@ -26,8 +26,9 @@ ___
 
     - [ ] Global button to enable/disable all sound
 
-- [ ] Final title --> Momentful (?)
 - [ ] Animated title that plays when first loading (maybe clouds?)
+
+- [ ] Fix plane trails?
 
 <br/>
 

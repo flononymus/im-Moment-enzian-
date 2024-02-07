@@ -81,6 +81,7 @@ if (currentImage === null) {
 }
 
 function drawImages() {
+  // resetToggles;
   if (currentImage === 'clouds') {
 
     // if (raining) {
@@ -154,7 +155,6 @@ function drawImages() {
       }
   }
   else if (currentImage === 'moreNight') {
-
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
 
@@ -176,7 +176,7 @@ function drawImages() {
 
   }
   else if (currentImage === 'fullNight') {
-     resetToggles(); 
+    //  toggleStars();
 
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
@@ -195,11 +195,11 @@ function drawImages() {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched')
+        // toggleStars();
 
-        setTimeout(function() { 
-          // toggleBorealis();
-          toggleStars();
-        },1000);
+        // setTimeout(function() { 
+        //   toggleStars();
+        // },500);
 
       }
   }
@@ -210,9 +210,9 @@ function drawImages() {
 }
 
 function cloudImage() {
-  // resetToggles();
   currentImage = "clouds";
   currentOpacity = 0;
+  resetToggles(); 
   drawImages();
 
   // setTimeout(function() {
@@ -226,7 +226,9 @@ function dayImage() {
   // resetToggles();
   currentImage = "day";
   currentOpacity = 0;
+  resetToggles(); 
   drawImages();
+  // resetButton();
   // setTimeout(function() {
   //   togglePlane();
   // },1000);
@@ -234,11 +236,11 @@ function dayImage() {
 function halfNight() {
   currentImage = "halfNight";
   currentOpacity = 0;
+  resetToggles(); 
   drawImages();
   // toggleStars();
 }
 function moreNight() {
-  // resetToggles();
   currentImage = "moreNight";
   currentOpacity = 0;
   drawImages();
@@ -246,6 +248,7 @@ function moreNight() {
 function fullNight() {
   currentImage = "fullNight";
   currentOpacity = 0;
+  resetToggles(); 
   drawImages();
 }
 function noImage() {

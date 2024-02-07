@@ -27,7 +27,9 @@ document.body.appendChild(halfNightButton);
 
 var fullNightButton= document.createElement('buttonSound');
 fullNightButton.textContent = "🌃"
-fullNightButton.onclick = fullNight;
+fullNightButton.onclick = function() {
+    fullNight();toggleStars();
+}
 document.body.appendChild(fullNightButton);
 
 var noneButton= document.createElement('button2');
