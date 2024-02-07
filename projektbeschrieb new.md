@@ -1,28 +1,51 @@
 ```mermaid
+%%{init: {'theme':'neutral'}}%%
 mindmap
-    )Thema: "im Moment"(
+    ((Projektbeschrieb))
 
-        ((Wallpaper))
-            (vectorbased?)
-                (Illustrator maybe convert to pixelart)
-                    (Convert to svg and create canvas to animate/scale)
+        (Idea)
+            (Mindfulness)
+            (Capture moments)
+            (mundane)
 
-            [art style:] 
-                (cartoon-y)
-                (pixelated)
-                ("lofi")
+        (Description)
+            (html canvas)
+            (javascript)
+            (photoshop)
 
-            (2/3 different variants maybe seasons)
-
-            (look into glsl)
-
-            (html5 canvas + js.)
-
-        ((Pixel art))
-
-            (draw in photoshop/illustrator)
-
-            (google for atmospheric landscapes/cozy images)
 
 
 ```
+
+#### V 1.5 (idea)
+
+My idea for this project was to recreate moments of mindfulness, a topic that is very important in my daily life. 
+When i feel stressed or overwhelmed, i often look out of my window and try to focus on the scenery, the details, the sounds, 
+and the whole picture, and i wanted to try and capture some of these moments.
+
+___
+
+
+#### V 1.5 (specifics/technical details)
+
+The project constists of four images of the cityscape opposite my house, that i took over the span of a day. 
+These images were then edited and pixelated using Photoshop, and rendered on a html canvas. 
+
+Afterwards i drew additional elements like birds, clouds and raindrops, to enhance the original images and add some movement and life. 
+These elements were overlayed and animated using JavaScript and html. 
+In addition, i recorded different ambient sounds to more accurately recreate these „momentary snapshots“. The end result can be viewed here:
+
+___
+
+#### V 1.5 (full)
+
+My idea for this project was to recreate moments of mindfulness, a topic that 
+is very important in my daily life. When i feel stressed or overwhelmed, i often look out of my window and try to focus on the scenery, the details, the sounds, and the whole picture, and i wanted to try and capture some of these moments.
+
+The project constists of four images of the cityscape opposite my house, that i took over the span of a day. These images were then edited and pixelated using Photoshop, and rendered on a html canvas. 
+
+Afterwards i drew additional elements like birds, clouds and raindrops, to 
+enhance the original images and add some movement and life. These elements were overlayed and animated using JavaScript and html. In addition, i recorded different ambient sounds to more accurately recreate these „momentary 
+snapshots“. The end result can be viewed here:
+
+___
