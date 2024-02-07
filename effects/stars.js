@@ -1183,16 +1183,15 @@ var starPoints = [
 {xPos: 527.4754226453782 , yPos: 2466.841836224964 , alpha: 0.4876552387420028 , size: 1.974852067767161 },
 ]
 var canvasStars= document.getElementById('canvasStars');
-var canvasStars2= document.getElementById('canvasStars2');
+// var canvasStars2= document.getElementById('canvasStars2');
 var ctxStars= canvasStars.getContext('2d');
-var ctxStars2 = canvasStars2.getContext('2d');
+// var ctxStars2 = canvasStars2.getContext('2d');
 canvasStars.width = 1000;
 canvasStars.height = 1000;
 
-var moonImage = new Image();
-// moonImage.src = "images/moon.png"
-moonImage.src = "images/moontest.png"
-moonImage.onload = drawMoon();
+// var moonImage = new Image();
+// moonImage.src = "images/moontest.png"
+// moonImage.onload = drawMoon();
 
 var enableStars = false;
 let rotationAngle = 0;
@@ -1212,11 +1211,11 @@ const starCenterY = canvasStars.height/2;
 
 ctxStars.imageSmoothingEnabled = false;
 
-function drawMoon() {
-  ctxStars2.drawImage(moonImage,0,0,canvasStars.width,canvasStars.height)
-  console.log(moonImage.x, moonImage.y)
-  console.log('moon should be here')
-}
+// function drawMoon() {
+//   ctxStars2.drawImage(moonImage,0,0,canvasStars.width,canvasStars.height)
+//   console.log(moonImage.x, moonImage.y)
+//   console.log('moon should be here')
+// }
 
 
 function stars() {
@@ -1251,7 +1250,6 @@ function toggleStars() {
   enableStars = !enableStars
   console.log('stars', enableStars)
   if (enableStars) {
-    drawMoon();
     stars();
     starInterval = setInterval(stars, 1000 / fps);
   }
