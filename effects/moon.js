@@ -18,7 +18,6 @@ function drawMoon() {
     if (moonShown) {
         if (moonOpacity < 1) {
             ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
-            // moonOpacity += 0.01
             moonOpacity += 0.005
             ctxMoon.globalAlpha = moonOpacity;
             requestAnimationFrame(drawMoon)
