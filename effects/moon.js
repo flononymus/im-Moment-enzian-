@@ -7,18 +7,46 @@ canvasMoon.height = 1000;
 var moonImage = new Image();
 moonImage.src = "images/moonsmall.png"
 
-ctxMoon.globalAlpha = 0.6;
+// ctxMoon.globalAlpha = 0.6;
+var moonOpacity = 0;
+
+
 var moonShown = false
+
+
+function drawMoon() {
+    if (moonShown) {
+        if (moonOpacity < 1) {
+            ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
+            // moonOpacity += 0.01
+            moonOpacity += 0.005
+            ctxMoon.globalAlpha = moonOpacity;
+            requestAnimationFrame(drawMoon)
+            ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
+        }
+    }
+    if (!moonShown) {
+        if (moonOpacity > 0) {
+            ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
+            moonOpacity -= 0.005
+            ctxMoon.globalAlpha = moonOpacity;
+            requestAnimationFrame(drawMoon)
+            ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
+        }
+    }
+}
 
 function toggleMoon() {
     moonShown = !moonShown 
     if (moonShown) {
-    ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
-    console.log('moon should be here')
+        drawMoon();
     }
     else {
-        ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
-        console.log('clear')
+        setTimeout(function() { 
+            ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
+            console.log('clear')
+        }, 1000)
+        
         
     }
 }

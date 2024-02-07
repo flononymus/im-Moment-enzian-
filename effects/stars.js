@@ -1183,120 +1183,91 @@ var starPoints = [
 {xPos: 527.4754226453782 , yPos: 2466.841836224964 , alpha: 0.4876552387420028 , size: 1.974852067767161 },
 ]
 var canvasStars= document.getElementById('canvasStars');
-// var canvasStars2= document.getElementById('canvasStars2');
+var canvasStars2= document.getElementById('canvasStars2');
 var ctxStars= canvasStars.getContext('2d');
-// var ctxStars2 = canvasStars2.getContext('2d');
+var ctxStars2 = canvasStars2.getContext('2d');
 canvasStars.width = 1000;
 canvasStars.height = 1000;
 
-// var moonImage = new Image();
-// moonImage.src = "images/moontest.png"
-// moonImage.onload = drawMoon();
+canvasStars2.width = 1000;
+canvasStars2.height = 1000;
 
 var enableStars = false;
 let rotationAngle = 0;
 var fps = 60;
 
-// ctxStars.width = 1000;
-// ctxStars.height = 1000;
-
-
 let xStars = 3;
 let yStars = 3;
 
 let currentOpacityStars= 0;
+let fadeOutStars = false;
+let fadeInStars= true;
 
 const starCenterX = canvasStars.width/2;
 const starCenterY = canvasStars.height/2; 
 
 ctxStars.imageSmoothingEnabled = false;
 
-// function drawMoon() {
-//   ctxStars2.drawImage(moonImage,0,0,canvasStars.width,canvasStars.height)
-//   console.log(moonImage.x, moonImage.y)
-//   console.log('moon should be here')
-// }
-
-
 function stars() {
+
   ctxStars.globalAlpha = 0;
-  ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height);
+  ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)
 
   ctxStars.save();
-  //for rotating in the center
+
   ctxStars.translate(canvasStars.width/2,canvasStars.height/2)
-
   ctxStars.rotate(rotationAngle);
-
-  //to put it back in place
   ctxStars.translate(-canvasStars.width / 2, (-canvasStars.height/2)-100);
-  // ctxStars.translate(-canvasStars.width / 2, (-canvasStars.height/3)/2);
 
+  if (fadeInStars) {
+    if (currentOpacityStars < 1) {
+      currentOpacityStars += 0.01;
+      ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height); 
+      console.log(currentOpacityStars, 'fadein')
+    }   
+  }
+
+  if (fadeOutStars) {
+    if (currentOpacityStars > 0) {
+      currentOpacityStars -= 0.01
+      ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height); 
+      console.log(currentOpacityStars, 'fadeout')
+    }
+  }
 
   starPoints.forEach(star => {
     let {xPos,yPos,alpha,size} = star;
-  ctxStars.fillStyle = '#ffffff';
-  ctxStars.globalAlpha = alpha/2;
-  ctxStars.fillRect(xPos,yPos,size,size);
-  });
+      ctxStars.fillStyle = '#ffffff';
+      ctxStars.globalAlpha = alpha/2 * currentOpacityStars; // Apply the new global alpha value to the stars
+      ctxStars.fillRect(xPos,yPos,size,size);
+    });
+  
+
   ctxStars.restore();
   rotationAngle += (Math.PI / 180 * 0.005)
-  // rotationAngle += (Math.PI / 180 * 0.1)
+  // rotationAngle += (Math.PI / 180 * 0.05)
 };
 
 
 
 function toggleStars() {
   enableStars = !enableStars
-  console.log('stars', enableStars)
+  console.log(fadeOutStars)
+  // console.log('stars', enableStars)
   if (enableStars) {
     stars();
-    starInterval = setInterval(stars, 1000 / fps);
+    starInterval = setInterval(stars, 1000 / fps)
+    fadeInStars = true;
+    fadeOutStars = false;
+
   }
   else {
-    ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)
-    clearInterval(starInterval);
-    rotationAngle = 0;
+    fadeInStars = false;
+    fadeOutStars = true;
+    // starInterval = setInterval(stars, 1000 / fps)
+    // console.log('fadeout', fadeOutStars)
+    // ctxStars.clearRect(0,0,canvasStars.width,canvasStars.height)
+    // clearInterval(starInterval);
+    // rotationAngle = 0;
   }
 }
-
-
-
-// var canvasStars= document.getElementById('canvasStars');
-// var ctxStars= canvasStars.getContext('2d');
-
-// canvasStars.width = 2* window.innerWidth;
-// canvasStars.height = 2* window.innerWidth;
-
-// var enableStars = false;
-
-// function randomStar(min,max) {
-//   return min + Math.random() * (max + 1 -min);
-// }
-
-// function toggleStars() {
-//   enableStars = !enableStars
-//   console.log('stars', enableStars)
-//   if (enableStars) {
-//     const canvasSize = canvasStars.width * canvasStars.height;
-//     const starsFraction = canvasSize / 6000;
-
-//     for (let i = 0; i < starsFraction; i++) {
-//       let xPos = randomStar(2,canvasStars.width - 2);
-//       let yPos = randomStar(2,canvasStars.height- 2);
-//       // let alpha = randomStar(0.01,0.02);
-//       let alpha = Math.random(0.1,0.5);
-//       // let alpha = 0.1;
-//       let size = randomStar(1,2);
-
-//       ctxStars.fillStyle = '#ffffff';
-//       ctxStars.globalAlpha = alpha;
-//       ctxStars.fillRect(xPos,yPos,size,size);
-//       console.log('{xPos:',xPos, ', yPos:',yPos,', alpha:',alpha,', size:',size,'},')
-//     }
-//   }
-//   else {
-//     console.log('test')
-//     ctxStars.clearRect(0,0,canvasStars.width, canvasStars.height);
-//   }
-// }
