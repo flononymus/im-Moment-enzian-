@@ -107,10 +107,15 @@ birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
 
-var cometButton= document.createElement('button2');
+var cometButton = document.createElement('button2');
 cometButton.textContent = "Comet"
 cometButton.onclick = toggleComet;
 document.body.appendChild(cometButton);
+
+var titleButton = document.createElement('button2');
+titleButton.textContent = "Title"
+titleButton.onclick = toggleTitle;
+document.body.appendChild(titleButton);
 
 var resetButton = document.createElement('button2');
 resetButton.textContent = "No effects"
@@ -184,6 +189,7 @@ secondRow.id = 'secondRow';
 secondRow.appendChild(noneButton);
 secondRow.appendChild(cycleButton);
 secondRow.appendChild(stopCycleButton);
+secondRow.appendChild(titleButton);
 
 var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
