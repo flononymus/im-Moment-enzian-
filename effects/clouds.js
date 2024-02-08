@@ -14,6 +14,11 @@ const ctxClouds3= canvasClouds3.getContext("2d");
 canvasClouds3.width = 1000
 canvasClouds3.height = 1000
 
+// const canvasClouds4= document.getElementById("canvasClouds4");
+// const ctxClouds4= canvasClouds3.getContext("2d");
+// canvasClouds3.width = 1000
+// canvasClouds3.height = 1000
+
 var cloudsActive= false;
 var scrollSpeed1 = 0.05; 
 var scrollSpeed2 = 0.1;

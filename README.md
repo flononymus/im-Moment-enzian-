@@ -35,6 +35,7 @@ ___
     - [ ] Global button to enable/disable all sound
 
 - [ ] Animated title that plays when first loading (maybe clouds?)
+    - [ ] clouds.js add one more canvas
 
 - [ ] Fix plane trails?
 
