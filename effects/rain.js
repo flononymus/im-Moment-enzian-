@@ -12,10 +12,11 @@ var h = canvasRain.height;
 var rainInterval;
 
 ctxRain.strokeStyle = 'rgba(50,50,50,0.15)';
-ctxRain.lineWidth = 3;
+ctxRain.lineWidth = 2;
 ctxRain.lineCap ='square';
 var init = [];
-var maxParts = 1000;
+// var maxParts = 1000;
+var maxParts = 800;
 
 var rainOpacity = 0;
 var rainOpacityOut = 0.5;
@@ -54,6 +55,9 @@ function toggleRain() {
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
     loadRainSound();
+    setTimeout(function() {
+      loadAmbulanceSound();
+    },5500)
 
     // if (currentImage === 'clouds') {
     //   console.log('currentimage detection')

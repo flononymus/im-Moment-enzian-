@@ -120,13 +120,10 @@ function drawImages() {
 
   else if (currentImage === 'halfNight') {
     $("link[rel*='icon']").attr("href", "images/test_night1.png");
-
-    currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
-
+    currentOpacity += fadeSpeed;
     setTimeout(function() {
       requestAnimationFrame(drawImages);
-
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
@@ -138,6 +135,7 @@ function drawImages() {
         ctxBack.drawImage(imageHalfNight,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched to', currentImage)
+        // toggleMoon()
       }
   }
 

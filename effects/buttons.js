@@ -20,12 +20,18 @@ document.body.appendChild(cloudyButton);
 
 var dayButton= document.createElement('buttonSound');
 dayButton.textContent = "🏙️"
-dayButton.onclick= dayImage;
+// dayButton.onclick= dayImage;
+dayButton.onclick= function() {
+    dayImage(); toggleBird();
+}
 document.body.appendChild(dayButton);
 
 var halfNightButton= document.createElement('buttonSound');
 halfNightButton.textContent = "🌆"
-halfNightButton.onclick = halfNight;
+// halfNightButton.onclick = halfNight;
+halfNightButton.onclick = function() {
+    halfNight(); toggleMoon();
+}
 document.body.appendChild(halfNightButton);
 
 var fullNightButton= document.createElement('buttonSound');
@@ -139,13 +145,28 @@ document.body.appendChild(soundButton)
 
 var rainSoundButton = document.createElement('button2');
 rainSoundButton.textContent = "Rain sound"
-rainSoundButton.onclick=loadRainSound 
+rainSoundButton.onclick = loadRainSound 
 document.body.appendChild(rainSoundButton)
 
 var ambulanceSoundButton = document.createElement('button2')
 ambulanceSoundButton.textContent = "Ambulance"
 ambulanceSoundButton.onclick=loadAmbulanceSound
 document.body.appendChild(ambulanceSoundButton);
+
+var carSoundButton = document.createElement('button2')
+carSoundButton.textContent = "Car test"
+carSoundButton.onclick = loadCarSound
+document.body.appendChild(carSoundButton)
+
+var birdSoundButton = document.createElement('button2')
+birdSoundButton.textContent = "Birds"
+birdSoundButton.onclick = loadBirdSound
+document.body.appendChild(birdSoundButton)
+
+var jazzSoundButton= document.createElement('button2')
+jazzSoundButton.textContent = "Jazz"
+jazzSoundButton.onclick = loadJazzSound
+document.body.appendChild(jazzSoundButton)
 
 
 var firstRow = document.createElement('div');
@@ -183,6 +204,9 @@ var fourthRow = document.createElement('div');
 fourthRow.id = 'fourthRow'
 fourthRow.appendChild(rainSoundButton);
 fourthRow.appendChild(ambulanceSoundButton);
+fourthRow.appendChild(carSoundButton);
+fourthRow.appendChild(birdSoundButton);
+fourthRow.appendChild(jazzSoundButton);
 
 
 function resetToggles() {
