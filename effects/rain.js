@@ -106,7 +106,7 @@ function fadeInRain() {
       ctxRain.globalAlpha = rainOpacity;
       if (rainOpacity < 0.5) {
         isFadingRain = true;
-        console.log(ctxRain.globalAlpha)
+        // console.log(ctxRain.globalAlpha)
         rainOpacity += 0.005
         ctxRain.globalAlpha = rainOpacity;
 
@@ -115,7 +115,7 @@ function fadeInRain() {
   }
   setTimeout(function() { 
     isFadingRain= false;  
-    console.log('fade in over')
+    // console.log('fade in over')
   },1000)
 
 }
@@ -126,7 +126,7 @@ function fadeOutRain() {
     rainOpacity = 0;
     if (rainOpacityOut > 0) {
       ctxRain.globalAlpha = rainOpacityOut;
-      console.log(ctxRain.globalAlpha)
+      // console.log(ctxRain.globalAlpha)
       rainOpacityOut -= 0.005
     
 
@@ -137,6 +137,6 @@ function fadeOutRain() {
   }
   setTimeout(function() { 
     isFadingOutRain = false;  
-    console.log('fade out over')
+    // console.log('fade out over')
   },1000)
 }

@@ -12,7 +12,10 @@ $(document).on('click', 'button2', function() {
 
 var cloudyButton= document.createElement('buttonSound');
 cloudyButton.textContent ="🌫️"
-cloudyButton.onclick = cloudImage;
+// cloudyButton.onclick = cloudImage;
+cloudyButton.onclick = function() {
+    cloudImage(); toggleRain(); toggleClouds();
+}
 document.body.appendChild(cloudyButton);
 
 var dayButton= document.createElement('buttonSound');

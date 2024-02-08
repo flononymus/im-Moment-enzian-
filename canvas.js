@@ -46,9 +46,6 @@ imageClouds.src = "images/test_clouds2.png"
 var imageHalfNight= new Image();
 imageHalfNight.src = "images/test_night1.png"
 
-var imageMoreNight= new Image();
-imageMoreNight.src = "images/test_night5.png"
-
 var imageFullNight= new Image();
 // imageFullNight.src = "images/test_night6.png"
 // imageFullNight.src = "images/night_mixed1.png"
@@ -99,14 +96,14 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        console.log(currentOpacity);
+        // console.log(currentOpacity);
         ctxFade.drawImage(imageClouds,0,0,canvasFade.width,canvasFade.height);
       }, 1000 / fps);
     }
       else {
         ctxBack.drawImage(imageClouds,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        console.log('switched')
+        console.log('switched to', currentImage)
       }
   }
 
@@ -121,14 +118,14 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        console.log(currentOpacity);
+        // console.log(currentOpacity);
         ctxFade.drawImage(imageDay,0,0,canvasFade.width,canvasFade.height);
       }, 1000 / fps);
       }
       else {
         ctxBack.drawImage(imageDay,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        console.log('switched')
+        console.log('switched to', currentImage)
       }
   }
 
@@ -144,37 +141,17 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        console.log(currentOpacity);
+        // console.log(currentOpacity);
         ctxFade.drawImage(imageHalfNight,0,0,canvasFade.width,canvasFade.height);
       }, 1000 / fps);
       }
       else {
         ctxBack.drawImage(imageHalfNight,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        console.log('switched')
+        console.log('switched to', currentImage)
       }
   }
-  else if (currentImage === 'moreNight') {
-    currentOpacity += fadeSpeed;
-    if (currentOpacity < 1) {
 
-    setTimeout(function() {
-      requestAnimationFrame(drawImages);
-
-        ctxFade.globalAlpha = currentOpacity;
-        ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        ctxFade.globalAlpha = currentOpacity;
-        console.log(currentOpacity);
-        ctxFade.drawImage(imageMoreNight,0,0,canvasFade.width,canvasFade.height);
-      }, 1000 / fps);
-      }
-      else {
-        ctxBack.drawImage(imageMoreNight,0,0, canvasBack.width, canvasBack.height);
-        ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        console.log('switched')
-      }
-
-  }
   else if (currentImage === 'fullNight') {
     //  toggleStars();
 
@@ -187,20 +164,14 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        console.log(currentOpacity);
+        // console.log(currentOpacity);
         ctxFade.drawImage(imageFullNight,0,0,canvasFade.width,canvasFade.height);
       }, 1000 / fps);
       }
       else {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
-        console.log('switched')
-        // toggleStars();
-
-        // setTimeout(function() { 
-        //   toggleStars();
-        // },500);
-
+        console.log('switched to', currentImage)
       }
   }
   else if (currentImage === 'none') {
@@ -239,11 +210,6 @@ function halfNight() {
   resetToggles(); 
   drawImages();
   // toggleStars();
-}
-function moreNight() {
-  currentImage = "moreNight";
-  currentOpacity = 0;
-  drawImages();
 }
 function fullNight() {
   currentImage = "fullNight";
