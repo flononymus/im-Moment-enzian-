@@ -12,10 +12,11 @@ var h = canvasRain.height;
 var rainInterval;
 
 ctxRain.strokeStyle = 'rgba(50,50,50,0.15)';
-ctxRain.lineWidth = 3;
+ctxRain.lineWidth = 2;
 ctxRain.lineCap ='square';
 var init = [];
-var maxParts = 1000;
+// var maxParts = 1000;
+var maxParts = 800;
 
 var rainOpacity = 0;
 var rainOpacityOut = 0.5;
@@ -54,6 +55,9 @@ function toggleRain() {
     rainInterval = setInterval(drawRain,30);
     console.log('rain')
     loadRainSound();
+    setTimeout(function() {
+      loadAmbulanceSound();
+    },5500)
 
     // if (currentImage === 'clouds') {
     //   console.log('currentimage detection')
@@ -106,7 +110,7 @@ function fadeInRain() {
       ctxRain.globalAlpha = rainOpacity;
       if (rainOpacity < 0.5) {
         isFadingRain = true;
-        console.log(ctxRain.globalAlpha)
+        // console.log(ctxRain.globalAlpha)
         rainOpacity += 0.005
         ctxRain.globalAlpha = rainOpacity;
 
@@ -115,7 +119,7 @@ function fadeInRain() {
   }
   setTimeout(function() { 
     isFadingRain= false;  
-    console.log('fade in over')
+    // console.log('fade in over')
   },1000)
 
 }
@@ -126,7 +130,7 @@ function fadeOutRain() {
     rainOpacity = 0;
     if (rainOpacityOut > 0) {
       ctxRain.globalAlpha = rainOpacityOut;
-      console.log(ctxRain.globalAlpha)
+      // console.log(ctxRain.globalAlpha)
       rainOpacityOut -= 0.005
     
 
@@ -137,6 +141,6 @@ function fadeOutRain() {
   }
   setTimeout(function() { 
     isFadingOutRain = false;  
-    console.log('fade out over')
+    // console.log('fade out over')
   },1000)
 }

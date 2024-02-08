@@ -12,17 +12,26 @@ $(document).on('click', 'button2', function() {
 
 var cloudyButton= document.createElement('buttonSound');
 cloudyButton.textContent ="🌫️"
-cloudyButton.onclick = cloudImage;
+// cloudyButton.onclick = cloudImage;
+cloudyButton.onclick = function() {
+    cloudImage(); toggleRain(); toggleClouds();
+}
 document.body.appendChild(cloudyButton);
 
 var dayButton= document.createElement('buttonSound');
 dayButton.textContent = "🏙️"
-dayButton.onclick= dayImage;
+// dayButton.onclick= dayImage;
+dayButton.onclick= function() {
+    dayImage(); toggleBird();
+}
 document.body.appendChild(dayButton);
 
 var halfNightButton= document.createElement('buttonSound');
 halfNightButton.textContent = "🌆"
-halfNightButton.onclick = halfNight;
+// halfNightButton.onclick = halfNight;
+halfNightButton.onclick = function() {
+    halfNight(); toggleMoon();
+}
 document.body.appendChild(halfNightButton);
 
 var fullNightButton= document.createElement('buttonSound');
@@ -98,10 +107,15 @@ birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
 
-var cometButton= document.createElement('button2');
+var cometButton = document.createElement('button2');
 cometButton.textContent = "Comet"
 cometButton.onclick = toggleComet;
 document.body.appendChild(cometButton);
+
+var titleButton = document.createElement('button2');
+titleButton.textContent = "Title"
+titleButton.onclick = toggleTitle;
+document.body.appendChild(titleButton);
 
 var resetButton = document.createElement('button2');
 resetButton.textContent = "No effects"
@@ -131,9 +145,34 @@ soundButton.addEventListener('click', function handleClick() {
         soundButton.textContent = "🔊"
     }
 });
-
 soundButton.onclick = toggleSound;
 document.body.appendChild(soundButton)
+
+var rainSoundButton = document.createElement('button2');
+rainSoundButton.textContent = "Rain sound"
+rainSoundButton.onclick = loadRainSound 
+document.body.appendChild(rainSoundButton)
+
+var ambulanceSoundButton = document.createElement('button2')
+ambulanceSoundButton.textContent = "Ambulance"
+ambulanceSoundButton.onclick=loadAmbulanceSound
+document.body.appendChild(ambulanceSoundButton);
+
+var carSoundButton = document.createElement('button2')
+carSoundButton.textContent = "Car test"
+carSoundButton.onclick = loadCarSound
+document.body.appendChild(carSoundButton)
+
+var birdSoundButton = document.createElement('button2')
+birdSoundButton.textContent = "Birds"
+birdSoundButton.onclick = loadBirdSound
+document.body.appendChild(birdSoundButton)
+
+var jazzSoundButton= document.createElement('button2')
+jazzSoundButton.textContent = "Jazz"
+jazzSoundButton.onclick = loadJazzSound
+document.body.appendChild(jazzSoundButton)
+
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
@@ -150,6 +189,7 @@ secondRow.id = 'secondRow';
 secondRow.appendChild(noneButton);
 secondRow.appendChild(cycleButton);
 secondRow.appendChild(stopCycleButton);
+secondRow.appendChild(titleButton);
 
 var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
@@ -159,19 +199,20 @@ thirdRow.appendChild(cloudsButtonDay);
 thirdRow.appendChild(smokeButton);
 thirdRow.appendChild(starsButton);
 thirdRow.appendChild(borealisButton);
-thirdRow.appendChild(resetButton);
+thirdRow.appendChild(planeButton);
+thirdRow.appendChild(birdButton);
+thirdRow.appendChild(nightPlaneButton);
+thirdRow.appendChild(cometButton);
 thirdRow.appendChild(moonButton);
+thirdRow.appendChild(resetButton);
 
 var fourthRow = document.createElement('div');
 fourthRow.id = 'fourthRow'
-fourthRow.appendChild(planeButton);
-fourthRow.appendChild(birdButton);
-fourthRow.appendChild(nightPlaneButton);
-fourthRow.appendChild(cometButton);
-
-var testButton= document.createElement('button');
-testButton.textContent = "test"
-testButton.onclick = console.log('test');
+fourthRow.appendChild(rainSoundButton);
+fourthRow.appendChild(ambulanceSoundButton);
+fourthRow.appendChild(carSoundButton);
+fourthRow.appendChild(birdSoundButton);
+fourthRow.appendChild(jazzSoundButton);
 
 
 function resetToggles() {

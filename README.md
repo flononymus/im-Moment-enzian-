@@ -20,17 +20,22 @@ ___
 ### Ideas/Brainstorming
 
 - [ ] soundscapes collection
+    - [ ] Church bells
     - [ ] Footsteps
     - [ ] Cars
     - [ ] Wind
     - [ ] People chatter
-    - [ ] Rain
+    - [x] Rain
+    - [x] Ambulance
     - [ ] Birds
     - [ ] Cricket(?)
+
+    - [ ] Maybe ambient music to underlay?
 
     - [ ] Global button to enable/disable all sound
 
 - [ ] Animated title that plays when first loading (maybe clouds?)
+    - [ ] clouds.js add one more canvas
 
 - [ ] Fix plane trails?
 

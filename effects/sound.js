@@ -1,9 +1,34 @@
 var enableSound = true;
 var enableRainSound = false;
-var rainSound = new Audio("audio/rain test.wav")
-// var rainSound = new Audio("audio/rain test.m4a")
+var enableAmbulanceSound= false;
+var enableCarSound= false;
+var enableBirdSound= false;
+var enableJazzSound= false;
 
-rainSound.loop = false;
+
+
+var rainSound = new Audio("audio/rain loop.wav")
+var ambulanceSound= new Audio("audio/ambulance.wav")
+var carSound = new Audio("audio/car test.wav")
+var birdSound= new Audio("audio/birds test1.wav")
+var jazzSound= new Audio("audio/jazz.wav")
+
+rainSound.addEventListener('timeupdate', function(){
+    var buffer= .60
+    if(this.currentTime > this.duration - buffer){
+        this.currentTime = 0
+        this.play()
+        console.log('loop')
+    }
+});
+
+ambulanceSound.addEventListener('timeupdate', function(){
+    var buffer = 0.5
+    if(this.currentTime > this.duration - buffer){
+        enableAmbulanceSound = false;
+        console.log('test sound off')
+    }
+});
 
 function toggleSound() {
     enableSound = !enableSound
@@ -11,35 +36,103 @@ function toggleSound() {
         console.log('sound', enableSound)
     }
     if (!enableSound) {
-        rainSound.pause();
-        rainSound.currentTime = 0;
+        loadRainSound()
+        loadAmbulanceSound()
+        loadCarSound()
+        loadBirdSound()
         console.log('sound', enableSound)
     }
 }
-
-
-
 
 
 function loadRainSound(){
     enableRainSound = !enableRainSound
     if (enableRainSound && enableSound) {
         rainSound.volume = 0;
-        $(rainSound).animate({volume: 0.2},1000);
-        console.log(rainSound.volume)
+        $(rainSound).animate({volume: 0.8},1000);
         rainSound.play();
-        console.log('sound',enableSound);
-        console.log(rainSound.loop)
+        console.log('Rain sound',enableRainSound);
     }
     else if (!enableRainSound) {
-        rainSound.volume = 0.2;
+        rainSound.volume = 0.8;
         $(rainSound).animate({volume: 0},1000, function(){
             rainSound.pause();
         });
         rainSound.currentTime = 0;
-        console.log('sound',enableSound);
+        console.log('Rain sound',enableRainSound);
     }
-    // else if (enableRainSound && !enableSound) {
-    //     console.log('audio should really stop')
-    // }
 }
+
+function loadAmbulanceSound() {
+    enableAmbulanceSound = !enableAmbulanceSound
+    if (enableAmbulanceSound && enableSound) {
+        ambulanceSound.volume = 0;
+        $(ambulanceSound).animate({volume: 0.2},1000);
+        ambulanceSound.play();
+        console.log('Ambulance sound',enableAmbulanceSound);
+    }
+    else if (!enableAmbulanceSound) {
+        ambulanceSound.volume = 0.2;
+        $(ambulanceSound).animate({volume: 0},1000, function(){
+            ambulanceSound.pause();
+        });
+        ambulanceSound.currentTime = 0;
+        console.log('Ambulance sound',enableAmbulanceSound);
+    }
+}
+
+function loadCarSound() {
+    enableCarSound= !enableCarSound
+    if (enableCarSound && enableSound) {
+        carSound.volume = 0;
+        $(carSound).animate({volume: 0.8},1000);
+        carSound.play();
+        console.log('Car sound',enableCarSound);
+    }
+    else if (!enableCarSound) {
+        carSound.volume = 0.8;
+        $(carSound).animate({volume: 0},1000, function(){
+            carSound.pause();
+        });
+        carSound.currentTime = 0;
+        console.log('Car sound',enableCarSound);
+    }
+}
+
+function loadBirdSound() {
+    enableBirdSound= !enableBirdSound
+    if (enableBirdSound&& enableSound) {
+        birdSound.volume = 0;
+        $(birdSound).animate({volume: 0.6},1000);
+        birdSound.play();
+        console.log('Bird sound',enableBirdSound);
+    }
+    else if (!enableBirdSound) {
+        birdSound.volume = 0.6;
+        $(birdSound).animate({volume: 0},1000, function(){
+            birdSound.pause();
+        });
+        birdSound.currentTime = 0;
+        console.log('Bird sound',enableBirdSound);
+    }
+}
+
+function loadJazzSound() {
+    enableJazzSound= !enableJazzSound
+    if (enableJazzSound&& enableSound) {
+        jazzSound.volume = 0;
+        $(jazzSound).animate({volume: 0.1},1000);
+        jazzSound.play();
+        console.log('Jazz sound',enableJazzSound);
+    }
+    else if (!enableJazzSound) {
+        jazzSound.volume = 0.1;
+        $(jazzSound).animate({volume: 0},1000, function(){
+            jazzSound.pause();
+        });
+        jazzSound.currentTime = 0;
+        console.log('Jazz sound',enableJazzSound);
+    }
+}
+
+

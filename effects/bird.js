@@ -41,8 +41,10 @@ var yBird
 var xBirdIdle
 var yBirdIdle
 
-var birdSpeed = -1;
-var birdHeight = -0.1;
+// var birdSpeed = -1;
+// var birdHeight = -0.1;
+var birdSpeed = -1.5;
+var birdHeight = -0.2;
 
 var birdIdleSpeed = 0;
 var birdIdleHeight = 0;
@@ -65,8 +67,10 @@ var xBirdLanding
 // var yBirdLanding = (canvasBird.height/3)*2
 var yBirdLanding
 
-var birdSpeedLanding = 1;
-var birdHeightLanding= 0.5;
+// var birdSpeedLanding = 1;
+// var birdHeightLanding= 0.5;
+var birdSpeedLanding = 1.5;
+var birdHeightLanding= 1;
 // var birdSpeedLanding = 0;
 // var birdHeightLanding= 0;
 
@@ -142,13 +146,15 @@ function animate() {
     yBirdIdle += birdIdleHeight;
 
     framesDrawn++;
-        if (framesDrawn >= 5) {
+        // if (framesDrawn >= 5) {
+        if (framesDrawn > 3) { 
             currentFrame++;
             framesDrawn = 0;
         }
 
     framesDrawnIdle++;
-        if (framesDrawnIdle >= 6) {
+        // if (framesDrawnIdle >= 6) {
+        if (framesDrawnIdle >= 3) {
             currentFrameIdle++;
             framesDrawnIdle = 0;
         }
@@ -171,6 +177,7 @@ function toggleBird() {
     // canvasBird.width = 1000;
     // canvasBird.height = 1000;
 
+    loadBirdSound()
     birdActive = !birdActive   
     // console.log(ctxBird2.canvas.width,ctxBird2.canvas.height)
     if (birdActive) {
@@ -201,8 +208,10 @@ function toggleBird() {
         xBirdIdle = (canvasBird.width/5) * 2;
         yBirdIdle = (canvasBird.height/7) * 5.15 ;
 
-        birdSpeed = -1;
-        birdHeight = -0.1;
+        // birdSpeed = -1;
+        // birdHeight = -0.1;
+        birdSpeed = -1.5;
+        birdHeight = -0.2;
 
         birdIdleSpeed = 0;
         birdIdleHeight = 0;
@@ -239,8 +248,10 @@ function switchIdle() {
     }
     else {
         birdIdle.src = "images/birdPixelLeft.png"
-        birdIdleSpeed = 1;
-        birdIdleHeight = -0.5;
+        // birdIdleSpeed = 1;
+        // birdIdleHeight = -0.5;
+        birdIdleSpeed = 1.5;
+        birdIdleHeight = -1;
 
         // console.log('test')
         // requestAnimationFrame(switchIdle)
@@ -263,7 +274,8 @@ function landBird() {
         yBirdLanding += birdHeightLanding; 
     
         framesDrawnLanding++;
-            if (framesDrawnLanding >= 5) {
+            // if (framesDrawnLanding >= 5) {
+            if (framesDrawnLanding > 3) {
                 currentFrameLanding++;
                 framesDrawnLanding = 0;
             }
@@ -281,8 +293,10 @@ function landBird() {
         if (birdLanded) {
             setTimeout(function() {
                 birdLanded=false;
-                birdSpeedLanding = -1;
-                birdHeightLanding = -0.5;
+                // birdSpeedLanding = -1;
+                // birdHeightLanding = -0.5;
+                birdSpeedLanding = -1.5;
+                birdHeightLanding = -1;
                 birdFlyingRight.src = "images/birdPixelLeft.png"
             },9000)
         }

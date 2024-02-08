@@ -7,12 +7,17 @@ canvasClouds1.height = 1000
 const canvasClouds2= document.getElementById("canvasClouds2");
 const ctxClouds2= canvasClouds2.getContext("2d");
 canvasClouds2.width = 1000
-canvasClouds2.height = 1000
+canvasClouds2.height = 10003
 
 const canvasClouds3= document.getElementById("canvasClouds3");
 const ctxClouds3= canvasClouds3.getContext("2d");
 canvasClouds3.width = 1000
 canvasClouds3.height = 1000
+
+// const canvasClouds4= document.getElementById("canvasClouds4");
+// const ctxClouds4= canvasClouds3.getContext("2d");
+// canvasClouds3.width = 1000
+// canvasClouds3.height = 1000
 
 var cloudsActive= false;
 var scrollSpeed1 = 0.05; 
@@ -26,9 +31,11 @@ var scrollVal3 = 0;
 var clouds1= new Image;
 clouds1.src = "images/clouds7.png"
 var clouds2= new Image;
-clouds2.src = "images/clouds6.png"
+// clouds2.src = "images/clouds6.png"
+clouds2.src = "images/clouds6 test.png"
 var clouds3= new Image;
-clouds3.src = "images/clouds8.png"
+// clouds3.src = "images/clouds8.png"
+clouds3.src = "images/clouds8 test.png"
 
 var cloudsOpacity = 0;
 var cloudFadeIn = false;
