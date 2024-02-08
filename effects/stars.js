@@ -1223,7 +1223,7 @@ function stars() {
     if (currentOpacityStars < 1) {
       currentOpacityStars += 0.01;
       ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height); 
-      console.log(currentOpacityStars, 'fadein')
+      // console.log(currentOpacityStars, 'fadein')
     }   
   }
 
@@ -1231,7 +1231,7 @@ function stars() {
     if (currentOpacityStars > 0) {
       currentOpacityStars -= 0.01
       ctxStars.clearRect(0, 0, canvasStars.width, canvasStars.height); 
-      console.log(currentOpacityStars, 'fadeout')
+      // console.log(currentOpacityStars, 'fadeout')
     }
   }
 
@@ -1252,7 +1252,7 @@ function stars() {
 
 function toggleStars() {
   enableStars = !enableStars
-  console.log(fadeOutStars)
+  // console.log(fadeOutStars)
   // console.log('stars', enableStars)
   if (enableStars) {
     stars();

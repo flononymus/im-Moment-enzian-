@@ -80,6 +80,7 @@ if (currentImage === null) {
 function drawImages() {
   // resetToggles;
   if (currentImage === 'clouds') {
+    $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
 
     // if (raining) {
     //   console.log('darker clouds')
@@ -108,6 +109,7 @@ function drawImages() {
   }
 
   else if (currentImage === 'day') {
+    $("link[rel*='icon']").attr("href", "images/test_day.png");
 
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
@@ -131,6 +133,7 @@ function drawImages() {
 
 
   else if (currentImage === 'halfNight') {
+    $("link[rel*='icon']").attr("href", "images/test_night1.png");
 
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
@@ -153,6 +156,7 @@ function drawImages() {
   }
 
   else if (currentImage === 'fullNight') {
+    $("link[rel*='icon']").attr("href", "images/night_mixed2.png");
     //  toggleStars();
 
     currentOpacity += fadeSpeed;

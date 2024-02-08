@@ -172,10 +172,6 @@ fourthRow.appendChild(birdButton);
 fourthRow.appendChild(nightPlaneButton);
 fourthRow.appendChild(cometButton);
 
-var testButton= document.createElement('button');
-testButton.textContent = "test"
-testButton.onclick = console.log('test');
-
 
 function resetToggles() {
     if (raining) {

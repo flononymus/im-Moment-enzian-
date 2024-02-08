@@ -1,9 +1,18 @@
 var enableSound = true;
 var enableRainSound = false;
-var rainSound = new Audio("audio/rain test.wav")
+// var rainSound = new Audio("audio/rain test.wav")
+// var rainSound = new Audio("audio/rain test short.wav")
+var rainSound = new Audio("audio/rain recording 1.wav")
 // var rainSound = new Audio("audio/rain test.m4a")
 
-rainSound.loop = false;
+rainSound.addEventListener('timeupdate', function(){
+    var buffer = .60
+    if(this.currentTime > this.duration - buffer){
+        this.currentTime = 0
+        this.play()
+        console.log('loop')
+    }
+});
 
 function toggleSound() {
     enableSound = !enableSound
@@ -16,9 +25,6 @@ function toggleSound() {
         console.log('sound', enableSound)
     }
 }
-
-
-
 
 
 function loadRainSound(){
@@ -39,7 +45,4 @@ function loadRainSound(){
         rainSound.currentTime = 0;
         console.log('sound',enableSound);
     }
-    // else if (enableRainSound && !enableSound) {
-    //     console.log('audio should really stop')
-    // }
 }

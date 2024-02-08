@@ -19,6 +19,8 @@ ___
 
 ### Ideas/Brainstorming
 
+- [ ] Better icon
+
 - [ ] soundscapes collection
     - [ ] Footsteps
     - [ ] Cars
