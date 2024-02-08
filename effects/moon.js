@@ -20,7 +20,8 @@ function drawMoon() {
             ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
             moonOpacity += 0.005
             ctxMoon.globalAlpha = moonOpacity;
-            requestAnimationFrame(drawMoon)
+            // requestAnimationFrame(drawMoon)
+            console.log(moonOpacity);
             ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
         }
     }
@@ -29,22 +30,26 @@ function drawMoon() {
             ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
             moonOpacity -= 0.005
             ctxMoon.globalAlpha = moonOpacity;
-            requestAnimationFrame(drawMoon)
+            // requestAnimationFrame(drawMoon)
             ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
+            console.log(moonOpacity)
         }
     }
+    requestAnimationFrame(drawMoon)
 }
 
 function toggleMoon() {
     moonShown = !moonShown 
     if (moonShown) {
+        console.log('moonshown', moonShown)
         drawMoon();
     }
-    else {
-        setTimeout(function() { 
-            ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
-            console.log('clear')
-        }, 1000)
+    if (!moonShown) {
+        console.log('moonshown', moonShown)
+        // setTimeout(function() { 
+        //     ctxMoon.clearRect(0,0,canvasMoon.width,canvasMoon.height)
+        //     console.log('clear')
+        // }, 1000)
         
         
     }

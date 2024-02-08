@@ -196,14 +196,15 @@ function halfNight() {
   currentImage = "halfNight";
   currentOpacity = 0;
   resetToggles(); 
-  drawImages();
-  // toggleStars();
+  drawImages(); 
+  toggleMoon();
 }
 function fullNight() {
   currentImage = "fullNight";
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
+  toggleMoon();
 }
 function noImage() {
   currentImage = "none";

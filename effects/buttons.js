@@ -30,14 +30,15 @@ var halfNightButton= document.createElement('buttonSound');
 halfNightButton.textContent = "🌆"
 // halfNightButton.onclick = halfNight;
 halfNightButton.onclick = function() {
-    halfNight(); toggleMoon();
+    halfNight(); 
+    // toggleMoon();
 }
 document.body.appendChild(halfNightButton);
 
 var fullNightButton= document.createElement('buttonSound');
 fullNightButton.textContent = "🌃"
 fullNightButton.onclick = function() {
-    fullNight();toggleStars();
+    fullNight(); toggleStars();
 }
 document.body.appendChild(fullNightButton);
 
@@ -236,6 +237,10 @@ function resetToggles() {
         console.log('clouds off')
         toggleClouds();
     }
+    if (cloudsDayActive) {
+        console.log('day clouds off')
+        toggleCloudsDay
+    }
     if (borealisActive) {
         console.log('borealis off')
         toggleBorealis();
@@ -243,6 +248,10 @@ function resetToggles() {
     if (birdActive) {
         console.log('bird off');
         toggleBird();
+    }
+    if (moonShown) {
+        console.log('moon off')
+        toggleMoon();
     }
   }
 

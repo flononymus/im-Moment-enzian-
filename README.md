@@ -19,6 +19,8 @@ ___
 
 ### Ideas/Brainstorming
 
+- [ ] Center canvas
+
 - [ ] soundscapes collection
     - [ ] Church bells
     - [ ] Footsteps
@@ -38,13 +40,14 @@ ___
     - [ ] clouds.js add one more canvas
 
 - [ ] Fix plane trails?
+- [ ] Change chimney smoke color
 
 <br/>
 
-- Night --> northern lights, stars, maybe a galaxy
-- Half night --> smoking chimneys, 
+- Night --> northern lights, stars, maybe a galaxy, moon, **shooting stars**
+- Half night --> smoking chimneys, moon
 - Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
-- Day --> small clouds, airplanes , planes, birds, smaller birds
+- Day --> small clouds, airplanes , planes, birds, **smaller birds**
 
 ___
 
