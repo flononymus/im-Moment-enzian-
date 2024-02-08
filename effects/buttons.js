@@ -134,9 +134,19 @@ soundButton.addEventListener('click', function handleClick() {
         soundButton.textContent = "🔊"
     }
 });
-
 soundButton.onclick = toggleSound;
 document.body.appendChild(soundButton)
+
+var rainSoundButton = document.createElement('button2');
+rainSoundButton.textContent = "Rain sound"
+rainSoundButton.onclick=loadRainSound 
+document.body.appendChild(rainSoundButton)
+
+var ambulanceSoundButton = document.createElement('button2')
+ambulanceSoundButton.textContent = "Ambulance"
+ambulanceSoundButton.onclick=loadAmbulanceSound
+document.body.appendChild(ambulanceSoundButton);
+
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
@@ -162,15 +172,17 @@ thirdRow.appendChild(cloudsButtonDay);
 thirdRow.appendChild(smokeButton);
 thirdRow.appendChild(starsButton);
 thirdRow.appendChild(borealisButton);
-thirdRow.appendChild(resetButton);
+thirdRow.appendChild(planeButton);
+thirdRow.appendChild(birdButton);
+thirdRow.appendChild(nightPlaneButton);
+thirdRow.appendChild(cometButton);
 thirdRow.appendChild(moonButton);
+thirdRow.appendChild(resetButton);
 
 var fourthRow = document.createElement('div');
 fourthRow.id = 'fourthRow'
-fourthRow.appendChild(planeButton);
-fourthRow.appendChild(birdButton);
-fourthRow.appendChild(nightPlaneButton);
-fourthRow.appendChild(cometButton);
+fourthRow.appendChild(rainSoundButton);
+fourthRow.appendChild(ambulanceSoundButton);
 
 
 function resetToggles() {

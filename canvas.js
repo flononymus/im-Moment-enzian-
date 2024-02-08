@@ -6,10 +6,6 @@ var ctxFade = canvasFade.getContext('2d');
 var canvasDetail= document.getElementById('canvasDetail');
 var ctxDetail= canvasDetail.getContext('2d');
 
-// canvasBack.width = window.innerWidth;
-// canvasFade.width = window.innerWidth;
-// canvasBack.height = window.innerHeight;
-// canvasFade.height = window.innerHeight;
 canvasBack.width = 1000;
 canvasFade.width = 1000;
 canvasBack.height = 1000;
@@ -37,23 +33,16 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = drawImages(),
-// setTimeout(function() { 
-//     toggleBird();
-// },1000);
-// imageClouds.onload = drawImages, toggleBird
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.src = "images/test_night1.png"
 
 var imageFullNight= new Image();
-// imageFullNight.src = "images/test_night6.png"
-// imageFullNight.src = "images/night_mixed1.png"
 imageFullNight.src = "images/night_mixed2.png"
 imageFullNight.onload = drawImages
 
 var imageLightsDetail = new Image();
-// imageLightsDetail.src = "images/background lights1.png"
 imageLightsDetail.src = "images/background lights2.png"
 
 var imageDarkClouds = new Image();
@@ -68,9 +57,6 @@ document.getElementById('canvasBackground').onwheel = function(event){
 document.getElementById('canvasBackground').onmouswheel = function(event){
   event.preventDefault();
 }
-
-// currentImage = 'clouds'
-// currentImage = 'fullNight'
 
 if (currentImage === null) {
   // currentImage = 'fullNight'
