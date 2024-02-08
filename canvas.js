@@ -66,7 +66,7 @@ if (currentImage === null) {
 function drawImages() {
   // resetToggles;
   if (currentImage === 'clouds') {
-    $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
+    // $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
 
     // if (raining) {
     //   console.log('darker clouds')
