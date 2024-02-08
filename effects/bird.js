@@ -94,6 +94,10 @@ var srcYLanding = 0;
 // canvasBird.height = 1000;
 canvasBird.width = 1200;
 canvasBird.height = 1200;
+canvasBird2.width = 1200;
+canvasBird2.height = 1200;
+canvasBird3.width = 1200;
+canvasBird3.height = 1200;
 
 xBird = canvasBird.width;
 yBird = canvasBird.height/2;

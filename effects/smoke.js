@@ -71,14 +71,19 @@ var smokeInterval2;
         
         function createParticle(x,y,options){
             options = options || {}
-            var lifetime = options.lifetime || 4000
+            // var lifetime = options.lifetime || 4000
+            var lifetime = options.lifetime || 8000
             var particle = {
                 x: x,
                 y: y,
-                vx: floatInRange(options.minVx || -4/100, options.maxVx || 4/100),
-                startvy: floatInRange(options.minVy || -4/10, options.maxVy || -1/10),
+                // vx: floatInRange(options.minVx || -4/100, options.maxVx || 4/100),
+                // startvy: floatInRange(options.minVy || -4/10, options.maxVy || -1/10),
+                vx: floatInRange(options.minVx || -1/100, options.maxVx || 1/100),
+                startvy: floatInRange(options.minVy || -5/10, options.maxVy || -1/10),
                 scale: floatInRange(options.minScale || 0, options.maxScale || 0.5),
-                lifetime: floatInRange(options.minLifetime || 2000, options.maxLifetime || 8000),
+                // scale: floatInRange(options.minScale || 0, options.maxScale || 1),
+                // lifetime: floatInRange(options.minLifetime || 2000, options.maxLifetime || 8000),
+                lifetime: floatInRange(options.minLifetime || 4000, options.maxLifetime || 10000),
                 age: 0,
             }
             particle.finalScale = floatInRange(
@@ -166,14 +171,18 @@ var smokeInterval2;
                     preDrawCallback = f
                 },
                 stop: function stop(){ running = false },
-                addsmoke: addParticles,
+                // addsmoke: addParticles,
                 addSmoke: addParticles,
             }
         }
 
         }))
 
-var party = SmokeMachine(ctxSmoke, [50,50,50])
+// var party = SmokeMachine(ctxSmoke, [50,50,50])
+// var party = SmokeMachine(ctxSmoke, [250,250,250])
+// var party = SmokeMachine(ctxSmoke, [200,200,200])
+var party = SmokeMachine(ctxSmoke, [150,150,150])
+// var party2 = SmokeMachine(ctxSmoke, [50,50,50])
 
 // toggleSmoking();
 
@@ -196,12 +205,16 @@ function toggleSmoking() {
 
             // party.addSmoke(980, 1000, 0.5); 
             // party.addSmoke(980, 1000, 0.3); 
-            party.addSmoke(980, 1000, 0.8); 
+
+            // party.addSmoke(980, 1000, 0.2); 
+            party.addSmoke(980, 1000, 0.2); 
             
-        }, 80); 
+        // }, 80); 
+        }, 40); 
+        // party2.start()
         smokeInterval2 = setInterval(function() {
-            party.addSmoke(650, 1150, 0.3); 
-            party.addSmoke(150, 1200, 0.6); 
+            // party.addSmoke(650, 1150, 0.1); 
+            party.addSmoke(150, 1200, 0.2); 
             // party.addSmoke(650, 1150, 0.2); 
             // party.addSmoke(150, 1200, 0.3); 
             

@@ -37,6 +37,7 @@ imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.src = "images/test_night1.png"
+imageHalfNight.onload = drawImages();
 
 var imageFullNight= new Image();
 imageFullNight.src = "images/night_mixed2.png"
@@ -60,7 +61,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 
 if (currentImage === null) {
   // currentImage = 'fullNight'
-  currentImage = 'clouds'
+  // currentImage = 'clouds'
+  currentImage = 'halfNight'
 }
 
 function drawImages() {

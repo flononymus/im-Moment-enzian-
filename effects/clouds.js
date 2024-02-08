@@ -7,7 +7,7 @@ canvasClouds1.height = 1000
 const canvasClouds2= document.getElementById("canvasClouds2");
 const ctxClouds2= canvasClouds2.getContext("2d");
 canvasClouds2.width = 1000
-canvasClouds2.height = 10003
+canvasClouds2.height = 1000
 
 const canvasClouds3= document.getElementById("canvasClouds3");
 const ctxClouds3= canvasClouds3.getContext("2d");
