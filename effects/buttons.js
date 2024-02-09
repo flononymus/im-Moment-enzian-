@@ -200,7 +200,7 @@ firstRow.appendChild(dayButton);
 firstRow.appendChild(halfNightButton);
 firstRow.appendChild(fullNightButton);
 firstRow.appendChild(hideButton);
-// document.body.appendChild(firstRow);
+document.body.appendChild(firstRow);
 
 var secondRow = document.createElement('div');
 secondRow.id = 'secondRow';
@@ -237,33 +237,33 @@ fourthRow.appendChild(nightAmbienceButton);
 
 
 
-var cloudyButtonBig= document.createElement('buttonBig');
-cloudyButtonBig.textContent ="🌫️"
-cloudyButtonBig.onclick = function() {
-    toggleButtonsSmall();cloudImage(); toggleRain(); toggleClouds(); toggleTitle();
-}
-document.body.appendChild(cloudyButtonBig);
+// var cloudyButtonBig= document.createElement('buttonBig');
+// cloudyButtonBig.textContent ="🌫️"
+// cloudyButtonBig.onclick = function() {
+//     toggleButtonsSmall();cloudImage(); toggleRain(); toggleClouds(); toggleTitle();
+// }
+// document.body.appendChild(cloudyButtonBig);
 
-var dayButtonBig= document.createElement('buttonBig');
-dayButtonBig.textContent = "🏙️"
-dayButtonBig.onclick= function() {
-    toggleButtonsSmall();dayImage(); toggleBird(); toggleTitle(); //toggleCloudsDay();
-}
-document.body.appendChild(dayButtonBig);
+// var dayButtonBig= document.createElement('buttonBig');
+// dayButtonBig.textContent = "🏙️"
+// dayButtonBig.onclick= function() {
+//     toggleButtonsSmall();dayImage(); toggleBird(); toggleTitle(); //toggleCloudsDay();
+// }
+// document.body.appendChild(dayButtonBig);
 
-var halfNightButtonBig= document.createElement('buttonBig');
-halfNightButtonBig.textContent = "🌆"
-halfNightButtonBig.onclick = function() {
-    toggleButtonsSmall(); halfNight(); toggleTitle(); 
-}
-document.body.appendChild(halfNightButtonBig);
+// var halfNightButtonBig= document.createElement('buttonBig');
+// halfNightButtonBig.textContent = "🌆"
+// halfNightButtonBig.onclick = function() {
+//     toggleButtonsSmall(); halfNight(); toggleTitle(); 
+// }
+// document.body.appendChild(halfNightButtonBig);
 
-var fullNightButtonBig= document.createElement('buttonBig');
-fullNightButtonBig.textContent = "🌃"
-fullNightButtonBig.onclick = function() {
-    toggleButtonsSmall();fullNight(); toggleStars();toggleTitle();
-}
-document.body.appendChild(fullNightButtonBig);
+// var fullNightButtonBig= document.createElement('buttonBig');
+// fullNightButtonBig.textContent = "🌃"
+// fullNightButtonBig.onclick = function() {
+//     toggleButtonsSmall();fullNight(); toggleStars();toggleTitle();
+// }
+// document.body.appendChild(fullNightButtonBig);
 
 // var soundButtonBig = document.createElement('buttonBig');
 // soundButtonBig.textContent = "🔊"
@@ -278,15 +278,24 @@ document.body.appendChild(fullNightButtonBig);
 // soundButtonBig.onclick = toggleSound;
 // document.body.appendChild(soundButtonBig)
 
+var manualButton = document.createElement('buttonBig')
+manualButton.textContent = "Manual"
+document.body.appendChild(manualButton)
 
-var bigButtonDiv= document.createElement('div');
-bigButtonDiv.id = "bigButtonDiv"
-// bigButtonDiv.appendChild(soundButtonBig);
-bigButtonDiv.appendChild(cloudyButtonBig);
-bigButtonDiv.appendChild(dayButtonBig);
-bigButtonDiv.appendChild(halfNightButtonBig);
-bigButtonDiv.appendChild(fullNightButtonBig);
-document.body.appendChild(bigButtonDiv);
+var autoButton = document.createElement('buttonBig')
+autoButton.textContent = "Automatic"
+document.body.appendChild(autoButton)
+
+// var bigButtonDiv= document.createElement('div');
+// bigButtonDiv.id = "bigButtonDiv"
+// bigButtonDiv.appendChild(manualButton);
+// bigButtonDiv.appendChild(autoButton);
+// // bigButtonDiv.appendChild(soundButtonBig);
+// // bigButtonDiv.appendChild(cloudyButtonBig);
+// // bigButtonDiv.appendChild(dayButtonBig);
+// // bigButtonDiv.appendChild(halfNightButtonBig);
+// // bigButtonDiv.appendChild(fullNightButtonBig);
+// document.body.appendChild(bigButtonDiv);
 
 
 function resetToggles() {
@@ -343,15 +352,15 @@ function hideButtons() {
     }
 }
 
-function toggleButtonsSmall() {
-    showSmallButtons = !showSmallButtons 
-    if (showSmallButtons) {
-        console.log('check')
-        document.body.removeChild(bigButtonDiv)
-        document.body.appendChild(firstRow)
-    }
-    else {
-        document.body.appendChild(bigButtonDiv)
-        document.body.removeChild(firstRow)
-    }
-}
+// function toggleButtonsSmall() {
+//     showSmallButtons = !showSmallButtons 
+//     if (showSmallButtons) {
+//         console.log('check')
+//         document.body.removeChild(bigButtonDiv)
+//         document.body.appendChild(firstRow)
+//     }
+//     else {
+//         document.body.appendChild(bigButtonDiv)
+//         document.body.removeChild(firstRow)
+//     }
+// }

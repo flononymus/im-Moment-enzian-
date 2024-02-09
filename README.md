@@ -50,7 +50,6 @@ ___
 
         - [ ] one ambient sound that loops: night 
 
-
     - [ ] Global button to enable/disable all sound
 
 #### Visual:
