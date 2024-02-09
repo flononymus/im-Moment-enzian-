@@ -5,6 +5,8 @@ var titleEnabled = false;
 canvasTitle.width = 1000
 canvasTitle.height = 1000
 
+document.documentElement.style.setProperty('--resized-width', `${canvasTitle.width}px`);
+
 var titleImage = new Image()
 // titleImage.src = "images/title test.png"
 // titleImage.src = "images/title test2.png"
@@ -31,11 +33,6 @@ function toggleTitle() {
 }
 
 
-
-
-var scrollSpeedTitle = 0.3; 
-var scrollValTitle = 0;
-
 var titleOpacity= 0;
 var titleFadeIn= false;
 
@@ -44,28 +41,37 @@ function drawTitle() {
 
     ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
 
-    ctxTitle.drawImage(titleImage, 0,0,canvasTitle.width - scrollValTitle, canvasTitle.height, scrollValTitle,0, canvasTitle.width - scrollValTitle, canvasTitle.height)
-    scrollValTitle += scrollSpeedTitle;
-    if (scrollValTitle >= canvasTitle.width) {
-        scrollSpeedTitle = 0;
-    }
-
+    // ctxTitle.drawImage(titleImage, 0,0,canvasTitle.width - scrollValTitle, canvasTitle.height, scrollValTitle,0, canvasTitle.width - scrollValTitle, canvasTitle.height)
+    ctxTitle.drawImage(titleImage,0,0,canvasTitle.width,canvasTitle.height);
         if (titleOpacity< 1) {
             ctxTitle.globalAlpha = titleOpacity;
-            titleOpacity+= 0.005;
+            titleOpacity+= 0.01;
         }
 
     requestAnimationFrame(drawTitle);
 
     }
     else {
-    ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
     if (!titleFadeIn) {
         if (titleOpacity> 0) {
+        ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
         ctxTitle.globalAlpha = titleOpacity
         titleOpacity-= 0.01;
+        ctxTitle.drawImage(titleImage,0,0,canvasTitle.width,canvasTitle.height);
+        console.log(titleOpacity)
         }
     }
     requestAnimationFrame(drawTitle);
+    }
+    // requestAnimationFrame(drawTitle);
+}
+
+function moveTitle() {
+    // scrollSpeedTitle = 0.3; 
+    // scrollValTitle = 0;
+    drawTitle();
+    if (titleOpacity> 0) {
+        ctxTitle.globalAlpha = titleOpacity
+        titleOpacity-= 0.01;
     }
 }

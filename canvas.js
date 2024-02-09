@@ -32,7 +32,9 @@ var imageDay= new Image();
 imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
-imageClouds.onload = drawImages(),
+imageClouds.onload = function() {
+  drawImages(); toggleTitle();
+}
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
@@ -175,20 +177,14 @@ function cloudImage() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
-
-  // setTimeout(function() {
-  //   toggleSmoking();
-  // },1000);
-  // setTimeout(function() {
-  //   toggleRain();
-  // },1000);
 }
 function dayImage() {
-  // resetToggles();
   currentImage = "day";
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
+  loadBirdSound();
+  loadChatterSound();
   // resetButton();
   // setTimeout(function() {
   //   togglePlane();
@@ -200,6 +196,8 @@ function halfNight() {
   resetToggles(); 
   drawImages(); 
   toggleMoon();
+  loadBellSound();
+  loadChatterSound();
 }
 function fullNight() {
   currentImage = "fullNight";

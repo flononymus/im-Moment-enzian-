@@ -19,6 +19,8 @@ ___
 
 ### General to do:
 
+- [ ] Rethink buttons (big, in the middle)
+
 #### Audio
 - [ ] soundscapes collection
     - [x] Rain:
@@ -26,19 +28,28 @@ ___
         - [x] Rain
         - [x] Ambulance
 
+        - [x] ambient sound that loops: rain
+
     - [ ] Day:
         - [x] Birds
-        - [ ] Cars rest
+        - [ ] Cars 
         - [ ] Footsteps
-        - [ ] People chatter
+        - [x] People chatter
+
+        - [x] ambient sound that loops: birds & chatter
 
     - [ ] Evening:
         - [x] Church bells
         - [ ] People chatter
 
+        - [ ] one ambient sound that loops: bells? 
+
     - [ ] Night:
         - [ ] Cricket(?)
         - [ ] Maybe some ambient music to underlay?
+
+        - [ ] one ambient sound that loops: night 
+
 
     - [ ] Global button to enable/disable all sound
 
