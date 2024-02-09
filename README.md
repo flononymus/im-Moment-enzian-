@@ -36,15 +36,17 @@ ___
     - [ ] Global button to enable/disable all sound
 
 #### Visual:
-- [ ] maybe smaller birds
-- [ ] Maybe shooting stars
-- [ ] Fix plane trails?
-- [x] Change chimney smoke color
+- [ ] Finish all the details
+    - [ ] maybe smaller birds
+    - [ ] Maybe shooting stars
+    - [ ] Fix plane trails?
+    - [x] Change chimney smoke color
 
 #### End product
-- [ ] Figure out timings on automatic switching
-- [ ] Figure out when title
-- [ ] Center canvas
+- [ ] Tie everything together
+    - [ ] Figure out timings on automatic switching
+    - [ ] Figure out when title
+    - [ ] Center canvas
 
 ### Ideas/Brainstorming
 
