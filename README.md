@@ -29,10 +29,10 @@ ___
     - [ ] People chatter
     - [x] Rain
     - [x] Ambulance
-    - [ ] Birds
+    - [x] Birds
     - [ ] Cricket(?)
 
-    - [ ] Maybe ambient music to underlay?
+    - [x] Maybe ambient music to underlay?
 
     - [ ] Global button to enable/disable all sound
 
@@ -40,7 +40,7 @@ ___
     - [ ] clouds.js add one more canvas
 
 - [ ] Fix plane trails?
-- [ ] Change chimney smoke color
+- [x] Change chimney smoke color
 
 <br/>
 
