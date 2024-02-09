@@ -48,6 +48,7 @@ ___
         - [ ] one ambient sound that loops: night 
 
     - [ ] Global button to enable/disable all sound
+    - [ ] "reset sound" button?
 
 #### Visual:
 - [ ] Finish all the details

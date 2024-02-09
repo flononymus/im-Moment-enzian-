@@ -14,41 +14,9 @@ canvasTitle.height = 1000
 canvasTitleFront.width = 1000
 canvasTitleFront.height = 1000
 
-// document.documentElement.style.setProperty('--resized-width', `${canvasTitle.width}px`);
-
-// var titleImage = new Image()
-// // titleImage.src = "images/title test6.png"
-// // titleImage.src = "images/title test2.png"
-// // titleImage.src =  "images/clouds6 test.png"
-
-// var titleOpacity= 1;
-
-// function toggleTitle() {
-//         if (titleOpacity > 0) {
-//             ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
-//             ctxTitle.globalAlpha = titleOpacity
-//             titleOpacity-= 0.01;
-//             ctxTitle.drawImage(titleImage,0,0,canvasTitle.width,canvasTitle.height);
-//             requestAnimationFrame(toggleTitle)
-//         }
-
-//         setTimeout(function() { 
-//             ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height);    
-//             titleOpacity= 0;
-//         },3000)
-// };
-
-
-// function drawTitle() {
-//     ctxTitle.drawImage(titleImage,0,0,canvasTitle.width,canvasTitle.height); 
-// }
-
 var titleImage = new Image()
 titleImage.src = "images/clouds6.png"
 var titleImageFront = new Image()
-// titleImageFront.src = "images/titleclouds.png"
-// titleImageFront.src = "images/titleclouds2.png"
-// titleImageFront.src = "images/titleclouds2.png"
 titleImageFront.src = "images/titleclouds4.png"
 
 console.log('toggled',titleToggled)
@@ -66,23 +34,17 @@ function toggleTitleBool() {
 
 function toggleTitle() {
     if (titleActive) {
-        // ctxTitle.drawImage(titleImage,0,0,canvasTitle.width,canvasTitle.height)
         titleFadeIn = true;
         drawTitle();
         console.log('title', titleActive)
     }
     else {
-        // ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
         titleFadeIn= false;
         setTimeout(function() { 
             ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height);    
             ctxTitleFront.clearRect(0,0,canvasTitle.width,canvasTitle.height);    
             titleOpacity= 0;
 
-            // scrollSpeedTitle = 1; 
-            // scrollValTitle = 0;
-           // scrollSpeedTitleFront = 1.5; 
-            // scrollValTitleFront = 0;
             scrollSpeedTitle = 0; 
             scrollSpeedTitleFront = 0; 
         },3000)
@@ -90,11 +52,9 @@ function toggleTitle() {
     }
 }
 
-// var scrollSpeedTitle = 0.1; 
 var scrollSpeedTitle = 0.5; 
 var scrollValTitle = 0;
 
-// var scrollSpeedTitleFront = 0.15; 
 var scrollSpeedTitleFront = 0.9; 
 var scrollValTitleFront = 0;
 

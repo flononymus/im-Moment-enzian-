@@ -343,6 +343,14 @@ function resetToggles() {
         console.log('moon off')
         toggleMoon();
     }
+    if (enableBellSound) {
+        console.log('bell sound off')
+        loadBellSound();
+    }
+    if (enableNightAmbience) {
+        console.log('night chatter off')
+        loadNightAmbienceSound();
+    }
   }
 
 function hideButtons() {

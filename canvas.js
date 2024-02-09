@@ -199,6 +199,7 @@ function halfNight() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages(); 
+  toggleSmoking();
   toggleMoon();
   loadBellSound();
   loadChatterSound();
