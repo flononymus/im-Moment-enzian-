@@ -21,7 +21,6 @@ function drawMoon() {
             moonOpacity += 0.005
             ctxMoon.globalAlpha = moonOpacity;
             // requestAnimationFrame(drawMoon)
-            console.log(moonOpacity);
             ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
         }
     }
@@ -32,7 +31,6 @@ function drawMoon() {
             ctxMoon.globalAlpha = moonOpacity;
             // requestAnimationFrame(drawMoon)
             ctxMoon.drawImage(moonImage,0,0,canvasMoon.width,canvasMoon.height)
-            console.log(moonOpacity)
         }
     }
     requestAnimationFrame(drawMoon)

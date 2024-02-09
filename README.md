@@ -17,30 +17,56 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ___
 
-### Ideas/Brainstorming
+### General to do:
 
-- [ ] Center canvas
+- [ ] Rethink buttons (big, in the middle)
 
+#### Audio
 - [ ] soundscapes collection
-    - [ ] Church bells
-    - [ ] Footsteps
-    - [ ] Cars
-    - [ ] Wind
-    - [ ] People chatter
-    - [x] Rain
-    - [x] Ambulance
-    - [x] Birds
-    - [ ] Cricket(?)
+    - [x] Rain:
+        - [x] Cars Rain
+        - [x] Rain
+        - [x] Ambulance
 
-    - [x] Maybe ambient music to underlay?
+        - [x] ambient sound that loops: rain
+
+    - [ ] Day:
+        - [x] Birds
+        - [ ] Cars 
+        - [ ] Footsteps
+        - [x] People chatter
+
+        - [x] ambient sound that loops: birds & chatter
+
+    - [ ] Evening:
+        - [x] Church bells
+        - [ ] People chatter
+
+        - [ ] one ambient sound that loops: bells? 
+
+    - [ ] Night:
+        - [ ] Cricket(?)
+        - [ ] Maybe some ambient music to underlay?
+
+        - [ ] one ambient sound that loops: night 
+
 
     - [ ] Global button to enable/disable all sound
 
-- [ ] Animated title that plays when first loading (maybe clouds?)
-    - [ ] clouds.js add one more canvas
+#### Visual:
+- [ ] Finish all the details
+    - [ ] maybe smaller birds
+    - [ ] Maybe shooting stars
+    - [ ] Fix plane trails?
+    - [x] Change chimney smoke color
 
-- [ ] Fix plane trails?
-- [x] Change chimney smoke color
+#### End product
+- [ ] Tie everything together
+    - [ ] Figure out timings on automatic switching
+    - [ ] Figure out when title
+    - [ ] Center canvas
+
+### Ideas/Brainstorming
 
 <br/>
 

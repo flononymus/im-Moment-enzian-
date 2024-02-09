@@ -181,7 +181,7 @@ function toggleBird() {
     // canvasBird.width = 1000;
     // canvasBird.height = 1000;
 
-    loadBirdSound()
+    // loadBirdSound()
     birdActive = !birdActive   
     // console.log(ctxBird2.canvas.width,ctxBird2.canvas.height)
     if (birdActive) {
