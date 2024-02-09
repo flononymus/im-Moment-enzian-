@@ -21,17 +21,24 @@ ___
 
 #### Audio
 - [ ] soundscapes collection
-    - [x] Church bells
-    - [ ] Footsteps
-    - [x] Cars Rain
-    - [ ] Cars rest
-    - [ ] People chatter
-    - [x] Rain
-    - [x] Ambulance
-    - [x] Birds
-    - [ ] Cricket(?)
+    - [x] Rain:
+        - [x] Cars Rain
+        - [x] Rain
+        - [x] Ambulance
 
-    - [x] Maybe ambient music to underlay?
+    - [ ] Day:
+        - [x] Birds
+        - [ ] Cars rest
+        - [ ] Footsteps
+        - [ ] People chatter
+
+    - [ ] Evening:
+        - [x] Church bells
+        - [ ] People chatter
+
+    - [ ] Night:
+        - [ ] Cricket(?)
+        - [ ] Maybe some ambient music to underlay?
 
     - [ ] Global button to enable/disable all sound
 
