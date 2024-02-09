@@ -33,7 +33,7 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = function() {
-  drawImages(); toggleTitle();
+  drawImages(); drawTitle();
 }
 imageClouds.src = "images/test_clouds2.png"
 
