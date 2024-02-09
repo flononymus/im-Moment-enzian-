@@ -12,25 +12,19 @@ $(document).on('click', 'button2', function() {
 });
 
 var cloudyButton= document.createElement('buttonSound');
-// cloudyButton.textContent ="🌫️"
-// cloudyButton.textContent = "☁"
-// cloudyButton.textContent = "⛆"
 // cloudyButton.innerHTML = "<i class='material-icons'>rainy</i>"
 cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
-// cloudyButton.onclick = cloudImage;
 cloudyButton.onclick = function() {
-    cloudImage(); toggleRain(); toggleClouds(); toggleTitle();
+    cloudImage(); toggleRain(); toggleClouds(); toggleTitleBool();
 }
 document.body.appendChild(cloudyButton);
 
 var dayButton= document.createElement('buttonSound');
-// dayButton.textContent = "🏙️"
-// dayButton.textContent = "☀"
 dayButton.innerHTML = "<i class='material-icons'>sunny</i>"
 // dayButton.onclick= dayImage;
 dayButton.onclick= function() {
     dayImage(); toggleBird(); 
-    toggleTitle();
+    toggleTitleBool();
     // toggleTitle();//toggleCloudsDay();
 }
 document.body.appendChild(dayButton);
@@ -40,7 +34,7 @@ var halfNightButton= document.createElement('buttonSound');
 // halfNightButton.onclick = halfNight;
 halfNightButton.innerHTML = "<i class='material-icons'>wb_twilight</i>"
 halfNightButton.onclick = function() {
-    halfNight(); toggleTitle(); 
+    halfNight(); toggleTitleBool(); 
     // toggleMoon();
 }
 document.body.appendChild(halfNightButton);
@@ -50,7 +44,7 @@ var fullNightButton= document.createElement('buttonSound');
 // fullNightButton.textContent = "🌌"
 fullNightButton.innerHTML = "<i class='material-icons'>nights_stay</i>"
 fullNightButton.onclick = function() {
-    fullNight(); toggleStars();toggleTitle();
+    fullNight(); toggleStars();toggleTitleBool();
 }
 document.body.appendChild(fullNightButton);
 
@@ -127,7 +121,8 @@ document.body.appendChild(cometButton);
 
 var titleButton = document.createElement('button2');
 titleButton.textContent = "Title"
-titleButton.onclick = toggleTitle;
+// titleButton.onclick = toggleTitle;
+titleButton.onclick = toggleTitleBool;
 document.body.appendChild(titleButton);
 
 var resetButton = document.createElement('button2');

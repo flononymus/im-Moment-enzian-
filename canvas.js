@@ -33,7 +33,7 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = function() {
-  drawImages(); drawTitle();
+  drawImages(); toggleTitle();//drawTitle();
 }
 imageClouds.src = "images/test_clouds2.png"
 
@@ -70,7 +70,7 @@ if (currentImage === null) {
 function drawImages() {
   // resetToggles;
   if (currentImage === 'clouds') {
-    // $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
+    $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
 
     // if (raining) {
     //   console.log('darker clouds')
@@ -89,7 +89,8 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         // console.log(currentOpacity);
         ctxFade.drawImage(imageClouds,0,0,canvasFade.width,canvasFade.height);
-      }, 1000 / fps);
+      // }, 1000 / fps);
+      }, 700 / fps);
     }
       else {
         ctxBack.drawImage(imageClouds,0,0, canvasBack.width, canvasBack.height);
@@ -112,7 +113,8 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         // console.log(currentOpacity);
         ctxFade.drawImage(imageDay,0,0,canvasFade.width,canvasFade.height);
-      }, 1000 / fps);
+      // }, 1000 / fps);
+      }, 700 / fps);
       }
       else {
         ctxBack.drawImage(imageDay,0,0, canvasBack.width, canvasBack.height);
@@ -133,7 +135,8 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         // console.log(currentOpacity);
         ctxFade.drawImage(imageHalfNight,0,0,canvasFade.width,canvasFade.height);
-      }, 1000 / fps);
+      // }, 1000 / fps);
+      }, 700 / fps);
       }
       else {
         ctxBack.drawImage(imageHalfNight,0,0, canvasBack.width, canvasBack.height);
@@ -158,7 +161,8 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         // console.log(currentOpacity);
         ctxFade.drawImage(imageFullNight,0,0,canvasFade.width,canvasFade.height);
-      }, 1000 / fps);
+      // }, 1000 / fps);
+      }, 700 / fps);
       }
       else {
         ctxBack.drawImage(imageFullNight,0,0, canvasBack.width, canvasBack.height);
@@ -205,6 +209,7 @@ function fullNight() {
   resetToggles(); 
   drawImages();
   toggleMoon();
+  loadNightAmbienceSound();
 }
 function noImage() {
   currentImage = "none";

@@ -239,12 +239,12 @@ function loadNightAmbienceSound() {
     enableNightAmbience= !enableNightAmbience
     if (enableNightAmbience&& enableSound) {
         nightAmbienceSound.volume = 0;
-        $(nightAmbienceSound).animate({volume: 1},1000);
+        $(nightAmbienceSound).animate({volume: 0.9},1000);
         nightAmbienceSound.play();
         console.log('night sound',enableNightAmbience);
     }
     else if (!enableNightAmbience) {
-        nightAmbienceSound.volume = 1;
+        nightAmbienceSound.volume = 0.9;
         $(nightAmbienceSound).animate({volume: 0},1000, function(){
             nightAmbienceSound.pause();
         });
