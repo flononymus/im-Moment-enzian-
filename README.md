@@ -19,7 +19,8 @@ ___
 
 ### General to do:
 
-- [ ] Rethink buttons (big, in the middle)
+- [ ] Rethink buttons (big, in the middle)
+- [ ] Buttons use "innerHTML" instead of textcontent?
 
 #### Audio
 - [ ] soundscapes collection

@@ -65,13 +65,3 @@ function drawTitle() {
     }
     // requestAnimationFrame(drawTitle);
 }
-
-function moveTitle() {
-    // scrollSpeedTitle = 0.3; 
-    // scrollValTitle = 0;
-    drawTitle();
-    if (titleOpacity> 0) {
-        ctxTitle.globalAlpha = titleOpacity
-        titleOpacity-= 0.01;
-    }
-}
