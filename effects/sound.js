@@ -4,6 +4,7 @@ var enableAmbulanceSound= false;
 var enableCarSound= false;
 var enableBirdSound= false;
 var enableJazzSound= false;
+var enableBellSound = false;
 
 
 
@@ -12,6 +13,8 @@ var ambulanceSound= new Audio("audio/ambulance.wav")
 var carSound = new Audio("audio/car test.wav")
 var birdSound= new Audio("audio/birds test1.wav")
 var jazzSound= new Audio("audio/jazz.wav")
+var bellSound = new Audio("audio/bells1.wav")
+var bellSound2 = new Audio("audio/bells2.wav")
 
 rainSound.addEventListener('timeupdate', function(){
     var buffer= .60
@@ -135,4 +138,33 @@ function loadJazzSound() {
     }
 }
 
+function loadBellSound() {
+    enableBellSound = !enableBellSound
+    if (enableBellSound && enableSound) {
+        bellSound.volume = 0;
+        $(bellSound).animate({volume: 0.5},1000);
+        bellSound.play();
+        console.log('Bells',enableBellSound);
+
+        bellSound2.volume = 0;
+        $(bellSound2).animate({volume: 0.5},1000);
+        bellSound2.play();
+        console.log('Bells2',enableBellSound);
+    }
+    else if (!enableBellSound) {
+        bellSound.volume = 0.5;
+        $(bellSound).animate({volume: 0},1000, function(){
+            bellSound.pause();
+        });
+        // bellSound.currentTime = 0;
+        console.log('Bells',enableBellSound);
+
+        bellSound2.volume = 0.5;
+        $(bellSound2).animate({volume: 0},1000, function(){
+            bellSound2.pause();
+        });
+        // bellSound2.currentTime = 0;
+        console.log('Bells2',enableBellSound);
+    }
+}
 

@@ -17,15 +17,14 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ___
 
-### Ideas/Brainstorming
+### General to do:
 
-- [ ] Center canvas
-
+#### Audio
 - [ ] soundscapes collection
-    - [ ] Church bells
+    - [x] Church bells
     - [ ] Footsteps
-    - [ ] Cars
-    - [ ] Wind
+    - [x] Cars Rain
+    - [ ] Cars rest
     - [ ] People chatter
     - [x] Rain
     - [x] Ambulance
@@ -36,11 +35,18 @@ ___
 
     - [ ] Global button to enable/disable all sound
 
-- [ ] Animated title that plays when first loading (maybe clouds?)
-    - [ ] clouds.js add one more canvas
-
+#### Visual:
+- [ ] maybe smaller birds
+- [ ] Maybe shooting stars
 - [ ] Fix plane trails?
 - [x] Change chimney smoke color
+
+#### End product
+- [ ] Figure out timings on automatic switching
+- [ ] Figure out when title
+- [ ] Center canvas
+
+### Ideas/Brainstorming
 
 <br/>
 

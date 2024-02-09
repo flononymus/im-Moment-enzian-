@@ -61,8 +61,8 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 
 if (currentImage === null) {
   // currentImage = 'fullNight'
-  // currentImage = 'clouds'
-  currentImage = 'halfNight'
+  currentImage = 'clouds'
+  // currentImage = 'halfNight'
 }
 
 function drawImages() {

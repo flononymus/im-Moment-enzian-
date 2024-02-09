@@ -174,6 +174,11 @@ jazzSoundButton.textContent = "Jazz"
 jazzSoundButton.onclick = loadJazzSound
 document.body.appendChild(jazzSoundButton)
 
+var bellButton = document.createElement('button2')
+bellButton.textContent = "Bells"
+bellButton.onclick = loadBellSound
+document.body.appendChild(bellButton)
+
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
@@ -214,6 +219,7 @@ fourthRow.appendChild(ambulanceSoundButton);
 fourthRow.appendChild(carSoundButton);
 fourthRow.appendChild(birdSoundButton);
 fourthRow.appendChild(jazzSoundButton);
+fourthRow.appendChild(bellButton);
 
 
 function resetToggles() {
