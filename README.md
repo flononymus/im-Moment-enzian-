@@ -5,12 +5,6 @@
 
 ___
 
-### Projektbeschrieb Momentfulness
-
-<!-- [[projektbeschrieb]] -->
-![image](images/hausaufgabe/hausaufgabe.png)
-___
-
 ## Description/general idea:
 
 peaceful atmospheric images/environment to get a break from a busy day, to relax with, to get lost in, and to tune out. 
@@ -19,7 +13,10 @@ ___
 
 ### General to do:
 
-- [ ] Better title image --> more down, plus description of "click a button"
+- [ ] Better title image
+  - [x] more down, 
+  - [ ] description of "click a button"
+  - [ ] Maybe short overview?
 
 #### Audio
 - [ ] soundscapes collection
@@ -62,7 +59,7 @@ ___
 #### End product
 - [ ] Tie everything together
     - [ ] Figure out timings on automatic switching
-    - [ ] Figure out when title
+    - [x] Figure out when title
     - [ ] Center canvas
 
 ### Ideas/Brainstorming
