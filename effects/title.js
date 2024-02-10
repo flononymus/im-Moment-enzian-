@@ -4,9 +4,9 @@ var ctxTitle = canvasTitle.getContext('2d')
 var canvasTitleFront = document.getElementById('canvasTitleFront')
 var ctxTitleFront = canvasTitleFront.getContext('2d')
 
-// var titleActive = true;
-// var titleActive = false;
-var titleActive= true;
+// var titleActive= true;
+var titleActive= false;
+
 var titleToggled= false;
 
 canvasTitle.width = 1000

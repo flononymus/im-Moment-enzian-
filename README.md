@@ -63,6 +63,23 @@ ___
     - [x] Figure out when title
     - [ ] Center canvas
 
+    - [x] Rain 
+      - [x] Loop rain 
+      - [x] Loop clouds
+
+    - [ ] Day
+      - [ ] Loop birds
+      - [ ] Loop airplanes
+
+    - [ ] Evening
+      - [x] Loop Smoke chimneys
+      - [ ] 
+
+    - [ ] Night
+      - [ ] Occasionally turn on borealis
+      - [ ] Better night airplanes
+      - [ ] Loop night airplanes
+
 ### Ideas/Brainstorming
 
 <br/>
