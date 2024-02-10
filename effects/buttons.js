@@ -114,6 +114,11 @@ birdButton.textContent = "Bird"
 birdButton.onclick = toggleBird;
 document.body.appendChild(birdButton);
 
+var birdFlockButton= document.createElement('button2');
+birdFlockButton.textContent = "Flock"
+birdFlockButton.onclick = toggleBirdFlock; 
+document.body.appendChild(birdFlockButton);
+
 var cometButton = document.createElement('button2');
 cometButton.textContent = "Comet"
 cometButton.onclick = toggleComet;
@@ -227,6 +232,7 @@ thirdRow.appendChild(starsButton);
 thirdRow.appendChild(borealisButton);
 thirdRow.appendChild(planeButton);
 thirdRow.appendChild(birdButton);
+thirdRow.appendChild(birdFlockButton);
 thirdRow.appendChild(nightPlaneButton);
 thirdRow.appendChild(cometButton);
 thirdRow.appendChild(moonButton);

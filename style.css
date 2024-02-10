@@ -218,6 +218,13 @@
     position:absolute;
 }
 
+#canvasBirdFlock{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
 #canvasBorealis{    
     margin:0;
     height: 100vh;
