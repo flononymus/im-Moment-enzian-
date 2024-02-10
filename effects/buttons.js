@@ -357,6 +357,10 @@ function resetToggles() {
         console.log('night chatter off')
         loadNightAmbienceSound();
     }
+    if (cometActive) {
+        console.log('comet off');
+        toggleComet();
+    }
   }
 
 function hideButtons() {

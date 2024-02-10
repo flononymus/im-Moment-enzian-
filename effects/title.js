@@ -25,13 +25,9 @@ function toggleTitleBool() {
     if (!titleToggled) {
       titleToggled = true;
       titleActive = false;
+      titleFadeIn = false;
       toggleTitle();
       console.log('toggled',titleToggled)
-
-      setTimeout(function() {
-        ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
-        console.log('title gone')
-      },30)
     }
 }
 
@@ -67,7 +63,7 @@ var titleOpacity= 0;
 var titleFadeIn= false;
 
 function drawTitle() {
-    if (titleActive) {
+
 
     ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
 
@@ -93,36 +89,15 @@ function drawTitle() {
             ctxTitle.globalAlpha = titleOpacity;
             ctxTitleFront.globalAlpha = titleOpacity;
             titleOpacity+= 0.005;
+        }    
+
+        if (!titleFadeIn) {
+            if (titleOpacity> 0) {
+            ctxTitle.globalAlpha = titleOpacity
+            ctxTitleFront.globalAlpha = titleOpacity
+            titleOpacity-= 0.01;
+            }
         }
 
     requestAnimationFrame(drawTitle);
-
     }
-    else {
-    ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
-
-    ctxTitle.drawImage(titleImage, canvasTitle.width - scrollValTitle,0,scrollValTitle, canvasTitle.height,0,0,scrollValTitle, canvasTitle.height)
-    ctxTitle.drawImage(titleImage, 0,0,canvasTitle.width - scrollValTitle, canvasTitle.height, scrollValTitle,0, canvasTitle.width - scrollValTitle, canvasTitle.height)
-    scrollValTitle += scrollSpeedTitle;
-
-    ctxTitleFront.clearRect(0,0,canvasTitle.width,canvasTitle.height)
-
-    ctxTitleFront.drawImage(titleImageFront, canvasTitle.width - scrollValTitleFront,0,scrollValTitleFront, canvasTitle.height,0,0,scrollValTitleFront, canvasTitle.height)
-    ctxTitleFront.drawImage(titleImageFront, 0,0,canvasTitle.width - scrollValTitleFront, canvasTitle.height, scrollValTitleFront,0, canvasTitle.width - scrollValTitleFront, canvasTitle.height)
-    scrollValTitleFront += scrollSpeedTitleFront;
-
-
-    if (scrollValTitle >= canvasTitle.width) {
-        scrollValTitle = 0;
-    }
-
-    if (!titleFadeIn) {
-        if (titleOpacity> 0) {
-        ctxTitle.globalAlpha = titleOpacity
-        ctxTitleFront.globalAlpha = titleOpacity
-        titleOpacity-= 0.01;
-        }
-    }
-    requestAnimationFrame(drawTitle);
-    }
-}
