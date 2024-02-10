@@ -4,8 +4,8 @@ var ctxTitle = canvasTitle.getContext('2d')
 var canvasTitleFront = document.getElementById('canvasTitleFront')
 var ctxTitleFront = canvasTitleFront.getContext('2d')
 
-// var titleActive= true;
-var titleActive= false;
+var titleActive= true;
+// var titleActive= false;
 
 var titleToggled= false;
 
@@ -27,6 +27,11 @@ function toggleTitleBool() {
       titleActive = false;
       toggleTitle();
       console.log('toggled',titleToggled)
+
+      setTimeout(function() {
+        ctxTitle.clearRect(0,0,canvasTitle.width,canvasTitle.height)
+        console.log('title gone')
+      },30)
     }
 }
 

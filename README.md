@@ -52,9 +52,12 @@ ___
 
 #### Visual:
 - [ ] Finish all the details
-    - [ ] maybe smaller birds
-    - [ ] Maybe shooting stars
+    - [x] maybe smaller birds
+
+    - [ ] **Maybe shooting stars**
+
     - [ ] Fix plane trails?
+
     - [x] Change chimney smoke color
 
 #### End product

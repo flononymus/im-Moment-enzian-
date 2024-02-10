@@ -44,7 +44,7 @@ var fullNightButton= document.createElement('buttonSound');
 // fullNightButton.textContent = "🌌"
 fullNightButton.innerHTML = "<i class='material-icons'>nights_stay</i>"
 fullNightButton.onclick = function() {
-    fullNight(); toggleStars();toggleTitleBool();
+    fullNight(); toggleStars(); toggleTitleBool(); toggleComet();
 }
 document.body.appendChild(fullNightButton);
 
