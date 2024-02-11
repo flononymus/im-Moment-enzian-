@@ -210,6 +210,12 @@
     /* aspect-ratio: 1/1; */
     position:absolute;
 }
+#canvasBird4{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
 
 #canvasAnimationTest{    
     margin:0;

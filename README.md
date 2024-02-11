@@ -62,8 +62,8 @@ ___
     - [ ] Plane trails
     - [x] Fade out smoke 
 
-- [ ] Repeats
-    - [ ] Bird idle
+- [ ] **Repeats**
+    - [ ] **Bird idle**
 
 #### End product
 - [ ] Tie everything together

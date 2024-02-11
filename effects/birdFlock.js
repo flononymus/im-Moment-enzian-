@@ -65,7 +65,8 @@ birdSpeedReversed= 1;
 // birdSpeedReversed= 4;
 
 ctxBirdFlock.globalAlpha = 0.4;
-ctxBirdFlockReversed.globalAlpha = 0.3;
+// ctxBirdFlockReversed.globalAlpha = 0.3;
+ctxBirdFlockReversed.globalAlpha = 0.6;
 
 
 

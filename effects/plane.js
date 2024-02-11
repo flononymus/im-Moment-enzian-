@@ -43,6 +43,8 @@ const speed2 = -0.2;
 const yspeed2 = 0.02;
 
 var enablePlane= false;
+// ctxPlane2.globalAlpha = 0.4;
+ctxPlane2.filter = "blur(1px)"
 
 function togglePlane() {
   enablePlane= !enablePlane
