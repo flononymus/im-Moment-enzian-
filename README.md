@@ -53,12 +53,17 @@ ___
 #### Visual:
 - [ ] Finish all the details
     - [x] maybe smaller birds
-
-    - [ ] **Maybe shooting stars**
-
-    - [ ] Fix plane trails?
-
+    - [x] **Maybe shooting stars**
+    - [x] Fix plane trails?
+    - [ ] toggle borealis automatically
     - [x] Change chimney smoke color
+
+- [ ] Fade outs:
+    - [ ] Plane trails
+    - [ ] 
+
+- [ ] Repeats
+    - [ ] Bird idle
 
 #### End product
 - [ ] Tie everything together
@@ -79,9 +84,9 @@ ___
       - [ ] 
 
     - [ ] Night
-      - [ ] Occasionally turn on borealis
+      - [x] Occasionally turn on borealis
       - [ ] Better night airplanes
-      - [ ] Loop night airplanes
+      - [x] Loop night airplanes
 
 ### Ideas/Brainstorming
 

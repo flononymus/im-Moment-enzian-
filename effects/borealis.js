@@ -45,10 +45,10 @@ function animateBorealis() {
             framesDrawnB = 0;
         }
 
-        if (borealisOpacity < 0.3) {
+        if (borealisOpacity < 0.2) {
             ctxBorealis.globalAlpha = borealisOpacity
             // borealisOpacity += 0.0005;
-            borealisOpacity += 0.0005;
+            borealisOpacity += 0.0004;
         }
 
     }
@@ -60,7 +60,7 @@ function animateBorealis() {
         if (borealisFadeOut) {
             if (borealisOpacity > 0) {
                 ctxBorealis.globalAlpha = borealisOpacity;
-                borealisOpacity += -0.005;
+                borealisOpacity += -0.0005;
             }
             requestAnimationFrame(animateBorealis);
         }
@@ -72,27 +72,25 @@ function toggleBorealis() {
     borealisActive = !borealisActive;
         if (borealisActive) {
         borealisFadeOut= false;
-        console.log('borealis on')
-        animateBorealis();
-        // canvasBorealis.width = 1000
-        // canvasBorealis.height = 1000
-        // ctxBorealis.drawImage(borealis,0,0,canvasBorealis.width, canvasBorealis.height)
-
-        // ctxBorealis.globalAlpha = 0.3
-        // ctxBorealis.globalAlpha = 1
-        // setTimeout(function(){ 
-        //     // ctxBorealis.filter = "blur(5px)"
-        //     ctxBorealis.globalAlpha = 0.3;
+        setTimeout(function() { 
+            animateBorealis();
+            setTimeout(function() {
+                toggleBorealis();
+            }, 20000)
+            // }, 2000)
+        },15000)
         // },1000)
-
 
     } else {
         borealisFadeOut= true;
-        // console.log('borealis off')
+        console.log('borealis off')
         setTimeout(function() { 
             ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);     
-            console.log('test')
             borealisFadeOut = false;
-        },3000)
+        },9000)
+        // if (borealisOpacity < 0.1) {
+        //     ctxBorealis.clearRect(0,0,canvasBorealis.width,canvasBorealis.height);     
+        //     borealisFadeOut = false;
+        // }
     }
 }

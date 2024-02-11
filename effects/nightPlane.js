@@ -32,7 +32,7 @@ canvasNightPlane.height = 1000;
 xNightPlane = canvasNightPlane.width;
 yNightPlane = canvasNightPlane.height/2;
 
-ctxNightPlane.globalAlpha = 0.2
+ctxNightPlane.globalAlpha = 0.1
 ctxNightPlane.filter = "blur(5px)"
 
 function toggleNightPlane() {
