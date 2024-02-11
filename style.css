@@ -238,6 +238,25 @@
     position:absolute;
 }
 
+#canvasWindow1{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasWindow2{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasWindow3{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
 #canvasLights{    
     margin:0;
     height: 100vh;

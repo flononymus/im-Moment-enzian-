@@ -37,6 +37,7 @@ ___
 
     - [ ] Evening:
         - [x] Church bells
+          - [ ] Remove fade out bells
         - [ ] People chatter
 
         - [ ] one ambient sound that loops: bells? 

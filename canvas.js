@@ -39,6 +39,7 @@ imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.src = "images/test_night1.png"
+// imageHalfNight.src = "images/halfnight dark.png"
 imageHalfNight.onload = drawImages();
 
 var imageFullNight= new Image();
@@ -181,6 +182,8 @@ function cloudImage() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
+  // toggleClouds();
+  // toggleRain();
 }
 function dayImage() {
   currentImage = "day";
@@ -199,8 +202,6 @@ function halfNight() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages(); 
-  toggleSmoking();
-  toggleMoon();
   loadBellSound();
   loadChatterSound();
 }
@@ -209,8 +210,13 @@ function fullNight() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
-  toggleMoon();
   loadNightAmbienceSound();
+  if (moonShown) {
+    return;
+  }
+  else {
+    toggleMoon();
+  }
 }
 function noImage() {
   currentImage = "none";

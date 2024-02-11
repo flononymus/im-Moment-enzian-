@@ -14,7 +14,10 @@ $(document).on('click', 'button2', function() {
 var cloudyButton= document.createElement('buttonSound');
 cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
 cloudyButton.onclick = function() {
-    cloudImage(); toggleRain(); toggleClouds(); toggleTitleBool();
+    cloudImage(); 
+    toggleRain(); 
+    toggleClouds(); 
+    toggleTitleBool();
 }
 document.body.appendChild(cloudyButton);
 
@@ -25,15 +28,19 @@ dayButton.onclick= function() {
     toggleBird();  
     toggleBirdFlock(); 
     togglePlane();
-    toggleTitleBool();
     toggleCloudsDay();
+    toggleTitleBool();
 }
 document.body.appendChild(dayButton);
 
 var halfNightButton= document.createElement('buttonSound');
 halfNightButton.innerHTML = "<i class='material-icons'>wb_twilight</i>"
 halfNightButton.onclick = function() {
-    halfNight(); toggleTitleBool(); 
+    halfNight(); 
+    toggleSmoking();
+    toggleMoon();
+    toggleWindow();
+    toggleTitleBool(); 
     // toggleMoon();
 }
 document.body.appendChild(halfNightButton);
@@ -41,7 +48,11 @@ document.body.appendChild(halfNightButton);
 var fullNightButton= document.createElement('buttonSound');
 fullNightButton.innerHTML = "<i class='material-icons'>nights_stay</i>"
 fullNightButton.onclick = function() {
-    fullNight(); toggleStars(); toggleTitleBool(); toggleComet(); toggleBorealis();
+    fullNight(); 
+    toggleStars(); 
+    toggleComet(); 
+    toggleBorealis();
+    toggleTitleBool(); 
 }
 document.body.appendChild(fullNightButton);
 
@@ -145,6 +156,11 @@ hideButton.addEventListener('click', function handleClick() {
 hideButton.onclick = hideButtons;
 document.body.appendChild(hideButton);
 
+var windowButton= document.createElement('button2');
+windowButton.textContent = "Windows"
+windowButton.onclick = toggleWindow;
+document.body.appendChild(windowButton);
+
 var soundButton = document.createElement('buttonSound');
 // soundButton.textContent = "🔊"
 soundButton.innerHTML = "<i class='material-icons'>volume_up</i>"
@@ -218,6 +234,7 @@ secondRow.appendChild(noneButton);
 secondRow.appendChild(cycleButton);
 secondRow.appendChild(stopCycleButton);
 secondRow.appendChild(titleButton);
+secondRow.appendChild(windowButton);
 
 var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
@@ -342,6 +359,10 @@ function resetToggles() {
         console.log('bird off');
         toggleBird();
     }
+    if (birdFlockActive) {
+        console.log('Flock off');
+        toggleBirdFlock();
+    }
     if (moonShown) {
         console.log('moon off')
         toggleMoon();
@@ -357,6 +378,10 @@ function resetToggles() {
     if (cometActive) {
         console.log('comet off');
         toggleComet();
+    }
+    if (windowActive) {
+        console.log('windows off')
+        toggleWindow();
     }
   }
 
