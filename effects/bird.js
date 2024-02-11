@@ -43,10 +43,18 @@ var srcY = 0;
 var srcXIdle = 0;
 var srcYIdle = 0;
 
+var totalFramesIdle2 = 10;
+var currentFrameIdle2 = 0;
+var framesDrawnIdle2 = 0;
+var srcXIdle2 = 0;
+var srcYIdle2 = 0;
+
 var xBird
 var yBird
 var xBirdIdle
 var yBirdIdle
+var xBirdIdle2
+var yBirdIdle2
 
 var birdSpeed = -1.5;
 var birdHeight = -0.2;
@@ -271,5 +279,7 @@ function idleBird() {
 
 function birdBackToIdle() {
     ctxBird4.clearRect(0,0,canvasBird4.width,canvasBird4.height)
+
+    ctxBird3.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
 }
 
