@@ -22,7 +22,8 @@ var birdSound= new Audio("audio/birds2.wav")
 
 var jazzSound= new Audio("audio/jazz.wav")
 
-var bellSound = new Audio("audio/bells1.wav")
+// var bellSound = new Audio("audio/bells1.wav")
+var bellSound = new Audio("audio/bells3.wav")
 // var bellSound2 = new Audio("audio/bells2.wav")
 
 var chatterSound = new Audio("audio/chatter.wav")
