@@ -14,7 +14,6 @@ ___
 ### General to do:
 
 - [ ] Better title image
-  - [x] more down, 
   - [ ] description of "click a button"
   - [ ] Maybe short overview?
 
@@ -37,7 +36,7 @@ ___
 
     - [ ] Evening:
         - [x] Church bells
-          - [ ] Remove fade out bells
+        - [x] Remove fade out bells
         - [ ] People chatter
 
         - [ ] one ambient sound that loops: bells? 
@@ -56,12 +55,12 @@ ___
     - [x] maybe smaller birds
     - [x] **Maybe shooting stars**
     - [x] Fix plane trails?
-    - [ ] toggle borealis automatically
+    - [x] toggle borealis automatically
     - [x] Change chimney smoke color
 
 - [ ] Fade outs:
     - [ ] Plane trails
-    - [ ] 
+    - [x] Fade out smoke 
 
 - [ ] Repeats
     - [ ] Bird idle

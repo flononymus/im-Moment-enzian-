@@ -221,11 +221,12 @@ function toggleSmoking() {
         }, 120); 
     }
     else {
-        party.stop() 
+        // party.stop() 
+        // party.end()
         console.log('no smoke')
         clearInterval(smokeInterval); 
         clearInterval(smokeInterval2);
 
-        ctxSmoke.clearRect(0,0,canvasSmoke.width,canvasSmoke.height);
+        // ctxSmoke.clearRect(0,0,canvasSmoke.width,canvasSmoke.height);
     }
 }

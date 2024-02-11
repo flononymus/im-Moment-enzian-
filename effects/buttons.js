@@ -306,13 +306,13 @@ fourthRow.appendChild(nightAmbienceButton);
 // soundButtonBig.onclick = toggleSound;
 // document.body.appendChild(soundButtonBig)
 
-var manualButton = document.createElement('buttonBig')
-manualButton.textContent = "Manual"
-document.body.appendChild(manualButton)
+// var manualButton = document.createElement('buttonBig')
+// manualButton.textContent = "Manual"
+// document.body.appendChild(manualButton)
 
-var autoButton = document.createElement('buttonBig')
-autoButton.textContent = "Automatic"
-document.body.appendChild(autoButton)
+// var autoButton = document.createElement('buttonBig')
+// autoButton.textContent = "Automatic"
+// document.body.appendChild(autoButton)
 
 // var bigButtonDiv= document.createElement('div');
 // bigButtonDiv.id = "bigButtonDiv"
