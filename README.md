@@ -51,6 +51,8 @@ ___
     - [ ] Figure out looping of functions
     - [ ] Center canvas
 
+    - [ ] **Window not stopping properly**
+
 - [ ] Title
     - [ ] Better title image
         - [ ] description of "click a button"
