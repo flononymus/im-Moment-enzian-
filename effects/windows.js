@@ -28,42 +28,61 @@ window3.src = "images/window3.png"
 
 
 var windowActive = false;
+var cycleComplete = false;
+
 
 
 function toggleWindow() {
     windowActive = !windowActive
 
+        if (windowActive) {
 
-    if (windowActive) {
-        setTimeout(function() { 
+            setTimeout(function() { 
 
-        setTimeout(function() {
-           ctxWindow3.drawImage(window3,0,0,canvasWindow3.height,canvasWindow3.width)
-        }, 2000)
+            setTimeout(function() {
+            ctxWindow3.drawImage(window3,0,0,canvasWindow3.height,canvasWindow3.width)
+            }, 2000)
 
-        setTimeout(function() {
-            ctxWindow2.drawImage(window2,0,0,canvasWindow2.height,canvasWindow2.width)
-        },4000)
-        setTimeout(function() {
-            ctxWindow1.drawImage(window1,0,0,canvasWindow1.height,canvasWindow1.width)
-        },5000)
-        setTimeout(function() { 
+            setTimeout(function() {
+                ctxWindow2.drawImage(window2,0,0,canvasWindow2.height,canvasWindow2.width)
+            },4000)
+            setTimeout(function() {
+                ctxWindow1.drawImage(window1,0,0,canvasWindow1.height,canvasWindow1.width)
+            },5000)
+            setTimeout(function() { 
+                ctxWindow1.clearRect(0,0,canvasWindow1.width,canvasWindow1.height)
+            },9000)
+            setTimeout(function() { 
+                // ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
+                ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
+            },10000)
+            setTimeout(function() { 
+                // ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
+                ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
+                cycleComplete = true;
+                console.log('cyclecomplete', cycleComplete)
+                repeatWindows();
+            },12000)
+            },1000)
+
+            // cycleComplete = true;
+            // console.log('cyclecomplete', cycleComplete)
+            }
+        else {
             ctxWindow1.clearRect(0,0,canvasWindow1.width,canvasWindow1.height)
-        },9000)
-        setTimeout(function() { 
-            // ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
-            ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
-        },10000)
-        setTimeout(function() { 
-            // ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
             ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
-        },12000)
-        },1000)
-        }
-    else {
-        console.log('no window')
-        ctxWindow1.clearRect(0,0,canvasWindow1.width,canvasWindow1.height)
-        ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
-        ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
+            ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
+            }
+}
+
+
+function repeatWindows() {
+    if (cycleComplete) {
+        cycleComplete = false;
+        toggleWindow();
+        setTimeout(() => {
+            toggleWindow();
+        },9000)
     }
+
 }
