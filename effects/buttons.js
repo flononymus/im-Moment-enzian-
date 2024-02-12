@@ -12,6 +12,8 @@ $(document).on('click', 'button2', function() {
 });
 
 var cloudyButton= document.createElement('buttonSound');
+// $('cloudyButton').tooltip();
+$('buttonSound').tooltip();
 cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
 cloudyButton.onclick = function() {
     cloudImage(); 
