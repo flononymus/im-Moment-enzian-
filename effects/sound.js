@@ -7,8 +7,8 @@ var enableJazzSound= false;
 var enableBellSound = false;
 var enableChatterSound = false;
 var enableCricketSound= false;
-
 var enableNightAmbience= false;
+var enableWindySound= false;
 
 
 
@@ -34,6 +34,8 @@ var chatterSound = new Audio("audio/chatter.wav")
 var nightAmbienceSound= new Audio("audio/night ambience.wav")
 
 var cricketSound = new Audio("audio/cricket test.wav")
+
+var windySound= new Audio("audio/test windy.wav")
 
 
 rainSound.addEventListener('timeupdate', function(){
@@ -86,6 +88,15 @@ ambulanceSound.addEventListener('timeupdate', function(){
     if(this.currentTime > this.duration - buffer){
         enableAmbulanceSound = false;
         console.log('test sound off')
+    }
+});
+
+windySound.addEventListener('timeupdate', function(){
+    var buffer= .60
+    if(this.currentTime > this.duration - buffer){
+        this.currentTime = 0
+        this.play()
+        console.log('wind loop')
     }
 });
 
@@ -313,5 +324,23 @@ function loadCricketSound() {
         });
         cricketSound.currentTime = 0;
         console.log('cricket sound',enableCricketSound);
+    }
+}
+
+function loadWindSound() {
+    enableWindySound= !enableWindySound
+    if (enableWindySound&& enableSound) {
+        windySound.volume = 0;
+        $(windySound).animate({volume: 1},1000);
+        windySound.play();
+        console.log('wind sound',enableWindySound);
+    }
+    else if (!enableWindySound) {
+        windySound.volume = 1;
+        $(windySound).animate({volume: 0},1000, function(){
+            windySound.pause();
+        });
+        windySound.currentTime = 0;
+        console.log('windy sound',enableWindySound);
     }
 }

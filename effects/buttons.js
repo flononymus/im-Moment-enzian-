@@ -206,7 +206,6 @@ document.body.appendChild(birdSoundButton)
 var jazzSoundButton= document.createElement('button2')
 jazzSoundButton.textContent = "Jazz"
 jazzSoundButton.onclick = loadJazzSound
-jazzSoundButton.title = 'test'
 document.body.appendChild(jazzSoundButton)
 
 var bellButton = document.createElement('button2')
@@ -228,6 +227,11 @@ var cricketButton = document.createElement('button2')
 cricketButton.textContent = "Crickets"
 cricketButton.onclick = loadCricketSound
 document.body.appendChild(cricketButton)
+
+var windyButton = document.createElement('button2')
+windyButton.textContent = "Wind"
+windyButton.onclick = loadWindSound
+document.body.appendChild(windyButton)
 
 
 var firstRow = document.createElement('div');
@@ -276,6 +280,7 @@ fourthRow.appendChild(bellButton);
 fourthRow.appendChild(chatterButton);
 fourthRow.appendChild(nightAmbienceButton);
 fourthRow.appendChild(cricketButton)
+fourthRow.appendChild(windyButton)
 
 var debugRow = document.createElement('div')
 debugRow.id = 'debugRow'
@@ -353,6 +358,10 @@ function resetToggles() {
     if (enableCarSound) {
         console.log('car off')
         loadCarSound();
+    }
+    if (enableWindySound) {
+        console.log('wind off')
+        loadWindSound();
     }
   }
 
