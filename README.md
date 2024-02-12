@@ -13,6 +13,9 @@ ___
 ### General to do:
 
 - [ ] Fix windows
+- [ ] Move audio & debug button to top right
+- [ ] Tooltips
+
 
 #### Audio
 
