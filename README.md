@@ -15,35 +15,41 @@ ___
 
 #### Audio
 
-- [ ] Global button to enable/disable all sound
-- [ ] "reset sound" button?
+- [ ] Music might not be stopping when fading out
 
+- [x] Global button to enable/disable all sound
+- [x] "reset sound" button?
 - [ ] Title screen --> maybe wind?
 
-- [ ] soundscapes collection
+- [x] soundscapes collection
     - [x] Rain:
         - [x] Cars Rain
         - [x] Rain
         - [x] Ambulance
         - [x] ambient sound that loops: rain
 
-    - [ ] Day:
+    - [x] Day:
         - [x] Birds
         - [x] Cars
         - [x] People chatter
         - [x] ambient sound that loops: birds & chatter
 
-    - [ ] Evening:
+    - [x] Evening:
         - [x] Church bells
         - [x] Remove fade out bells
         - [x] one ambient sound that loops: bells? 
 
-    - [ ] Night:
+    - [x] Night:
         - [x] Cricket(?)
         - [ ] **Maybe some ambient music to underlay?**
         - [x] one ambient sound that loops: night
 
 #### Visual:
+
+- [ ] Random
+    - [ ] Figure out constant animation speed?
+    - [ ] Figure out looping of functions
+    - [ ] Center canvas
 
 - [ ] Title
     - [ ] Better title image
@@ -65,33 +71,9 @@ ___
     - [ ] Repeats
         - [ ] Bird idle
         - [x] Windows
-
-#### End product
-- [ ] Tie everything together
-
-    - [ ] Not done yet:
-
-        - [ ] Figure out constant animation speed?
-        - [ ] Figure out looping of functions
-        - [ ] Center canvas
-
-        - [ ] Loop birds day
         - [ ] Maybe loop borealis
         - [ ] Better night airplanes
         - [ ] Loop night airplanes
-
-    - [ ] Done:
-        - [x] loop windows evening
-        - [x] Figure out timings on automatic switching
-        - [x] Figure out when title
-        - [x] Rain 
-        - [x] Loop rain 
-        - [x] Loop clouds
-        - [x] Day
-        - [x] Loop airplanes
-        - [x] Loop Smoke chimneys
-        - [x] Occasionally turn on borealis
-
 
 ### Ideas/Brainstorming
 

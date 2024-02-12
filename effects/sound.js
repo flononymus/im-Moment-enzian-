@@ -23,6 +23,7 @@ var carSound = new Audio("audio/car test2.wav")
 var birdSound= new Audio("audio/birds2.wav")
 
 var jazzSound= new Audio("audio/jazz.wav")
+// var jazzSound= new Audio("audio/jazz2.wav")
 
 // var bellSound = new Audio("audio/bells1.wav")
 var bellSound = new Audio("audio/bells3.wav")
@@ -224,10 +225,10 @@ function loadJazzSound() {
     }
     else if (!enableJazzSound) {
         jazzSound.volume = 0.1;
-        $(jazzSound).animate({volume: 0},1000, function(){
+        $(jazzSound).animate({volume: -1.0},1000, function(){
             jazzSound.pause();
         });
-        jazzSound.currentTime = 0;
+        // jazzSound.currentTime = 0;
         console.log('Jazz sound',enableJazzSound);
     }
 }
