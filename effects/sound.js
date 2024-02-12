@@ -6,6 +6,7 @@ var enableBirdSound= false;
 var enableJazzSound= false;
 var enableBellSound = false;
 var enableChatterSound = false;
+var enableCricketSound= false;
 
 var enableNightAmbience= false;
 
@@ -15,7 +16,8 @@ var rainSound = new Audio("audio/rain loop.wav")
 
 var ambulanceSound= new Audio("audio/ambulance.wav")
 
-var carSound = new Audio("audio/car test.wav")
+// var carSound = new Audio("audio/car test.wav")
+var carSound = new Audio("audio/car test2.wav")
 
 // var birdSound= new Audio("audio/birds test1.wav")
 var birdSound= new Audio("audio/birds2.wav")
@@ -29,6 +31,8 @@ var bellSound = new Audio("audio/bells3.wav")
 var chatterSound = new Audio("audio/chatter.wav")
 
 var nightAmbienceSound= new Audio("audio/night ambience.wav")
+
+var cricketSound = new Audio("audio/cricket test.wav")
 
 
 rainSound.addEventListener('timeupdate', function(){
@@ -84,16 +88,55 @@ ambulanceSound.addEventListener('timeupdate', function(){
     }
 });
 
+
+
+
+
 function toggleSound() {
     enableSound = !enableSound
     if (enableSound) {
         console.log('sound', enableSound)
+
+        if (enableRainSound) {
+            rainSound.play();
+        }
+        if (enableCarSound) {
+            carSound.play();
+        }
+        if (enableBirdSound) {
+            birdSound.play();
+        }
+        if (enableBellSound) {
+            bellSound.play();
+        }
+        if (enableChatterSound) {
+            chatterSound.play();
+        }
+        if (enableNightAmbience) {
+            nightAmbienceSound.play();
+        }
+        if (enableCricketSound) {
+            cricketSound.play();
+        }
+        
+
     }
     if (!enableSound) {
-        loadRainSound()
-        loadAmbulanceSound()
-        loadCarSound()
-        loadBirdSound()
+        // loadRainSound()
+        // loadAmbulanceSound()
+        // loadCarSound()
+        // loadBirdSound()
+
+        rainSound.pause();
+        ambulanceSound.pause();
+        carSound.pause();
+        birdSound.pause();
+        jazzSound.pause();
+        bellSound.pause();
+        chatterSound.pause();
+        nightAmbienceSound.pause();
+        cricketSound.pause();
+
         console.log('sound', enableSound)
     }
 }
@@ -139,12 +182,12 @@ function loadCarSound() {
     enableCarSound= !enableCarSound
     if (enableCarSound && enableSound) {
         carSound.volume = 0;
-        $(carSound).animate({volume: 0.8},1000);
+        $(carSound).animate({volume: 0.2},1000);
         carSound.play();
         console.log('Car sound',enableCarSound);
     }
     else if (!enableCarSound) {
-        carSound.volume = 0.8;
+        carSound.volume = 0.2;
         $(carSound).animate({volume: 0},1000, function(){
             carSound.pause();
         });
@@ -251,5 +294,23 @@ function loadNightAmbienceSound() {
         });
         nightAmbienceSound.currentTime = 0;
         console.log('night sound',enableNightAmbience);
+    }
+}
+
+function loadCricketSound() {
+    enableCricketSound= !enableCricketSound
+    if (enableCricketSound&& enableSound) {
+        cricketSound.volume = 0;
+        $(cricketSound).animate({volume: 0.1},1000);
+        cricketSound.play();
+        console.log('cricket sound',enableCricketSound);
+    }
+    else if (!enableCricketSound) {
+        cricketSound.volume = 0.1;
+        $(cricketSound).animate({volume: 0},1000, function(){
+            cricketSound.pause();
+        });
+        cricketSound.currentTime = 0;
+        console.log('cricket sound',enableCricketSound);
     }
 }

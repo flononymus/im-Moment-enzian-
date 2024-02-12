@@ -109,8 +109,9 @@
     mask-mode: alpha;
     mask-size: cover;
     mask-repeat: no-repeat;
-    /* mask-image: url(images/title\ mask2.png); */
-    mask-image: url(images/title\ mask.png);
+    mask-image: url(images/title\ mask2.png);
+    /* mask-image: url(images/title\ mask.png); */
+    /* mask-image: url(images/title\ mask3.png); */
     overflow: hidden;
 } 
 
@@ -325,7 +326,7 @@ button {
 
 button2 {
     display:flex;
-    /* flex-direction: row; */
+    /* flex-direction: column-reverse; */
     color: rgba(255,255,255,0.5);
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -338,17 +339,17 @@ button2 {
     border-style: solid;
     border:0.5px;
     border-radius: 6px;
-    margin:10px;
+    /* margin:10px; */
+    margin-left:10px;
+    margin-top:10px;
+    margin-right:20px;
     height:30px;
-    /* width:120px */
-    /* width:40px; */
-    /* width:80px; */
-    width:100px;
+    width:110px;
   }
 
-button2:hover {
+/* button2:hover {
     scale:1.1;  
-}
+} */
 
 .outlined{
     border-style:solid;
@@ -374,7 +375,8 @@ buttonSound {
     border:0.5px;
     border-radius: 6px;
     margin:10px;
-    height:30px;
+    /* height:30px; */
+    height:50px;
     width:40px
   }
 
@@ -382,7 +384,62 @@ buttonSound:hover {
     scale:1.1;  
 }
 
-buttonBig{
+buttonMain{
+    display:flex;
+    /* flex-direction: row; */
+    /* font-size: 16px; */
+    font-size:20px;
+    /* color:black; */
+    color: rgba(255,255,255,0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(0,0,0,0.1);
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border-style: solid;
+    border:0.5px;
+    border-radius: 6px;
+    margin-top:10px;
+    margin-right:10px;
+    /* height:30px */
+    /* width:40px */
+    height:50px;
+    width:70px
+  }
+
+buttonMain:hover {
+    scale:1.1;  
+}
+
+buttonDebug{
+    display:flex;
+    /* flex-direction: row; */
+    font-size: 16px;
+    /* color:black; */
+    color: rgba(255,255,255,0.2);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(0,0,0,0.1);
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border-style: solid;
+    border:0.5px;
+    border-radius: 6px;
+    margin:10px;
+    height:30px;
+    width:40px
+  }
+
+buttonDebug:hover {
+    scale:1.1;  
+}
+
+
+#buttonBig{
     display:flex;
     /* flex-direction: row; */
     font-size: 26px;
@@ -429,23 +486,25 @@ buttonBig:hover {
     top:90px
   }
 
+
   #firstRow {
     position:absolute;
     display: flex
   }
 
   #secondRow {
-    top:40px;
+    /* top:40px; */
+    top:60px;
     display: flex; 
     flex-direction: column;
     position:absolute;
-    left:240px;
+    left:250px;
 
   }
 
   #thirdRow {
-    /* top:60px; */
-    top:40px;
+    top:60px;
+    /* top:40px; */
     display: flex; 
     position:absolute;
     flex-direction: column;
@@ -453,9 +512,27 @@ buttonBig:hover {
   }
   #fourthRow{
     /* top:90px; */
-    top:40px;
+    /* top:40px; */
+    top:60px;
+    /* bottom:60px; */
     display: flex; 
     position:absolute;
     flex-direction: column;
-    left:120px;
+    left:125px;
   }
+
+
+  #debugRow{
+    position:absolute;
+    display: flex;
+    bottom:0px;
+  }
+
+
+
+
+
+
+
+
+

@@ -13,80 +13,85 @@ ___
 
 ### General to do:
 
-- [ ] Better title image
-  - [ ] description of "click a button"
-  - [ ] Maybe short overview?
-
 #### Audio
+
+- [ ] Global button to enable/disable all sound
+- [ ] "reset sound" button?
+
+- [ ] Title screen --> maybe wind?
+
 - [ ] soundscapes collection
     - [x] Rain:
         - [x] Cars Rain
         - [x] Rain
         - [x] Ambulance
-
         - [x] ambient sound that loops: rain
 
     - [ ] Day:
         - [x] Birds
-        - [ ] Cars 
-        - [ ] Footsteps
+        - [x] Cars
         - [x] People chatter
-
         - [x] ambient sound that loops: birds & chatter
 
     - [ ] Evening:
         - [x] Church bells
         - [x] Remove fade out bells
-        - [ ] People chatter
-
-        - [ ] one ambient sound that loops: bells? 
+        - [x] one ambient sound that loops: bells? 
 
     - [ ] Night:
-        - [ ] Cricket(?)
-        - [ ] Maybe some ambient music to underlay?
-
-        - [ ] one ambient sound that loops: night 
-
-    - [ ] Global button to enable/disable all sound
-    - [ ] "reset sound" button?
+        - [ ] **Cricket(?)**
+        - [ ] **Maybe some ambient music to underlay?**
+        - [ ] **one ambient sound that loops: night**
 
 #### Visual:
+
+- [ ] Title
+    - [ ] Better title image
+        - [ ] description of "click a button"
+        - [ ] Maybe short overview?
+        - [ ] Hover tool tips?
+    
 - [ ] Finish all the details
     - [x] maybe smaller birds
-    - [x] **Maybe shooting stars**
+    - [x] Maybe shooting stars
     - [x] Fix plane trails?
     - [x] toggle borealis automatically
     - [x] Change chimney smoke color
 
-- [ ] Fade outs:
-    - [ ] Plane trails
-    - [x] Fade out smoke 
+    - [ ] Fade outs:
+        - [ ] Plane trails
+        - [x] Fade out smoke 
 
-- [ ] **Repeats**
-    - [ ] **Bird idle**
+    - [ ] Repeats
+        - [ ] Bird idle
+        - [ ] Windows
 
 #### End product
 - [ ] Tie everything together
-    - [ ] Figure out timings on automatic switching
-    - [x] Figure out when title
-    - [ ] Center canvas
 
-    - [x] Rain 
-      - [x] Loop rain 
-      - [x] Loop clouds
+    - [ ] Not done yet:
 
-    - [ ] Day
-      - [ ] Loop birds
-      - [ ] Loop airplanes
+        - [ ] Figure out constant animation speed?
+        - [ ] Figure out looping of functions
+        - [ ] Center canvas
 
-    - [ ] Evening
-      - [x] Loop Smoke chimneys
-      - [ ] 
+        - [ ] Loop birds day
+        - [ ] loop windows evening
+        - [ ] Maybe loop borealis
+        - [ ] Better night airplanes
+        - [ ] Loop night airplanes
 
-    - [ ] Night
-      - [x] Occasionally turn on borealis
-      - [ ] Better night airplanes
-      - [x] Loop night airplanes
+    - [ ] Done:
+        - [x] Figure out timings on automatic switching
+        - [x] Figure out when title
+        - [x] Rain 
+        - [x] Loop rain 
+        - [x] Loop clouds
+        - [x] Day
+        - [x] Loop airplanes
+        - [x] Loop Smoke chimneys
+        - [x] Occasionally turn on borealis
+
 
 ### Ideas/Brainstorming
 
