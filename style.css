@@ -379,7 +379,7 @@ buttonSound:hover {
     scale:1.1;  
 }
 
-buttonBig{
+#buttonBig{
     display:flex;
     /* flex-direction: row; */
     font-size: 26px;

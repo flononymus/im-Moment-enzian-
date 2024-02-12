@@ -163,6 +163,7 @@ document.body.appendChild(windowButton);
 
 var soundButton = document.createElement('buttonSound');
 // soundButton.textContent = "🔊"
+// soundButton.title = "Mute audio"
 soundButton.innerHTML = "<i class='material-icons'>volume_up</i>"
 soundButton.addEventListener('click', function handleClick() {
     if (enableSound) {
