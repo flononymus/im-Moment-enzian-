@@ -344,9 +344,9 @@ button2 {
     width:100px;
   }
 
-button2:hover {
+/* button2:hover {
     scale:1.1;  
-}
+} */
 
 .outlined{
     border-style:solid;
