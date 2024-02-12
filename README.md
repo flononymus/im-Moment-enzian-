@@ -12,6 +12,8 @@ ___
 
 ### General to do:
 
+- [ ] Fix windows
+
 #### Audio
 
 - [ ] Music might not be stopping when fading out

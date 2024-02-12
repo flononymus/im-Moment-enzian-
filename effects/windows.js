@@ -86,5 +86,12 @@ function repeatWindows() {
             },9000)
         }
     }
+    if (currentImage === 'fullNight') {
+        console.log('full night off')
+        windowActive = false;
+        ctxWindow1.clearRect(0,0,canvasWindow1.width,canvasWindow1.height)
+        ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
+        ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
+    }
 
 }
