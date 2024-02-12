@@ -59,12 +59,12 @@ ___
     - [x] Change chimney smoke color
 
     - [ ] Fade outs:
-        - [ ] **Plane trails**
+        - [ ] Plane trails
         - [x] Fade out smoke 
 
     - [ ] Repeats
-        - [ ] **Bird idle**
-        - [ ] **Windows**
+        - [ ] Bird idle
+        - [ ] Windows
 
 #### End product
 - [ ] Tie everything together
@@ -73,11 +73,11 @@ ___
         - [ ] Figure out looping of functions
         - [ ] Center canvas
 
-        - [ ] **Loop birds day**
-        - [ ] **loop windows evening**
+        - [ ] Loop birds day
+        - [ ] loop windows evening
         - [ ] Maybe loop borealis
-        - [ ] **Better night airplanes**
-        - [ ] **Loop night airplanes**
+        - [ ] Better night airplanes
+        - [ ] Loop night airplanes
 
     - [ ] Done:
         - [x] Figure out timings on automatic switching
