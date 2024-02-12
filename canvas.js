@@ -13,6 +13,7 @@ canvasFade.height = 1000;
 canvasDetail.width= 1000;
 canvasDetail.height = 1000;
 
+var startingImage = true;
 var currentImage = null; 
 var currentOpacity = 1;
 var start = null;
@@ -33,13 +34,12 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = function() {
-  drawImages(); toggleTitle();
+  drawImages(); toggleTitle(); 
 }
 imageClouds.src = "images/test_clouds2.png"
 
 var imageHalfNight= new Image();
 imageHalfNight.src = "images/test_night1.png"
-// imageHalfNight.src = "images/halfnight dark.png"
 imageHalfNight.onload = drawImages();
 
 var imageFullNight= new Image();
@@ -63,21 +63,13 @@ document.getElementById('canvasBackground').onmouswheel = function(event){
 }
 
 if (currentImage === null) {
-  // currentImage = 'fullNight'
+  startingImage = true;
   currentImage = 'clouds'
-  // currentImage = 'halfNight'
 }
 
 function drawImages() {
-  // resetToggles;
   if (currentImage === 'clouds') {
     $("link[rel*='icon']").attr("href", "images/test_clouds2.png");
-
-    // if (raining) {
-    //   console.log('darker clouds')
-    //   ctxDetail.fillStyle = 'rgba(0,0,0,0.3)'
-    //   ctxDetail.fillRect(0,0,canvasDetail.width,canvasDetail.height);
-    // }
 
     currentOpacity += 0.005;
     if (currentOpacity < 1) {
@@ -112,9 +104,7 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        // console.log(currentOpacity);
         ctxFade.drawImage(imageDay,0,0,canvasFade.width,canvasFade.height);
-      // }, 1000 / fps);
       }, 700 / fps);
       }
       else {
@@ -134,22 +124,18 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        // console.log(currentOpacity);
         ctxFade.drawImage(imageHalfNight,0,0,canvasFade.width,canvasFade.height);
-      // }, 1000 / fps);
       }, 700 / fps);
       }
       else {
         ctxBack.drawImage(imageHalfNight,0,0, canvasBack.width, canvasBack.height);
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         console.log('switched to', currentImage)
-        // toggleMoon()
       }
   }
 
   else if (currentImage === 'fullNight') {
     $("link[rel*='icon']").attr("href", "images/night_mixed2.png");
-    //  toggleStars();
 
     currentOpacity += fadeSpeed;
     if (currentOpacity < 1) {
@@ -160,9 +146,7 @@ function drawImages() {
         ctxFade.globalAlpha = currentOpacity;
         ctxFade.clearRect(0,0,canvasFade.width,canvasFade.height);
         ctxFade.globalAlpha = currentOpacity;
-        // console.log(currentOpacity);
         ctxFade.drawImage(imageFullNight,0,0,canvasFade.width,canvasFade.height);
-      // }, 1000 / fps);
       }, 700 / fps);
       }
       else {
@@ -179,27 +163,24 @@ function drawImages() {
 
 function cloudImage() {
   currentImage = "clouds";
+  startingImage = false;
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
-  // toggleClouds();
-  // toggleRain();
 }
 function dayImage() {
   currentImage = "day";
+  startingImage = false;
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
   loadBirdSound();
   loadChatterSound();
   loadCarSound();
-  // resetButton();
-  // setTimeout(function() {
-  //   togglePlane();
-  // },1000);
 }
 function halfNight() {
   currentImage = "halfNight";
+  startingImage = false;
   currentOpacity = 0;
   resetToggles(); 
   drawImages(); 
@@ -208,6 +189,7 @@ function halfNight() {
 }
 function fullNight() {
   currentImage = "fullNight";
+  startingImage = false;
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
@@ -228,8 +210,6 @@ function noImage() {
 
 function cycleTime() {
   cyclingBG = !cyclingBG
-  // repeatCycle = !repeatCycle
-  // cyclingBG = true;
   if (cyclingBG) { 
     console.log('cycling background')
       setTimeout(function() { 
@@ -258,12 +238,6 @@ function cycleTime() {
       },5000)
     },5000)
   }
-  // if (!cyclingBG) {
-  //   repeatCycle = false; 
-  //   // cyclingBG = false;
-  //   console.log('not')
-  //   return;
-  // }
 }
 
 function stopCycleTime() {
@@ -308,9 +282,27 @@ function resizeAllCanvases() {
   var allCanvases = document.getElementsByTagName('canvas');
   for (var i = 0; i < allCanvases.length; i++) {
       resizeCanvas(allCanvases[i]);
-      // console.log(allCanvases)
   }
 }
 window.addEventListener('resize', resizeAllCanvases, false);
 resizeAllCanvases(); 
 }
+
+// function playWind() {
+// }
+
+// if (startingImage) {
+//   window.onfocus = function () {
+//     if (!enableWindySound) {
+//       // enableWindySound = false;
+//       console.log('wind sound')
+//       loadWindSound();
+//     };
+
+//     window.onblur = function () {
+//       enableWindySound = true;
+//       loadWindSound();
+//       console.log('not focus')
+//     }
+//   }
+// }

@@ -77,12 +77,14 @@ function toggleWindow() {
 
 
 function repeatWindows() {
-    if (cycleComplete) {
-        cycleComplete = false;
-        toggleWindow();
-        setTimeout(() => {
+    if (windowActive) {
+        if (cycleComplete) {
+            cycleComplete = false;
             toggleWindow();
-        },9000)
+            setTimeout(() => {
+                toggleWindow();
+            },9000)
+        }
     }
 
 }

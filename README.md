@@ -1,6 +1,5 @@
 # Interaction Design ZHdK, <br/> Thema: "im-Moment"
 
-
 ### https://flokleiser.github.io/Momentfulness/
 
 ___
@@ -15,35 +14,43 @@ ___
 
 #### Audio
 
-- [ ] Global button to enable/disable all sound
-- [ ] "reset sound" button?
+- [ ] Music might not be stopping when fading out
 
+- [x] Global button to enable/disable all sound
+- [x] "reset sound" button?
 - [ ] Title screen --> maybe wind?
 
-- [ ] soundscapes collection
+- [x] soundscapes collection
     - [x] Rain:
         - [x] Cars Rain
         - [x] Rain
         - [x] Ambulance
         - [x] ambient sound that loops: rain
 
-    - [ ] Day:
+    - [x] Day:
         - [x] Birds
         - [x] Cars
         - [x] People chatter
         - [x] ambient sound that loops: birds & chatter
 
-    - [ ] Evening:
+    - [x] Evening:
         - [x] Church bells
         - [x] Remove fade out bells
         - [x] one ambient sound that loops: bells? 
 
-    - [ ] Night:
-        - [ ] **Cricket(?)**
+    - [x] Night:
+        - [x] Cricket(?)
         - [ ] **Maybe some ambient music to underlay?**
-        - [ ] **one ambient sound that loops: night**
+        - [x] one ambient sound that loops: night
 
 #### Visual:
+
+- [ ] Random
+    - [ ] Figure out constant animation speed?
+    - [ ] Figure out looping of functions
+    - [ ] Center canvas
+
+    - [ ] **Window not stopping properly**
 
 - [ ] Title
     - [ ] Better title image
@@ -64,34 +71,10 @@ ___
 
     - [ ] Repeats
         - [ ] Bird idle
-        - [ ] Windows
-
-#### End product
-- [ ] Tie everything together
-
-    - [ ] Not done yet:
-
-        - [ ] Figure out constant animation speed?
-        - [ ] Figure out looping of functions
-        - [ ] Center canvas
-
-        - [ ] Loop birds day
-        - [ ] loop windows evening
+        - [x] Windows
         - [ ] Maybe loop borealis
         - [ ] Better night airplanes
         - [ ] Loop night airplanes
-
-    - [ ] Done:
-        - [x] Figure out timings on automatic switching
-        - [x] Figure out when title
-        - [x] Rain 
-        - [x] Loop rain 
-        - [x] Loop clouds
-        - [x] Day
-        - [x] Loop airplanes
-        - [x] Loop Smoke chimneys
-        - [x] Occasionally turn on borealis
-
 
 ### Ideas/Brainstorming
 
