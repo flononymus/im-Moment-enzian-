@@ -161,6 +161,7 @@ windowButton.textContent = "Windows"
 windowButton.onclick = toggleWindow;
 document.body.appendChild(windowButton);
 
+
 // var birdCycleButton= document.createElement('button2');
 // birdCycleButton.textContent = "cycle birbs"
 // birdCycleButton.onclick = repeatBirdCycle;

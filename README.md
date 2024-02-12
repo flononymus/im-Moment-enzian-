@@ -46,17 +46,9 @@ ___
 
 #### Visual:
 
-- [ ] Random
-    - [ ] Figure out constant animation speed?
-    - [ ] Figure out looping of functions
-    - [ ] Center canvas
-
-    - [ ] **Window not stopping properly**
-
-- [ ] Title
-    - [ ] Better title image
-        - [ ] description of "click a button"
-        - [ ] Maybe short overview?
+- [x] Title
+    - [x] Better title image
+        - [x] description of "click a button"
         - [ ] Hover tool tips?
     
 - [ ] Finish all the details
@@ -66,8 +58,8 @@ ___
     - [x] toggle borealis automatically
     - [x] Change chimney smoke color
 
-    - [ ] Fade outs:
-        - [ ] Plane trails
+    - [x] Fade outs:
+        - [x] Plane trails
         - [x] Fade out smoke 
 
     - [ ] Repeats

@@ -157,6 +157,7 @@ function toggleBird() {
 
         switchIdle();
         landBird();
+        // startLandBird();
 
 
         xBirdLanding = -10
@@ -262,6 +263,15 @@ function landBird() {
             },6000)
         }
 }
+
+// function startLandBird() {
+//     intervalId = setInterval(landBird, 10000); 
+//     console.log('repeating bird')
+// }
+
+// function stopLandBird() {
+//     clearInterval(intervalId); 
+// }
 
 function idleBird() {
     if (birdActive) {
