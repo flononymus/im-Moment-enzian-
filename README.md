@@ -13,61 +13,62 @@ ___
 
 ### General to do:
 
-- [ ] Better title image
-  - [ ] description of "click a button"
-  - [ ] Maybe short overview?
-
 #### Audio
+
+- [ ] Global button to enable/disable all sound
+- [ ] "reset sound" button?
+
 - [ ] soundscapes collection
     - [x] Rain:
         - [x] Cars Rain
         - [x] Rain
         - [x] Ambulance
-
         - [x] ambient sound that loops: rain
 
     - [ ] Day:
         - [x] Birds
-        - [ ] Cars 
-        - [ ] Footsteps
+        - [ ] **Cars**
+        - [ ] **Footsteps**
         - [x] People chatter
-
         - [x] ambient sound that loops: birds & chatter
 
     - [ ] Evening:
         - [x] Church bells
         - [x] Remove fade out bells
-        - [ ] People chatter
-
-        - [ ] one ambient sound that loops: bells? 
+        - [ ] **People chatter**
+        - [x] one ambient sound that loops: bells? 
 
     - [ ] Night:
-        - [ ] Cricket(?)
-        - [ ] Maybe some ambient music to underlay?
-
-        - [ ] one ambient sound that loops: night 
-
-    - [ ] Global button to enable/disable all sound
-    - [ ] "reset sound" button?
+        - [ ] **Cricket(?)**
+        - [ ] **Maybe some ambient music to underlay?**
+        - [(x)] **one ambient sound that loops: night**
 
 #### Visual:
+
+- [ ] Better title image
+    - [ ] description of "click a button"
+    - [ ] Maybe short overview?
+
+    - [ ] Hover tool tips?
+    
 - [ ] Finish all the details
     - [x] maybe smaller birds
-    - [x] **Maybe shooting stars**
+    - [x] Maybe shooting stars
     - [x] Fix plane trails?
     - [x] toggle borealis automatically
     - [x] Change chimney smoke color
 
 - [ ] Fade outs:
-    - [ ] Plane trails
+    - [ ] **Plane trails**
     - [x] Fade out smoke 
 
-- [ ] **Repeats**
+- [ ] Repeats
     - [ ] **Bird idle**
 
 #### End product
 - [ ] Tie everything together
-    - [ ] Figure out timings on automatic switching
+    - [ ] Figure out looping of functions
+    - [x] Figure out timings on automatic switching
     - [x] Figure out when title
     - [ ] Center canvas
 
@@ -76,17 +77,18 @@ ___
       - [x] Loop clouds
 
     - [ ] Day
-      - [ ] Loop birds
-      - [ ] Loop airplanes
+      - [x] Loop birds
+      - [x] Loop airplanes
 
     - [ ] Evening
       - [x] Loop Smoke chimneys
-      - [ ] 
+      - [ ] **Loop windows** 
 
     - [ ] Night
       - [x] Occasionally turn on borealis
-      - [ ] Better night airplanes
-      - [x] Loop night airplanes
+      - [ ] **Better night airplanes**
+      - [ ] **Loop night airplanes**
+
 
 ### Ideas/Brainstorming
 

@@ -109,8 +109,8 @@
     mask-mode: alpha;
     mask-size: cover;
     mask-repeat: no-repeat;
-    /* mask-image: url(images/title\ mask2.png); */
-    mask-image: url(images/title\ mask.png);
+    mask-image: url(images/title\ mask2.png);
+    /* mask-image: url(images/title\ mask.png); */
     overflow: hidden;
 } 
 
@@ -340,9 +340,6 @@ button2 {
     border-radius: 6px;
     margin:10px;
     height:30px;
-    /* width:120px */
-    /* width:40px; */
-    /* width:80px; */
     width:100px;
   }
 
