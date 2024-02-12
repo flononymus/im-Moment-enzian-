@@ -70,6 +70,8 @@ ___
 - [ ] Tie everything together
 
     - [ ] Not done yet:
+
+        - [ ] Figure out constant animation speed?
         - [ ] Figure out looping of functions
         - [ ] Center canvas
 
