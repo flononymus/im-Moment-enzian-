@@ -31,7 +31,6 @@ dayButton.onclick= function() {
     // toggleCloudsDay();
     toggleTitleBool();
 }
-cloudyButton.title = "Your Tooltip Text Here";
 document.body.appendChild(dayButton);
 
 var halfNightButton= document.createElement('buttonSound');
@@ -52,7 +51,7 @@ fullNightButton.onclick = function() {
     fullNight(); 
     toggleStars(); 
     toggleComet(); 
-    toggleBorealis();
+    // toggleBorealis();
     toggleTitleBool(); 
 }
 document.body.appendChild(fullNightButton);
@@ -220,6 +219,11 @@ nightAmbienceButton.textContent = "Night"
 nightAmbienceButton.onclick = loadNightAmbienceSound
 document.body.appendChild(nightAmbienceButton)
 
+var cricketButton = document.createElement('button2')
+cricketButton.textContent = "Crickets"
+cricketButton.onclick = loadCricketSound
+document.body.appendChild(cricketButton)
+
 
 var firstRow = document.createElement('div');
 firstRow.id = 'firstRow';
@@ -265,6 +269,7 @@ fourthRow.appendChild(jazzSoundButton);
 fourthRow.appendChild(bellButton);
 fourthRow.appendChild(chatterButton);
 fourthRow.appendChild(nightAmbienceButton);
+fourthRow.appendChild(cricketButton)
 
 
 
@@ -314,6 +319,10 @@ function resetToggles() {
         console.log('bell sound off')
         loadBellSound();
     }
+    if (enableBirdSound) {
+        console.log('bird sound off')
+        loadBirdSound();
+    }
     if (enableNightAmbience) {
         console.log('night chatter off')
         loadNightAmbienceSound();
@@ -325,6 +334,14 @@ function resetToggles() {
     if (windowActive) {
         console.log('windows off')
         toggleWindow();
+    }
+    if (enableCricketSound) {
+        console.log('cricket off')
+        loadCricketSound();
+    }
+    if (enableCarSound) {
+        console.log('car off')
+        loadCarSound();
     }
   }
 

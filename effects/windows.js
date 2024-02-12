@@ -32,6 +32,8 @@ var windowActive = false;
 
 function toggleWindow() {
     windowActive = !windowActive
+
+
     if (windowActive) {
         setTimeout(function() { 
 

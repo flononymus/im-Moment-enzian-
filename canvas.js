@@ -192,6 +192,7 @@ function dayImage() {
   drawImages();
   loadBirdSound();
   loadChatterSound();
+  loadCarSound();
   // resetButton();
   // setTimeout(function() {
   //   togglePlane();
@@ -211,6 +212,7 @@ function fullNight() {
   resetToggles(); 
   drawImages();
   loadNightAmbienceSound();
+  loadCricketSound();
   if (moonShown) {
     return;
   }

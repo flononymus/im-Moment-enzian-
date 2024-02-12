@@ -27,15 +27,13 @@ ___
 
     - [ ] Day:
         - [x] Birds
-        - [ ] **Cars**
-        - [ ] **Footsteps**
+        - [x] Cars
         - [x] People chatter
         - [x] ambient sound that loops: birds & chatter
 
     - [ ] Evening:
         - [x] Church bells
         - [x] Remove fade out bells
-        - [ ] **People chatter**
         - [x] one ambient sound that loops: bells? 
 
     - [ ] Night:
