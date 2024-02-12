@@ -39,9 +39,9 @@ ___
         - [x] one ambient sound that loops: bells? 
 
     - [ ] Night:
-        - [ ] **Cricket(?)**
+        - [x] Cricket(?)
         - [ ] **Maybe some ambient music to underlay?**
-        - [ ] **one ambient sound that loops: night**
+        - [x] one ambient sound that loops: night
 
 #### Visual:
 
@@ -64,7 +64,7 @@ ___
 
     - [ ] Repeats
         - [ ] Bird idle
-        - [ ] Windows
+        - [x] Windows
 
 #### End product
 - [ ] Tie everything together
@@ -76,12 +76,12 @@ ___
         - [ ] Center canvas
 
         - [ ] Loop birds day
-        - [ ] loop windows evening
         - [ ] Maybe loop borealis
         - [ ] Better night airplanes
         - [ ] Loop night airplanes
 
     - [ ] Done:
+        - [x] loop windows evening
         - [x] Figure out timings on automatic switching
         - [x] Figure out when title
         - [x] Rain 
