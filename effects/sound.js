@@ -130,6 +130,9 @@ function toggleSound() {
         if (enableCricketSound) {
             cricketSound.play();
         }
+        if (enableWindySound) {
+            windySound.play();
+        }
         
 
     }
@@ -148,6 +151,7 @@ function toggleSound() {
         chatterSound.pause();
         nightAmbienceSound.pause();
         cricketSound.pause();
+        windySound.pause();
 
         console.log('sound', enableSound)
     }

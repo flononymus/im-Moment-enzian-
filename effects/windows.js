@@ -86,7 +86,7 @@ function repeatWindows() {
             },9000)
         }
     }
-    if (currentImage === 'fullNight') {
+    else {
         console.log('full night off')
         windowActive = false;
         ctxWindow1.clearRect(0,0,canvasWindow1.width,canvasWindow1.height)

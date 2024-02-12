@@ -259,15 +259,8 @@ function landBird() {
                 birdHeightLanding = -1;
                 birdFlyingRight.src = "images/birdPixelLeft.png"
 
-            // },9000)
             },6000)
         }
-        // setTimeout(function() {
-        //     birdCycleComplete = true;
-        //     console.log
-        //     repeatBirdCycle();
-        // // },10000)
-        // },7000)
 }
 
 function idleBird() {

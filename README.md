@@ -42,7 +42,6 @@ ___
 
     - [x] Night:
         - [x] Cricket(?)
-        - [ ] **Maybe some ambient music to underlay?**
         - [x] one ambient sound that loops: night
 
 #### Visual:

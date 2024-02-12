@@ -62,7 +62,10 @@ const yspeed2 = 0.02;
 
 var enablePlane= false;
 // ctxPlane2.globalAlpha = 0.4;
-ctxPlane2.filter = "blur(1px)"
+// ctxPlane2.filter = "blur(1px)"
+// ctxPlane2.filter = "blur(1px)"
+ctxTrailOverlay.filter="blur(2px)"
+ctxTrailOverlay2.filter="blur(2px)"
 
 function togglePlane() {
   enablePlane= !enablePlane
@@ -92,10 +95,10 @@ function togglePlane() {
 function movePlane() {
   if (!enablePlane) return
   ctxPlane.clearRect(0,0,canvasPlane.width, canvasPlane.height);
-  ctxTrail.globalAlpha = 0.4;
+  ctxTrail.globalAlpha = 0.1;
   ctxTrail.clearRect(x - 700, 0, 10, canvasTrail.height);
-  ctxTrailOverlay.clearRect(x-400,0,10,canvasTrailOverlay.height);
-  ctxTrailOverlay.globalAlpha = 0.7;
+  ctxTrailOverlay.clearRect(x-600,0,10,canvasTrailOverlay.height);
+  ctxTrailOverlay.globalAlpha = 0.4;
 
   ctxPlane.drawImage(plane,x, y);
   ctxTrail.drawImage(trail,x,y);
@@ -114,10 +117,10 @@ function movePlane() {
 function movePlane2() {
   if (!enablePlane) return
   ctxPlane2.clearRect(0,0,canvasPlane2.width, canvasPlane2.height);
-  ctxTrail2.globalAlpha = 0.4;
+  ctxTrail2.globalAlpha = 0.1;
   ctxTrail2.clearRect(x2 +(700 + canvasTrail2.width), 0, canvasTrail2.width, canvasTrail2.height);
-  ctxTrailOverlay2.clearRect(x2 +(400 + canvasTrailOverlay2.width),0,canvasTrailOverlay2.width,canvasTrailOverlay2.height);
-  ctxTrailOverlay2.globalAlpha = 0.7;
+  ctxTrailOverlay2.clearRect(x2 +(600 + canvasTrailOverlay2.width),0,canvasTrailOverlay2.width,canvasTrailOverlay2.height);
+  ctxTrailOverlay2.globalAlpha = 0.4;
 
   ctxPlane2.drawImage(plane2,x2,y2);
   ctxTrail2.drawImage(trail2,x2,y2);

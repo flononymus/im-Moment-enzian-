@@ -34,7 +34,7 @@ imageDay.src = "images/test_day.png"
 
 var imageClouds= new Image();
 imageClouds.onload = function() {
-  drawImages(); toggleTitle(); 
+  drawImages(); toggleTitle(); playWind();
 }
 imageClouds.src = "images/test_clouds2.png"
 
@@ -167,6 +167,7 @@ function cloudImage() {
   currentOpacity = 0;
   resetToggles(); 
   drawImages();
+  loadWindSound();
 }
 function dayImage() {
   currentImage = "day";
@@ -288,21 +289,31 @@ window.addEventListener('resize', resizeAllCanvases, false);
 resizeAllCanvases(); 
 }
 
-// function playWind() {
-// }
+function playWind() {
+
 
 // if (startingImage) {
-//   window.onfocus = function () {
-//     if (!enableWindySound) {
-//       // enableWindySound = false;
-//       console.log('wind sound')
-//       loadWindSound();
-//     };
+  window.onfocus = function () {
+    if (startingImage) {
+      if (!enableWindySound) {
+        // enableWindySound = false;
+        console.log('wind sound')
+        loadWindSound();
+      };
+    }
+    else { 
+       return;
+    }
 
-//     window.onblur = function () {
-//       enableWindySound = true;
-//       loadWindSound();
-//       console.log('not focus')
-//     }
-//   }
-// }
+    window.onblur = function () {
+      if (startingImage) {
+        enableWindySound = true;
+        loadWindSound();
+        console.log('not focus')
+      }
+      else {
+        return;
+      }
+    }
+  }
+}
