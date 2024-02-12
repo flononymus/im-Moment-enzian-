@@ -41,7 +41,7 @@ ___
     - [ ] Night:
         - [ ] **Cricket(?)**
         - [ ] **Maybe some ambient music to underlay?**
-        - [(x)] **one ambient sound that loops: night**
+        - [ ] **one ambient sound that loops: night**
 
 #### Visual:
 
