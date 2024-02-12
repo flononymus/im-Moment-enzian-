@@ -3,6 +3,18 @@ var canvasTrail = document.getElementById('canvasTrail');
 var ctxPlane = canvasPlane.getContext('2d');
 var ctxTrail = canvasTrail.getContext('2d');
 
+var canvasTrailOverlay= document.getElementById('canvasTrailOverlay');
+var ctxTrailOverlay = canvasTrailOverlay.getContext('2d');
+
+canvasTrailOverlay.width = 1000;
+canvasTrailOverlay.height = 1000;
+
+var canvasTrailOverlay2= document.getElementById('canvasTrailOverlay2');
+var ctxTrailOverlay2 = canvasTrailOverlay2.getContext('2d');
+
+canvasTrailOverlay2.width = 1000;
+canvasTrailOverlay2.height = 1000;
+
 canvasPlane.width = 1000;
 canvasPlane.height = 1000;
 canvasTrail.width = 1000;
@@ -31,6 +43,12 @@ ctxTrail2.filter = "blur(1px)"
 var trail = new Image;
 trail.src = "images/trail.png"
 ctxTrail.filter = "blur(1px)"
+
+var trailOverlay = new Image;
+trailOverlay.src = "images/trail.png"
+
+var trailOverlay2 = new Image;
+trailOverlay2.src = "images/trail2.png"
 
 let x = -20;
 let y = 40;
@@ -66,6 +84,8 @@ function togglePlane() {
     ctxTrail.clearRect(0,0,canvasTrail.width,canvasTrail.height);
     ctxPlane2.clearRect(0,0,canvasPlane2.width, canvasPlane2.height);
     ctxTrail2.clearRect(0,0,canvasTrail2.width,canvasTrail2.height);
+    ctxTrailOverlay.clearRect(0,0,canvasTrailOverlay.width,canvasTrailOverlay.height)
+    ctxTrailOverlay2.clearRect(0,0,canvasTrailOverlay2.width,canvasTrailOverlay2.height)
   }
 }
 
@@ -74,9 +94,12 @@ function movePlane() {
   ctxPlane.clearRect(0,0,canvasPlane.width, canvasPlane.height);
   ctxTrail.globalAlpha = 0.4;
   ctxTrail.clearRect(x - 700, 0, 10, canvasTrail.height);
+  ctxTrailOverlay.clearRect(x-400,0,10,canvasTrailOverlay.height);
+  ctxTrailOverlay.globalAlpha = 0.7;
 
   ctxPlane.drawImage(plane,x, y);
   ctxTrail.drawImage(trail,x,y);
+  ctxTrailOverlay.drawImage(trailOverlay,x,y)
 
   x += speed;
   y -= yspeed;
@@ -93,9 +116,12 @@ function movePlane2() {
   ctxPlane2.clearRect(0,0,canvasPlane2.width, canvasPlane2.height);
   ctxTrail2.globalAlpha = 0.4;
   ctxTrail2.clearRect(x2 +(700 + canvasTrail2.width), 0, canvasTrail2.width, canvasTrail2.height);
+  ctxTrailOverlay2.clearRect(x2 +(400 + canvasTrailOverlay2.width),0,canvasTrailOverlay2.width,canvasTrailOverlay2.height);
+  ctxTrailOverlay2.globalAlpha = 0.7;
 
   ctxPlane2.drawImage(plane2,x2,y2);
   ctxTrail2.drawImage(trail2,x2,y2);
+  ctxTrailOverlay2.drawImage(trailOverlay2,x2,y2)
 
   x2 += speed2;
   y2 -= yspeed2;

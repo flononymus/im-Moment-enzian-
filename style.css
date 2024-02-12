@@ -146,6 +146,20 @@
     aspect-ratio: 1/1;
     position:absolute;
 }
+
+#canvasTrailOverlay{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+#canvasTrailOverlay2{    
+    margin:0;
+    height: 100vh;
+    aspect-ratio: 1/1;
+    position:absolute;
+}
+
 #canvasTrail2{    
     margin:0;
     height: 100vh;
