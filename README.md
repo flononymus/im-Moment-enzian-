@@ -45,11 +45,11 @@ ___
 
 #### Visual:
 
-- [ ] Better title image
-    - [ ] description of "click a button"
-    - [ ] Maybe short overview?
-
-    - [ ] Hover tool tips?
+- [ ] Title
+    - [ ] Better title image
+        - [ ] description of "click a button"
+        - [ ] Maybe short overview?
+        - [ ] Hover tool tips?
     
 - [ ] Finish all the details
     - [x] maybe smaller birds
@@ -58,36 +58,37 @@ ___
     - [x] toggle borealis automatically
     - [x] Change chimney smoke color
 
-- [ ] Fade outs:
-    - [ ] **Plane trails**
-    - [x] Fade out smoke 
+    - [ ] Fade outs:
+        - [ ] **Plane trails**
+        - [x] Fade out smoke 
 
-- [ ] Repeats
-    - [ ] **Bird idle**
+    - [ ] Repeats
+        - [ ] **Bird idle**
+        - [ ] **Windows**
 
 #### End product
 - [ ] Tie everything together
-    - [ ] Figure out looping of functions
-    - [x] Figure out timings on automatic switching
-    - [x] Figure out when title
-    - [ ] Center canvas
 
-    - [x] Rain 
-      - [x] Loop rain 
-      - [x] Loop clouds
+    - [ ] Not done yet:
+        - [ ] Figure out looping of functions
+        - [ ] Center canvas
 
-    - [ ] Day
-      - [x] Loop birds
-      - [x] Loop airplanes
+        - [ ] **Loop birds day**
+        - [ ] **loop windows evening**
+        - [ ] Maybe loop borealis
+        - [ ] **Better night airplanes**
+        - [ ] **Loop night airplanes**
 
-    - [ ] Evening
-      - [x] Loop Smoke chimneys
-      - [ ] **Loop windows** 
-
-    - [ ] Night
-      - [x] Occasionally turn on borealis
-      - [ ] **Better night airplanes**
-      - [ ] **Loop night airplanes**
+    - [ ] Done:
+        - [x] Figure out timings on automatic switching
+        - [x] Figure out when title
+        - [x] Rain 
+        - [x] Loop rain 
+        - [x] Loop clouds
+        - [x] Day
+        - [x] Loop airplanes
+        - [x] Loop Smoke chimneys
+        - [x] Occasionally turn on borealis
 
 
 ### Ideas/Brainstorming
