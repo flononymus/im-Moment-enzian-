@@ -28,6 +28,10 @@ var idleLanding = false;
 
 
 var birdActive = false;
+var birdCycleComplete = false;
+
+
+
 var cols = 10;
 var rows = 1;
 
@@ -109,6 +113,7 @@ yBirdIdle = (canvasBird.height/7) * 5.15 ;
 yBirdLanding = (canvasBird.height/3) * 2
 xBirdLanding = -10
 
+
 // let targetXIdle = (canvasBird2.height/7) * 5.15;
 // let targetYIdle = (canvasBird2.width/5)*2;
 
@@ -128,6 +133,10 @@ function toggleBird() {
         setTimeout(function() {
             landBird();
         },9000)
+
+        // setTimeout(function() {
+        //     repeatBirdCycle();
+        // },12000)
 
     }
     else {
@@ -180,10 +189,18 @@ function animateBird() {
     xBird += birdSpeed;
     yBird += birdHeight; 
 
+    if (xBird < -30) {
+        setTimeout(() => {
+            xBird = canvasBird.width + 30;
+            yBird = canvasBird.height/2;
+        },5000)
+    }
+
     framesDrawn++;
         if (framesDrawn > 3) { 
             currentFrame++;
             framesDrawn = 0;
+            // console.log(xBird)
         }
     }
 
@@ -241,8 +258,16 @@ function landBird() {
                 birdSpeedLanding = -1.5;
                 birdHeightLanding = -1;
                 birdFlyingRight.src = "images/birdPixelLeft.png"
-            },9000)
+
+            // },9000)
+            },6000)
         }
+        // setTimeout(function() {
+        //     birdCycleComplete = true;
+        //     console.log
+        //     repeatBirdCycle();
+        // // },10000)
+        // },7000)
 }
 
 function idleBird() {
@@ -272,14 +297,7 @@ function idleBird() {
         if (xBirdIdle > canvasBird2.width + 30) {
             birdIdleSpeed = 0;
             birdIdleHeight = 0;
-            birdBackToIdle();
+            // birdBackToIdle();
         }
     }
 }
-
-function birdBackToIdle() {
-    ctxBird4.clearRect(0,0,canvasBird4.width,canvasBird4.height)
-
-    ctxBird3.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
-}
-

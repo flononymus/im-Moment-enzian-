@@ -11,7 +11,7 @@ $(document).on('click', 'button2', function() {
     $(this).toggleClass('outlined');
 });
 
-var cloudyButton= document.createElement('buttonSound');
+var cloudyButton= document.createElement('buttonMain');
 cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
 cloudyButton.onclick = function() {
     cloudImage(); 
@@ -21,7 +21,7 @@ cloudyButton.onclick = function() {
 }
 document.body.appendChild(cloudyButton);
 
-var dayButton= document.createElement('buttonSound');
+var dayButton= document.createElement('buttonMain');
 dayButton.innerHTML = "<i class='material-icons'>sunny</i>"
 dayButton.onclick= function() {
     dayImage(); 
@@ -33,7 +33,7 @@ dayButton.onclick= function() {
 }
 document.body.appendChild(dayButton);
 
-var halfNightButton= document.createElement('buttonSound');
+var halfNightButton= document.createElement('buttonMain');
 halfNightButton.innerHTML = "<i class='material-icons'>wb_twilight</i>"
 halfNightButton.onclick = function() {
     halfNight(); 
@@ -45,7 +45,7 @@ halfNightButton.onclick = function() {
 }
 document.body.appendChild(halfNightButton);
 
-var fullNightButton= document.createElement('buttonSound');
+var fullNightButton= document.createElement('buttonMain');
 fullNightButton.innerHTML = "<i class='material-icons'>nights_stay</i>"
 fullNightButton.onclick = function() {
     fullNight(); 
@@ -143,7 +143,7 @@ resetButton.textContent = "No effects"
 resetButton.onclick = resetToggles;
 document.body.appendChild(resetButton);
 
-var hideButton = document.createElement('buttonSound');
+var hideButton = document.createElement('buttonDebug');
 hideButton.textContent = "+"
 hideButton.addEventListener('click', function handleClick() {
     if (buttonsHidden) {
@@ -160,6 +160,11 @@ var windowButton= document.createElement('button2');
 windowButton.textContent = "Windows"
 windowButton.onclick = toggleWindow;
 document.body.appendChild(windowButton);
+
+// var birdCycleButton= document.createElement('button2');
+// birdCycleButton.textContent = "cycle birbs"
+// birdCycleButton.onclick = repeatBirdCycle;
+// document.body.appendChild(birdCycleButton);
 
 var soundButton = document.createElement('buttonSound');
 // soundButton.textContent = "🔊"
@@ -241,7 +246,7 @@ secondRow.appendChild(noneButton);
 secondRow.appendChild(cycleButton);
 secondRow.appendChild(stopCycleButton);
 secondRow.appendChild(titleButton);
-secondRow.appendChild(windowButton);
+// secondRow.appendChild(birdCycleButton);
 
 var thirdRow= document.createElement('div');
 thirdRow.id = 'thirdRow';
@@ -257,6 +262,7 @@ thirdRow.appendChild(birdFlockButton);
 thirdRow.appendChild(nightPlaneButton);
 thirdRow.appendChild(cometButton);
 thirdRow.appendChild(moonButton);
+thirdRow.appendChild(windowButton);
 thirdRow.appendChild(resetButton);
 
 var fourthRow = document.createElement('div');
@@ -270,6 +276,11 @@ fourthRow.appendChild(bellButton);
 fourthRow.appendChild(chatterButton);
 fourthRow.appendChild(nightAmbienceButton);
 fourthRow.appendChild(cricketButton)
+
+var debugRow = document.createElement('div')
+debugRow.id = 'debugRow'
+debugRow.appendChild(hideButton)
+document.body.appendChild(debugRow);
 
 
 
