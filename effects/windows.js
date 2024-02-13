@@ -16,7 +16,8 @@ canvasWindow3.height = 1000
 
 var window1 = new Image()
 // window1.src = "images/window1 lit.png"
-window1.src = "images/window1.png"
+// window1.src = "images/window1.png"
+window1.src = "images/window1-2.png"
 
 var window2 = new Image()
 // window2.src = "images/window2 lit.png"
