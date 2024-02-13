@@ -349,10 +349,10 @@ function resetToggles() {
         console.log('clouds off')
         toggleClouds();
     }
-    if (cloudsDayActive) {
-        console.log('day clouds off')
-        toggleCloudsDay();
-    }
+    // if (cloudsDayActive) {
+    //     console.log('day clouds off')
+    //     toggleCloudsDay();
+    // }
     if (borealisActive) {
         console.log('borealis off')
         toggleBorealis();
