@@ -12,7 +12,6 @@ ___
 
 ### General to do:
 
-- [ ] **Fix windows***
 - [ ] Tooltips
 - [ ] Loop night airplanes
 
