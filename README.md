@@ -10,27 +10,21 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ___
 
-### General to do:
-
-- [ ] Tooltips
-- [ ] Loop night airplanes
-
-### Ideas/Brainstorming
-
-<br/>
-
-- Night --> northern lights, stars, maybe a galaxy, moon, **shooting stars**
-- Half night --> smoking chimneys, moon
-- Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
-- Day --> small clouds, airplanes , planes, birds, **smaller birds**
-
-___
-
 ### Features:
 
 - Different times of day (day/dusk/night)
 - Different weather (rain/cloudy/sunny etc)
 - Different sounds (Birds, tourists, wind, rain, cars, church bells)
+
+___
+
+### Ideas/Brainstorming
+
+
+- Night --> northern lights, stars, maybe a galaxy, moon, shooting stars
+- Half night --> smoking chimneys, windows, moon
+- Clouds --> rain (or snow), maybe something to indicate wind? --> fade in rain
+- Day --> small clouds, airplanes , planes, birds, smaller birds
 
 ___
 
@@ -59,6 +53,8 @@ mindmap
         ((Pixel art))
 
             (draw in photoshop/illustrator)
+
+            (turn pictures into pixels)
 
             (google for atmospheric landscapes/cozy images)
 
