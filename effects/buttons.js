@@ -12,7 +12,8 @@ $(document).on('click', 'button2', function() {
 });
 
 var cloudyButton= document.createElement('buttonMain');
-cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
+// cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
+cloudyButton.innerHTML = "<i class='material-symbols-outlined md-36'> rainy</i>"
 cloudyButton.onclick = function() {
     cloudImage(); 
     toggleRain(); 
@@ -22,7 +23,8 @@ cloudyButton.onclick = function() {
 document.body.appendChild(cloudyButton);
 
 var dayButton= document.createElement('buttonMain');
-dayButton.innerHTML = "<i class='material-icons'>sunny</i>"
+dayButton.innerHTML = "<i class='material-icons md-36'>sunny</i>"
+// dayButton.innerHTML = "<i class='material-symbols-outlined md-36'>brightness_7</i>"
 dayButton.onclick= function() {
     dayImage(); 
     toggleBird();  
@@ -34,7 +36,8 @@ dayButton.onclick= function() {
 document.body.appendChild(dayButton);
 
 var halfNightButton= document.createElement('buttonMain');
-halfNightButton.innerHTML = "<i class='material-icons'>wb_twilight</i>"
+halfNightButton.innerHTML = "<i class='material-icons md-36'>wb_twilight</i>"
+// halfNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>brightness_6</i>"
 halfNightButton.onclick = function() {
     halfNight(); 
     toggleSmoking();
@@ -46,7 +49,10 @@ halfNightButton.onclick = function() {
 document.body.appendChild(halfNightButton);
 
 var fullNightButton= document.createElement('buttonMain');
-fullNightButton.innerHTML = "<i class='material-icons'>nights_stay</i>"
+// fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>brightness_3</i>"
+fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>mode_night</i>"
+// fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>clear_night</i>"
+// fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>nightlight</i>"
 fullNightButton.onclick = function() {
     fullNight(); 
     toggleStars(); 

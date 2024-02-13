@@ -16,7 +16,8 @@ canvasWindow3.height = 1000
 
 var window1 = new Image()
 // window1.src = "images/window1 lit.png"
-window1.src = "images/window1.png"
+// window1.src = "images/window1.png"
+window1.src = "images/window1-2.png"
 
 var window2 = new Image()
 // window2.src = "images/window2 lit.png"
@@ -34,7 +35,10 @@ var cycleComplete = false;
 
 function toggleWindow() {
     windowActive = !windowActive
+    drawWindow();
+}
 
+function drawWindow() {
         if (windowActive) {
 
             setTimeout(function() { 
@@ -73,17 +77,17 @@ function toggleWindow() {
             ctxWindow2.clearRect(0,0,canvasWindow2.width,canvasWindow2.height)
             ctxWindow3.clearRect(0,0,canvasWindow3.width,canvasWindow3.height)
             }
-}
+    }
 
 
 function repeatWindows() {
     if (windowActive) {
         if (cycleComplete) {
             cycleComplete = false;
-            toggleWindow();
-            setTimeout(() => {
-                toggleWindow();
-            },9000)
+            setTimeout(function() {
+                drawWindow();
+            },900)
+        // },90)
         }
     }
     else {

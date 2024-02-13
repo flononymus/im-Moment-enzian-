@@ -13,10 +13,12 @@ const yspeedNightPlane = -0.2;
 
 var enableNightPlane= false;
 
-var colsNightPlane = 14;
+// var colsNightPlane = 14;
+var colsNightPlane = 10;
 var rowsNightPlane = 1;
 
-var totalFramesNightPlane = 14;
+// var totalFramesNightPlane = 14;
+var totalFramesNightPlane = 10;
 var currentFrameNightPlane = 0;
 var framesDrawnNightPlane = 0;
 
@@ -33,7 +35,8 @@ xNightPlane = canvasNightPlane.width;
 yNightPlane = canvasNightPlane.height/2;
 
 ctxNightPlane.globalAlpha = 0.1
-ctxNightPlane.filter = "blur(5px)"
+// ctxNightPlane.filter = "blur(5px)"
+ctxNightPlane.filter = "blur(1px)"
 
 function toggleNightPlane() {
   enableNightPlane= !enableNightPlane
@@ -64,7 +67,7 @@ function moveNightPlane() {
     yNightPlane += yspeedNightPlane
 
     framesDrawnNightPlane ++;
-  if (framesDrawnNightPlane >= 10) {
+  if (framesDrawnNightPlane >= 5) {
     currentFrameNightPlane++;
     framesDrawnNightPlane = 0;  
   }
