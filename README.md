@@ -12,65 +12,9 @@ ___
 
 ### General to do:
 
-- [ ] Fix windows
-- [ ] Move audio & debug button to top right
+- [ ] **Fix windows***
 - [ ] Tooltips
-
-
-#### Audio
-
-- [ ] Music might not be stopping when fading out
-
-- [x] Global button to enable/disable all sound
-- [x] "reset sound" button?
-- [ ] Title screen --> maybe wind?
-
-- [x] soundscapes collection
-    - [x] Rain:
-        - [x] Cars Rain
-        - [x] Rain
-        - [x] Ambulance
-        - [x] ambient sound that loops: rain
-
-    - [x] Day:
-        - [x] Birds
-        - [x] Cars
-        - [x] People chatter
-        - [x] ambient sound that loops: birds & chatter
-
-    - [x] Evening:
-        - [x] Church bells
-        - [x] Remove fade out bells
-        - [x] one ambient sound that loops: bells? 
-
-    - [x] Night:
-        - [x] Cricket(?)
-        - [x] one ambient sound that loops: night
-
-#### Visual:
-
-- [x] Title
-    - [x] Better title image
-        - [x] description of "click a button"
-        - [ ] Hover tool tips?
-    
-- [ ] Finish all the details
-    - [x] maybe smaller birds
-    - [x] Maybe shooting stars
-    - [x] Fix plane trails?
-    - [x] toggle borealis automatically
-    - [x] Change chimney smoke color
-
-    - [x] Fade outs:
-        - [x] Plane trails
-        - [x] Fade out smoke 
-
-    - [ ] Repeats
-        - [ ] Bird idle
-        - [x] Windows
-        - [ ] Maybe loop borealis
-        - [ ] Better night airplanes
-        - [ ] Loop night airplanes
+- [ ] Loop night airplanes
 
 ### Ideas/Brainstorming
 

@@ -12,7 +12,8 @@ $(document).on('click', 'button2', function() {
 });
 
 var cloudyButton= document.createElement('buttonMain');
-cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
+// cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
+cloudyButton.innerHTML = "<i class='material-symbols-outlined'> rainy</i>"
 cloudyButton.onclick = function() {
     cloudImage(); 
     toggleRain(); 
