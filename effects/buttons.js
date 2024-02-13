@@ -200,18 +200,6 @@ nightBackgroundButton.textContent = "Night"
 nightBackgroundButton.onclick = fullNight;
 document.body.appendChild(nightBackgroundButton);
 
-
-
-var birdCycleButton= document.createElement('button2');
-birdCycleButton.textContent = "cycle birbs"
-birdCycleButton.onclick = repeatBirdCycle;
-document.body.appendChild(birdCycleButton);
-
-var birdActiveButton= document.createElement('button2');
-birdActiveButton.textContent = "active birbs"
-birdActiveButton.onclick = toggleBirdActive;
-document.body.appendChild(birdActiveButton);
-
 var soundButton = document.createElement('buttonSound');
 soundButton.innerHTML = "<i class='material-icons'>volume_up</i>"
 soundButton.addEventListener('click', function handleClick() {
