@@ -429,16 +429,3 @@ function hideButtons() {
         document.body.appendChild(fourthRow)
     }
 }
-
-// function toggleButtonsSmall() {
-//     showSmallButtons = !showSmallButtons 
-//     if (showSmallButtons) {
-//         console.log('check')
-//         document.body.removeChild(bigButtonDiv)
-//         document.body.appendChild(firstRow)
-//     }
-//     else {
-//         document.body.appendChild(bigButtonDiv)
-//         document.body.removeChild(firstRow)
-//     }
-// }

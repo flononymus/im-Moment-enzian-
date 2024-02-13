@@ -16,18 +16,13 @@ var rainSound = new Audio("audio/rain loop.wav")
 
 var ambulanceSound= new Audio("audio/ambulance.wav")
 
-// var carSound = new Audio("audio/car test.wav")
 var carSound = new Audio("audio/car test2.wav")
 
-// var birdSound= new Audio("audio/birds test1.wav")
 var birdSound= new Audio("audio/birds2.wav")
 
 var jazzSound= new Audio("audio/jazz.wav")
-// var jazzSound= new Audio("audio/jazz2.wav")
 
-// var bellSound = new Audio("audio/bells1.wav")
 var bellSound = new Audio("audio/bells3.wav")
-// var bellSound2 = new Audio("audio/bells2.wav")
 
 var chatterSound = new Audio("audio/chatter.wav")
 
