@@ -341,6 +341,10 @@ function resetToggles() {
         console.log('rain off')
         toggleRain();
     }
+    if (enableRainSound) {
+        console.log('rain sound off') 
+        loadRainSound();
+    }
     if (enablePlane) {
         console.log('plane off')
         togglePlane();
@@ -359,7 +363,7 @@ function resetToggles() {
     }
     if (!cloudsDayActive) {
         console.log('day clouds off')
-        toggleCloudsDay
+        toggleCloudsDay();
     }
     if (borealisActive) {
         console.log('borealis off')
