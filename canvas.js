@@ -49,8 +49,8 @@ imageFullNight.onload = drawImages
 var imageLightsDetail = new Image();
 imageLightsDetail.src = "images/background lights2.png"
 
-var imageDarkClouds = new Image();
-imageDarkClouds.src = "images/test_clouds_rain.png"
+// var imageDarkClouds = new Image();
+// imageDarkClouds.src = "images/test_clouds_rain.png"
 
 
 
@@ -165,43 +165,43 @@ function cloudImage() {
   currentImage = "clouds";
   startingImage = false;
   currentOpacity = 0;
-  resetToggles(); 
+  // resetToggles(); 
   drawImages();
-  loadWindSound();
+  // loadWindSound();
 }
 function dayImage() {
   currentImage = "day";
   startingImage = false;
   currentOpacity = 0;
-  resetToggles(); 
+  // resetToggles(); 
   drawImages();
-  loadBirdSound();
-  loadChatterSound();
-  loadCarSound();
+  // loadBirdSound();
+  // loadChatterSound();
+  // loadCarSound();
 }
 function halfNight() {
   currentImage = "halfNight";
   startingImage = false;
   currentOpacity = 0;
-  resetToggles(); 
+  // resetToggles(); 
   drawImages(); 
-  loadBellSound();
-  loadChatterSound();
+  // loadBellSound();
+  // loadChatterSound();
 }
 function fullNight() {
   currentImage = "fullNight";
   startingImage = false;
   currentOpacity = 0;
-  resetToggles(); 
+  // resetToggles(); 
   drawImages();
-  loadNightAmbienceSound();
-  loadCricketSound();
-  if (moonShown) {
-    return;
-  }
-  else {
-    toggleMoon();
-  }
+  // loadNightAmbienceSound();
+  // loadCricketSound();
+  // if (moonShown) {
+  //   return;
+  // }
+  // else {
+  //   toggleMoon();
+  // }
 }
 function noImage() {
   currentImage = "none";

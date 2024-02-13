@@ -15,10 +15,15 @@ var cloudyButton= document.createElement('buttonMain');
 // cloudyButton.innerHTML = "<i class='material-icons'>filter_drama</i>"
 cloudyButton.innerHTML = "<i class='material-symbols-outlined md-36'> rainy</i>"
 cloudyButton.onclick = function() {
+    resetToggles();
     cloudImage(); 
     toggleRain(); 
     toggleClouds(); 
     toggleTitleBool();
+    loadRainSound();
+    setTimeout(function() {
+      loadAmbulanceSound();
+    },5500)
 }
 document.body.appendChild(cloudyButton);
 
@@ -26,12 +31,16 @@ var dayButton= document.createElement('buttonMain');
 dayButton.innerHTML = "<i class='material-icons md-36'>sunny</i>"
 // dayButton.innerHTML = "<i class='material-symbols-outlined md-36'>brightness_7</i>"
 dayButton.onclick= function() {
+    resetToggles();
     dayImage(); 
     toggleBird();  
     toggleBirdFlock(); 
     togglePlane();
     // toggleCloudsDay();
     toggleTitleBool();
+    loadBirdSound();
+    loadChatterSound();
+    loadCarSound();
 }
 document.body.appendChild(dayButton);
 
@@ -39,11 +48,14 @@ var halfNightButton= document.createElement('buttonMain');
 halfNightButton.innerHTML = "<i class='material-icons md-36'>wb_twilight</i>"
 // halfNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>brightness_6</i>"
 halfNightButton.onclick = function() {
+    resetToggles();
     halfNight(); 
     toggleSmoking();
     toggleMoon();
     toggleWindow();
     toggleTitleBool(); 
+    loadBellSound();
+    loadChatterSound();
     // toggleMoon();
 }
 document.body.appendChild(halfNightButton);
@@ -54,11 +66,20 @@ fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>mode_nig
 // fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>clear_night</i>"
 // fullNightButton.innerHTML = "<i class='material-symbols-outlined md-36'>nightlight</i>"
 fullNightButton.onclick = function() {
+    resetToggles();
     fullNight(); 
     toggleStars(); 
     toggleComet(); 
     // toggleBorealis();
     toggleTitleBool(); 
+    loadNightAmbienceSound();
+    loadCricketSound();
+    if (moonShown) {
+      return;
+    }
+    else {
+      toggleMoon();
+    }
 }
 document.body.appendChild(fullNightButton);
 
@@ -167,6 +188,27 @@ windowButton.textContent = "Windows"
 windowButton.onclick = toggleWindow;
 document.body.appendChild(windowButton);
 
+var cloudsBackgroundButton= document.createElement('button2');
+cloudsBackgroundButton.textContent = "Cloudy"
+cloudsBackgroundButton.onclick = cloudImage;
+document.body.appendChild(cloudsBackgroundButton);
+
+var dayBackgroundButton = document.createElement('button2');
+dayBackgroundButton.textContent = "Day"
+dayBackgroundButton.onclick = dayImage;
+document.body.appendChild(dayBackgroundButton);
+
+var eveningBackgroundButton= document.createElement('button2');
+eveningBackgroundButton.textContent = "Evening"
+eveningBackgroundButton.onclick = halfNight;
+document.body.appendChild(eveningBackgroundButton);
+
+var nightBackgroundButton= document.createElement('button2');
+nightBackgroundButton.textContent = "Night"
+nightBackgroundButton.onclick = fullNight;
+document.body.appendChild(nightBackgroundButton);
+
+
 
 // var birdCycleButton= document.createElement('button2');
 // birdCycleButton.textContent = "cycle birbs"
@@ -253,6 +295,10 @@ document.body.appendChild(firstRow);
 
 var secondRow = document.createElement('div');
 secondRow.id = 'secondRow';
+secondRow.appendChild(cloudsBackgroundButton);
+secondRow.appendChild(dayBackgroundButton);
+secondRow.appendChild(eveningBackgroundButton);
+secondRow.appendChild(nightBackgroundButton);
 secondRow.appendChild(noneButton);
 secondRow.appendChild(cycleButton);
 secondRow.appendChild(stopCycleButton);
