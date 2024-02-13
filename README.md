@@ -10,11 +10,6 @@ peaceful atmospheric images/environment to get a break from a busy day, to relax
 
 ___
 
-### General to do:
-
-- [ ] Tooltips
-- [ ] Loop night airplanes
-
 ### Ideas/Brainstorming
 
 <br/>
