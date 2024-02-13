@@ -28,9 +28,8 @@ var idleLanding = false;
 
 
 var birdActive = false;
+var landBirdActive = false;
 var birdCycleComplete = false;
-
-
 
 var cols = 10;
 var rows = 1;
@@ -210,69 +209,6 @@ function animateBird() {
     }
 }
 
-
-function switchIdle() {
-    imageSwitch = !imageSwitch;
-    if (imageSwitch) {
-        birdIdle.src = "images/birdIdlePixel5.png"
-        birdIdleSpeed = 0;
-        birdIdleHeight = 0;
-    }
-    else {
-        birdIdle.src = "images/birdPixelLeft.png"
-        birdIdleSpeed = 1.5;
-        birdIdleHeight = -0.5;
-    }
-}
-
-function landBird() {
-    if (birdActive) {
-        requestAnimationFrame(landBird);
-    
-        currentFrameLanding = currentFrameLanding % totalFramesLanding;
-    
-        srcXLanding= currentFrameLanding* spriteWidthLanding
-    
-        ctxBird3.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
-    
-        xBirdLanding += birdSpeedLanding;
-        yBirdLanding += birdHeightLanding; 
-    
-        framesDrawnLanding++;
-            if (framesDrawnLanding > 3) {
-                currentFrameLanding++;
-                framesDrawnLanding = 0;
-            }
-        }
-
-        if (yBirdLanding > (canvasBird.height/10)*7.8) {
-            birdSpeedLanding = 0;
-            birdHeightLanding = 0;
-            birdFlyingRight.src = "images/birdIdlePixel5.png"
-
-            birdLanded = true;
-        }
-
-        if (birdLanded) {
-            setTimeout(function() {
-                birdLanded=false;
-                birdSpeedLanding = -1.5;
-                birdHeightLanding = -1;
-                birdFlyingRight.src = "images/birdPixelLeft.png"
-
-            },6000)
-        }
-}
-
-// function startLandBird() {
-//     intervalId = setInterval(landBird, 10000); 
-//     console.log('repeating bird')
-// }
-
-// function stopLandBird() {
-//     clearInterval(intervalId); 
-// }
-
 function idleBird() {
     if (birdActive) {
 
@@ -303,4 +239,104 @@ function idleBird() {
             // birdBackToIdle();
         }
     }
+}
+
+
+
+function switchIdle() {
+    imageSwitch = !imageSwitch;
+    if (imageSwitch) {
+        birdIdle.src = "images/birdIdlePixel5.png"
+        birdIdleSpeed = 0;
+        birdIdleHeight = 0;
+    }
+    else {
+        birdIdle.src = "images/birdPixelLeft.png"
+        birdIdleSpeed = 1.5;
+        birdIdleHeight = -0.5;
+    }
+}
+
+function landBird() {
+    if (birdActive) {
+
+        // birdSpeedLanding = 1.5;
+        // birdHeightLanding= 1;
+
+        requestAnimationFrame(landBird);
+        ctxBird3.clearRect(0,0,canvasBird.width,canvasBird.height);
+    
+        currentFrameLanding = currentFrameLanding % totalFramesLanding;
+    
+        srcXLanding= currentFrameLanding* spriteWidthLanding
+    
+        ctxBird3.drawImage(birdFlyingRight, srcXLanding, srcYLanding, spriteWidthLanding, spriteHeightLanding, xBirdLanding, yBirdLanding, spriteWidthLanding, spriteHeightLanding)
+    
+        xBirdLanding += birdSpeedLanding;
+        yBirdLanding += birdHeightLanding; 
+    
+        framesDrawnLanding++;
+            if (framesDrawnLanding > 1) {
+                currentFrameLanding++;
+                framesDrawnLanding = 0;
+            }
+        }
+
+        if (yBirdLanding > (canvasBird.height/10)*7.8) {
+            birdSpeedLanding = 0;
+            birdHeightLanding = 0;
+            birdFlyingRight.src = "images/birdIdlePixel5.png"
+
+            birdLanded = true;
+        }
+
+        if (birdLanded) {
+            setTimeout(function() {
+                birdLanded=false;
+                birdSpeedLanding = -1.5;
+                birdHeightLanding = -1;
+                birdFlyingRight.src = "images/birdPixelLeft.png"
+
+            },6000)
+
+        }
+        
+        // if (yBirdLanding < (canvasBird.height/2)) {
+        //     console.log('too high')
+        //     xBirdLanding = -10
+        //     yBirdLanding = (canvasBird.height/3)*2
+    
+        //     birdSpeedLanding = 0
+        //     birdHeightLanding= 0;
+            
+        //     // repeatBirdCycle();
+        // }
+
+}
+
+
+
+function repeatBirdCycle() {
+    if (birdActive) {
+        birdLanded = false;
+        console.log('cycle birb')
+        xBirdLanding = -10
+        yBirdLanding = (canvasBird.height/3)*2
+
+        birdSpeedLanding = 1.5;
+        birdHeightLanding= 1;
+        landBird();
+
+    }
+
+}
+
+function toggleBirdActive() {
+    birdActive=!birdActive
+    // if (birdActive) {
+    //     console.log('test active')
+    // }
+    // else {
+    //     console.log('test NOT active')
+    // }
 }
