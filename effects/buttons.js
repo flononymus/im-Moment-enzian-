@@ -48,6 +48,7 @@ halfNightButton.onclick = function() {
     halfNight(); 
     toggleSmoking();
     toggleMoon();
+    // toggleBirdFlock(); 
     toggleWindow();
     toggleTitleBool(); 
     loadBellSound();

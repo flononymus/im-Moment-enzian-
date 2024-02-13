@@ -200,7 +200,6 @@ function animateBird() {
         if (framesDrawn > 3) { 
             currentFrame++;
             framesDrawn = 0;
-            // console.log(xBird)
         }
     }
 
@@ -276,7 +275,7 @@ function landBird() {
         yBirdLanding += birdHeightLanding; 
     
         framesDrawnLanding++;
-            if (framesDrawnLanding > 1) {
+            if (framesDrawnLanding > 3) {
                 currentFrameLanding++;
                 framesDrawnLanding = 0;
             }
